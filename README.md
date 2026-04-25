@@ -419,3 +419,108 @@ python -m unittest discover -s tests -v
 2. 把 `XAU/USD` 也纳入统一 catalog
 3. 给 FRED 和 XAU 增加统一的数据质量检查脚本
 4. 再扩到 deferred 指标，比如 GLD、COT、GVZ、GPR
+
+## Unified indicator access
+
+The repo now has a unified indicator registry and query layer for both `FRED` and `XAU/USD`.
+
+### Generated files
+
+- [data/indicator_catalog.csv](/D:/note/pandas_project/gold_price_analysis/data/indicator_catalog.csv)
+- [data/indicator_catalog.md](/D:/note/pandas_project/gold_price_analysis/data/indicator_catalog.md)
+
+`data/indicator_catalog.csv` includes:
+
+```csv
+indicator_id,category,indicator_name,english_code,source,frequency,file_path,definition,status,enabled
+```
+
+It is generated from:
+
+- `config/indicators.yml`
+- `data/fred/_catalog.csv`
+- `data/xau/manifest.json`
+
+### Refresh catalog
+
+```powershell
+python -m gold_data catalog
+```
+
+The catalog is also refreshed automatically after:
+
+- `python -m gold_data init`
+- `python -m gold_data update`
+- `python .\scripts\fetch_xau_data.py`
+
+### Query API
+
+Code location:
+
+- [src/gold_data/access.py](/D:/note/pandas_project/gold_price_analysis/src/gold_data/access.py)
+- [src/gold_data/catalog.py](/D:/note/pandas_project/gold_price_analysis/src/gold_data/catalog.py)
+- [src/gold_data/metadata.py](/D:/note/pandas_project/gold_price_analysis/src/gold_data/metadata.py)
+
+Usage:
+
+```python
+from pathlib import Path
+
+from src.gold_data.access import IndicatorStore
+
+store = IndicatorStore(Path(r"D:\note\pandas_project\gold_price_analysis"))
+
+# 1) query metadata
+items = store.list_indicators(
+    indicator_id="DGS10",
+    category="名义利率",
+    name="美债收益率",
+    frequency="d",
+)
+
+# 2) get one indicator
+frame = store.get_one(
+    indicator_id="DGS10",
+    start_date="2020-01-01",
+    end_date="2024-12-31",
+)
+
+# 3) get multiple indicators
+result = store.get_data(
+    category="通胀 / 通胀预期",
+    frequency="d",
+    start_date="2024-01-01",
+    end_date="2024-12-31",
+)
+```
+
+Filter behavior:
+
+- `indicator_id`: exact match, case-insensitive
+- `category`: exact match
+- `name`: substring match against `indicator_name` and `english_code`
+- `frequency`: exact match, case-insensitive
+- `start_date` / `end_date`: applied on the `date` column
+
+Return behavior:
+
+- `get_one(...)` returns a single `pandas.DataFrame`
+- `get_data(...)` returns `dict[indicator_id, pandas.DataFrame]`
+- by default returned frames include:
+  - `indicator_id`
+  - `category`
+  - `indicator_name`
+  - `frequency`
+  - `source`
+
+### Current unified IDs
+
+Examples:
+
+- `DGS10`
+- `DFII10`
+- `CPIAUCSL`
+- `T10YIE`
+- `XAU_USD_DAILY_OHLC`
+- `XAU_USD_MONTHLY_CLOSE`
+- `DERIVED__10年期通胀预期_名义减实际`

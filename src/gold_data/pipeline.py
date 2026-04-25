@@ -8,6 +8,7 @@ import logging
 
 import pandas as pd
 
+from .catalog import refresh_indicator_directory
 from .config import IndicatorConfig, build_catalog_rows, indicator_path, load_indicators
 from .fred import FredClient
 from .storage import merge_series_frames, read_series_csv, write_catalog_csv, write_series_csv
@@ -66,6 +67,7 @@ class DataPipeline:
 
         catalog_rows = build_catalog_rows(self.indicators, self.base_dir, self.series_meta)
         write_catalog_csv(self.base_dir / "data" / "fred" / "_catalog.csv", catalog_rows)
+        refresh_indicator_directory(self.base_dir, self.config_path)
         return RunResult(errors=errors)
 
     def _process_direct(self, indicator: IndicatorConfig, command: str) -> None:

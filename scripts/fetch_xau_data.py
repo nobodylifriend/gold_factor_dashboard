@@ -9,6 +9,8 @@ from typing import Iterable
 import pandas as pd
 import requests
 
+from src.gold_data.catalog import refresh_indicator_directory
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "data" / "xau"
@@ -191,6 +193,7 @@ def main() -> int:
         ],
     }
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    refresh_indicator_directory(ROOT)
 
     print(f"Wrote {daily_path}")
     print(f"Wrote {monthly_path}")

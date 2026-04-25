@@ -1,0 +1,59 @@
+from __future__ import annotations
+
+DEFAULT_XAU_CATEGORY = "黄金价格"
+
+INDICATOR_DEFINITIONS: dict[str, str] = {
+    "CPIAUCSL": "美国城市消费者价格指数，衡量居民消费端的整体通胀水平。",
+    "CPILFESL": "剔除食品和能源后的核心消费者价格指数，用于观察更平滑的核心通胀趋势。",
+    "PCEPI": "个人消费支出价格指数，美联储更常参考的总体通胀指标。",
+    "PCEPILFE": "剔除食品和能源后的核心PCE价格指数，用于刻画核心通胀压力。",
+    "PPIACO": "全部商品生产者价格指数，反映上游出厂价格变化。",
+    "GDPDEF": "GDP平减指数，反映宏观经济整体价格水平的季度变化。",
+    "MICH": "密歇根大学消费者1年通胀预期调查，衡量居民短期通胀预期。",
+    "T5YIE": "5年盈亏平衡通胀率，近似市场隐含的5年期平均通胀预期。",
+    "T10YIE": "10年盈亏平衡通胀率，近似市场隐含的10年期平均通胀预期。",
+    "T5YIFR": "5年期5年期前瞻通胀补偿，反映中长期通胀预期。",
+    "FEDFUNDS": "联邦基金利率，有效代表美国短端政策利率环境。",
+    "SOFR": "担保隔夜融资利率，美国美元无风险短端利率基准之一。",
+    "TB3MS": "3个月期美国国债收益率，代表短端无风险名义利率。",
+    "DGS10": "10年期美国国债收益率，代表长期名义利率水平。",
+    "DFII10": "10年期TIPS实际收益率，代表长期实际利率水平。",
+    "DTWEXBGS": "美元广义贸易加权指数，衡量美元相对主要贸易伙伴货币的强弱。",
+    "M1SL": "美国M1货币供应量，反映高流动性狭义货币规模。",
+    "M2SL": "美国M2货币供应量，反映广义货币条件。",
+    "BOGMBASE": "美国货币基础，衡量央行基础货币投放规模。",
+    "PAYEMS": "美国非农就业人数，反映劳动力市场扩张或收缩。",
+    "UNRATE": "美国失业率，反映劳动力市场松紧程度。",
+    "BAMLC0A0CM": "ICE BofA美国投资级企业债OAS，衡量投资级信用利差。",
+    "BAMLH0A0HYM2": "ICE BofA美国高收益企业债OAS，衡量高收益信用风险溢价。",
+    "TEDRATE": "TED利差，反映银行间融资风险与流动性压力。",
+    "STLFSI4": "圣路易斯联储金融压力指数，综合刻画金融市场紧张程度。",
+    "DCOILWTICO": "WTI原油现货价格，用于跟踪能源价格和通胀传导。",
+    "DCOILBRENTEU": "Brent原油现货价格，用于跟踪全球能源价格变化。",
+    "PCOPPUSDM": "铜价，用于刻画工业需求和全球增长预期。",
+    "DERIVED__10年期通胀预期_名义减实际": "10年期美债收益率减去10年期TIPS实际收益率，近似长期通胀预期。",
+    "XAU_USD_DAILY_OHLC": "XAU/USD黄金兑美元日线OHLC价格序列，适合构造收益率、波动率和技术特征。",
+    "XAU_USD_MONTHLY_CLOSE": "XAU/USD黄金兑美元月度收盘价序列，适合月频对齐和中长期建模。",
+}
+
+XAU_INDICATORS: tuple[dict[str, str], ...] = (
+    {
+        "indicator_id": "XAU_USD_DAILY_OHLC",
+        "category": DEFAULT_XAU_CATEGORY,
+        "indicator_name": "XAU/USD日线OHLC",
+        "english_code": "XAU_USD_DAILY_OHLC",
+        "source": "huggingface+investing",
+        "frequency": "d",
+        "file_name": "xau_usd_daily_ohlc.csv",
+    },
+    {
+        "indicator_id": "XAU_USD_MONTHLY_CLOSE",
+        "category": DEFAULT_XAU_CATEGORY,
+        "indicator_name": "XAU/USD月度收盘价",
+        "english_code": "XAU_USD_MONTHLY_CLOSE",
+        "source": "macrotrends",
+        "frequency": "m",
+        "file_name": "xau_usd_monthly_close.csv",
+    },
+)
+

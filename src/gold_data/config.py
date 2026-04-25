@@ -24,6 +24,9 @@ class IndicatorConfig:
     series_id: str = ""
     formula: str = ""
     dependencies: tuple[str, ...] = ()
+    indicator_id: str = ""
+    description: str = ""
+    english_code: str = ""
 
     @property
     def category_dirname(self) -> str:
@@ -32,6 +35,24 @@ class IndicatorConfig:
     @property
     def file_stem(self) -> str:
         return sanitize_component(self.indicator_name)
+
+    @property
+    def resolved_indicator_id(self) -> str:
+        if self.indicator_id:
+            return self.indicator_id
+        if self.series_id:
+            return self.series_id
+        return f"DERIVED__{self.file_stem}"
+
+    @property
+    def resolved_english_code(self) -> str:
+        if self.english_code:
+            return self.english_code
+        if self.series_id:
+            return self.series_id
+        if self.formula:
+            return self.formula
+        return self.resolved_indicator_id
 
 
 def sanitize_component(value: str) -> str:
