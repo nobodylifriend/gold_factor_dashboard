@@ -524,3 +524,77 @@ Examples:
 - `XAU_USD_DAILY_OHLC`
 - `XAU_USD_MONTHLY_CLOSE`
 - `DERIVED__10年期通胀预期_名义减实际`
+
+## Inflation rate transforms
+
+The raw price-index series are still stored, but the pipeline now also generates rate-based derived indicators for:
+
+- `CPI`
+- `核心CPI`
+- `PCE`
+- `核心PCE`
+- `PPI`
+- `GDP平减指数`
+
+For each of these series, the project now writes:
+
+- `同比`
+- `环比`
+- `环比年化`
+
+Examples:
+
+- `CPIAUCSL_YOY`
+- `CPIAUCSL_MOM`
+- `CPIAUCSL_MOM_ANNUALIZED`
+- `GDPDEF_YOY`
+- `GDPDEF_QOQ`
+- `GDPDEF_QOQ_ANNUALIZED`
+
+Implementation notes:
+
+- Derived-series engine: [src/gold_data/derived.py](/D:/note/pandas_project/gold_price_analysis/src/gold_data/derived.py)
+- Config model: [src/gold_data/config.py](/D:/note/pandas_project/gold_price_analysis/src/gold_data/config.py)
+- Pipeline orchestration: [src/gold_data/pipeline.py](/D:/note/pandas_project/gold_price_analysis/src/gold_data/pipeline.py)
+
+Configuration pattern for extensibility:
+
+- keep the raw source series as `series_type: direct`
+- add a derived entry with `series_type: derived`
+- set `derivation_method`
+- set `dependencies`
+- set `transform_params`
+
+Supported derived methods right now:
+
+- `expression`: multi-series arithmetic such as `DGS10 - DFII10`
+- `pct_change`: single-series rate transforms such as YoY / MoM / annualized MoM
+
+`pct_change` fields:
+
+```yaml
+series_type: derived
+derivation_method: pct_change
+dependencies:
+  - CPI
+transform_params:
+  periods: 12
+  annualize: false
+```
+
+Behavior:
+
+- monthly YoY: `periods: 12`
+- monthly MoM: `periods: 1`
+- monthly annualized MoM: `periods: 1`, `annualize: true`
+- quarterly YoY: `periods: 4`
+- quarterly QoQ: `periods: 1`
+- quarterly annualized QoQ: `periods: 1`, `annualize: true`
+
+The daily update flow already rebuilds all derived indicators after refreshing direct FRED series, so no extra scheduler change is required.
+
+For local rebuilds without hitting FRED again, use:
+
+```powershell
+python -m gold_data derive
+```

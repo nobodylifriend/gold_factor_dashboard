@@ -9,6 +9,61 @@ indicators:
   enabled: true
   status: active
   update_window_days: 540
+  description: 美国城市消费者价格指数原始值。
+- category: 通胀 / 通胀预期
+  indicator_name: CPI_同比
+  indicator_id: CPIAUCSL_YOY
+  english_code: CPIAUCSL_YOY
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - CPI
+  transform_params:
+    periods: 12
+    annualize: false
+  description: CPI相对12个月前的同比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: CPI_环比
+  indicator_id: CPIAUCSL_MOM
+  english_code: CPIAUCSL_MOM
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - CPI
+  transform_params:
+    periods: 1
+    annualize: false
+  description: CPI相对上月的环比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: CPI_环比年化
+  indicator_id: CPIAUCSL_MOM_ANNUALIZED
+  english_code: CPIAUCSL_MOM_ANNUALIZED
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - CPI
+  transform_params:
+    periods: 1
+    annualize: true
+  description: CPI环比按月频折算年化后的涨幅，单位为百分比。
 - category: 通胀 / 通胀预期
   indicator_name: 核心CPI
   source: fred
@@ -19,6 +74,61 @@ indicators:
   enabled: true
   status: active
   update_window_days: 540
+  description: 剔除食品和能源后的核心CPI原始值。
+- category: 通胀 / 通胀预期
+  indicator_name: 核心CPI_同比
+  indicator_id: CPILFESL_YOY
+  english_code: CPILFESL_YOY
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - 核心CPI
+  transform_params:
+    periods: 12
+    annualize: false
+  description: 核心CPI相对12个月前的同比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: 核心CPI_环比
+  indicator_id: CPILFESL_MOM
+  english_code: CPILFESL_MOM
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - 核心CPI
+  transform_params:
+    periods: 1
+    annualize: false
+  description: 核心CPI相对上月的环比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: 核心CPI_环比年化
+  indicator_id: CPILFESL_MOM_ANNUALIZED
+  english_code: CPILFESL_MOM_ANNUALIZED
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - 核心CPI
+  transform_params:
+    periods: 1
+    annualize: true
+  description: 核心CPI环比按月频折算年化后的涨幅，单位为百分比。
 - category: 通胀 / 通胀预期
   indicator_name: PCE
   source: fred
@@ -29,6 +139,61 @@ indicators:
   enabled: true
   status: active
   update_window_days: 540
+  description: 个人消费支出价格指数原始值。
+- category: 通胀 / 通胀预期
+  indicator_name: PCE_同比
+  indicator_id: PCEPI_YOY
+  english_code: PCEPI_YOY
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - PCE
+  transform_params:
+    periods: 12
+    annualize: false
+  description: PCE相对12个月前的同比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: PCE_环比
+  indicator_id: PCEPI_MOM
+  english_code: PCEPI_MOM
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - PCE
+  transform_params:
+    periods: 1
+    annualize: false
+  description: PCE相对上月的环比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: PCE_环比年化
+  indicator_id: PCEPI_MOM_ANNUALIZED
+  english_code: PCEPI_MOM_ANNUALIZED
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - PCE
+  transform_params:
+    periods: 1
+    annualize: true
+  description: PCE环比按月频折算年化后的涨幅，单位为百分比。
 - category: 通胀 / 通胀预期
   indicator_name: 核心PCE
   source: fred
@@ -39,6 +204,61 @@ indicators:
   enabled: true
   status: active
   update_window_days: 540
+  description: 剔除食品和能源后的核心PCE原始值。
+- category: 通胀 / 通胀预期
+  indicator_name: 核心PCE_同比
+  indicator_id: PCEPILFE_YOY
+  english_code: PCEPILFE_YOY
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - 核心PCE
+  transform_params:
+    periods: 12
+    annualize: false
+  description: 核心PCE相对12个月前的同比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: 核心PCE_环比
+  indicator_id: PCEPILFE_MOM
+  english_code: PCEPILFE_MOM
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - 核心PCE
+  transform_params:
+    periods: 1
+    annualize: false
+  description: 核心PCE相对上月的环比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: 核心PCE_环比年化
+  indicator_id: PCEPILFE_MOM_ANNUALIZED
+  english_code: PCEPILFE_MOM_ANNUALIZED
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - 核心PCE
+  transform_params:
+    periods: 1
+    annualize: true
+  description: 核心PCE环比按月频折算年化后的涨幅，单位为百分比。
 - category: 通胀 / 通胀预期
   indicator_name: PPI
   source: fred
@@ -49,6 +269,61 @@ indicators:
   enabled: true
   status: active
   update_window_days: 540
+  description: 全部商品生产者价格指数原始值。
+- category: 通胀 / 通胀预期
+  indicator_name: PPI_同比
+  indicator_id: PPIACO_YOY
+  english_code: PPIACO_YOY
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - PPI
+  transform_params:
+    periods: 12
+    annualize: false
+  description: PPI相对12个月前的同比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: PPI_环比
+  indicator_id: PPIACO_MOM
+  english_code: PPIACO_MOM
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - PPI
+  transform_params:
+    periods: 1
+    annualize: false
+  description: PPI相对上月的环比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: PPI_环比年化
+  indicator_id: PPIACO_MOM_ANNUALIZED
+  english_code: PPIACO_MOM_ANNUALIZED
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: m
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 540
+  dependencies:
+  - PPI
+  transform_params:
+    periods: 1
+    annualize: true
+  description: PPI环比按月频折算年化后的涨幅，单位为百分比。
 - category: 通胀 / 通胀预期
   indicator_name: GDP平减指数
   source: fred
@@ -59,6 +334,61 @@ indicators:
   enabled: true
   status: active
   update_window_days: 720
+  description: GDP平减指数原始值。
+- category: 通胀 / 通胀预期
+  indicator_name: GDP平减指数_同比
+  indicator_id: GDPDEF_YOY
+  english_code: GDPDEF_YOY
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+  dependencies:
+  - GDP平减指数
+  transform_params:
+    periods: 4
+    annualize: false
+  description: GDP平减指数相对4个季度前的同比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: GDP平减指数_环比
+  indicator_id: GDPDEF_QOQ
+  english_code: GDPDEF_QOQ
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+  dependencies:
+  - GDP平减指数
+  transform_params:
+    periods: 1
+    annualize: false
+  description: GDP平减指数相对上季度的环比涨幅，单位为百分比。
+- category: 通胀 / 通胀预期
+  indicator_name: GDP平减指数_环比年化
+  indicator_id: GDPDEF_QOQ_ANNUALIZED
+  english_code: GDPDEF_QOQ_ANNUALIZED
+  source: fred
+  series_type: derived
+  derivation_method: pct_change
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+  dependencies:
+  - GDP平减指数
+  transform_params:
+    periods: 1
+    annualize: true
+  description: GDP平减指数环比按季频折算年化后的涨幅，单位为百分比。
 - category: 通胀 / 通胀预期
   indicator_name: 密歇根大学1年通胀预期
   source: fred

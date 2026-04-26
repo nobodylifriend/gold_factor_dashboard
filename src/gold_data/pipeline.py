@@ -10,6 +10,7 @@ import pandas as pd
 
 from .catalog import refresh_indicator_directory
 from .config import IndicatorConfig, build_catalog_rows, indicator_path, load_indicators
+from .derived import DerivedSeriesBuilder
 from .fred import FredClient
 from .storage import merge_series_frames, read_series_csv, write_catalog_csv, write_series_csv
 
@@ -31,7 +32,7 @@ class DataPipeline:
         base_dir: Path,
         config_path: Path,
         env_path: Path,
-        client: FredClient,
+        client: FredClient | None,
         today: date | None = None,
     ) -> None:
         self.base_dir = base_dir
@@ -42,11 +43,12 @@ class DataPipeline:
         self.indicators = load_indicators(config_path)
         self.indicators_by_name = {item.indicator_name: item for item in self.indicators}
         self.series_meta: dict[str, dict[str, Any]] = {}
+        self.derived_builder = DerivedSeriesBuilder()
 
     def run(self, command: str) -> RunResult:
         errors: list[str] = []
         enabled = [item for item in self.indicators if item.enabled]
-        direct = [item for item in enabled if item.series_type == "direct"]
+        direct = [item for item in enabled if item.series_type == "direct"] if command != "derive" else []
         derived = [item for item in enabled if item.series_type == "derived"]
 
         for indicator in direct:
@@ -71,6 +73,8 @@ class DataPipeline:
         return RunResult(errors=errors)
 
     def _process_direct(self, indicator: IndicatorConfig, command: str) -> None:
+        if self.client is None:
+            raise RuntimeError("FRED client is not configured for direct series processing")
         path = indicator_path(self.base_dir, indicator)
         existing = read_series_csv(path)
         start_date = indicator.start_date if command == "init" else self._resolve_update_start(indicator, existing)
@@ -86,23 +90,12 @@ class DataPipeline:
         LOGGER.info("Wrote %s rows to %s", len(merged), path)
 
     def _process_derived(self, indicator: IndicatorConfig) -> None:
-        dependency_frames: list[pd.DataFrame] = []
-        for dependency_name in indicator.dependencies:
-            dependency = self.indicators_by_name[dependency_name]
-            dep_path = indicator_path(self.base_dir, dependency)
-            dep_frame = read_series_csv(dep_path)
-            if dep_frame.empty:
-                raise RuntimeError(f"Dependency has no data: {dependency_name}")
-            column_name = dependency.series_id or dependency.indicator_name
-            dependency_frames.append(dep_frame.rename(columns={"value": column_name}))
-
-        merged = dependency_frames[0]
-        for frame in dependency_frames[1:]:
-            merged = merged.merge(frame, on="date", how="inner")
-
-        merged = merged.sort_values("date").reset_index(drop=True)
-        merged["value"] = merged.eval(indicator.formula)
-        output = merged[["date", "value"]]
+        dependencies = self.derived_builder.load_dependency_frames(
+            base_dir=self.base_dir,
+            indicator=indicator,
+            indicators_by_name=self.indicators_by_name,
+        )
+        output = self.derived_builder.build(indicator=indicator, dependencies=dependencies)
         write_series_csv(indicator_path(self.base_dir, indicator), output)
 
     def _resolve_update_start(self, indicator: IndicatorConfig, existing: pd.DataFrame) -> str:
@@ -146,5 +139,20 @@ def build_pipeline(
         config_path=config_path or (base_dir / "config" / "indicators.yml"),
         env_path=env_file,
         client=FredClient(api_key=api_key),
+        today=today,
+    )
+
+
+def build_local_pipeline(
+    base_dir: Path,
+    config_path: Path | None = None,
+    env_path: Path | None = None,
+    today: date | None = None,
+) -> DataPipeline:
+    return DataPipeline(
+        base_dir=base_dir,
+        config_path=config_path or (base_dir / "config" / "indicators.yml"),
+        env_path=env_path or (base_dir / ".env"),
+        client=None,
         today=today,
     )

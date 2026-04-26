@@ -6,12 +6,12 @@ from pathlib import Path
 import sys
 
 from .catalog import refresh_indicator_directory
-from .pipeline import build_pipeline
+from .pipeline import build_local_pipeline, build_pipeline
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Fetch and update gold-related FRED indicators.")
-    parser.add_argument("command", choices=["init", "update", "catalog"])
+    parser.add_argument("command", choices=["init", "update", "catalog", "derive"])
     parser.add_argument("--base-dir", default=".", help="Project root directory.")
     parser.add_argument("--config", default=None, help="Path to indicators.yml.")
     parser.add_argument("--env-file", default=None, help="Path to .env file.")
@@ -39,6 +39,21 @@ def main(argv: list[str] | None = None) -> int:
             return 1
         logging.info("Refreshed indicator directory.")
         return 0
+
+    if args.command == "derive":
+        try:
+            pipeline = build_local_pipeline(base_dir=base_dir, config_path=config_path, env_path=env_path)
+            result = pipeline.run(args.command)
+        except Exception as exc:
+            logging.error("%s", exc)
+            return 1
+        if result.success:
+            logging.info("Completed %s successfully.", args.command)
+            return 0
+        logging.error("Completed %s with %s error(s).", args.command, len(result.errors))
+        for error in result.errors:
+            logging.error(" - %s", error)
+        return 1
 
     try:
         pipeline = build_pipeline(base_dir=base_dir, config_path=config_path, env_path=env_path)

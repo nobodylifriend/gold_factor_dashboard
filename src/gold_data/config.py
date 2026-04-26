@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 import re
@@ -27,6 +27,8 @@ class IndicatorConfig:
     indicator_id: str = ""
     description: str = ""
     english_code: str = ""
+    derivation_method: str = "expression"
+    transform_params: dict[str, Any] = field(default_factory=dict)
 
     @property
     def category_dirname(self) -> str:
@@ -94,8 +96,23 @@ def validate_indicators(indicators: list[IndicatorConfig]) -> None:
         if indicator.series_type == "derived":
             if not indicator.dependencies:
                 raise ValueError(f"Derived indicator missing dependencies: {indicator.indicator_name}")
-            if not indicator.formula:
-                raise ValueError(f"Derived indicator missing formula: {indicator.indicator_name}")
+            if indicator.derivation_method == "expression":
+                if not indicator.formula:
+                    raise ValueError(f"Derived indicator missing formula: {indicator.indicator_name}")
+            elif indicator.derivation_method == "pct_change":
+                periods = indicator.transform_params.get("periods")
+                if len(indicator.dependencies) != 1:
+                    raise ValueError(
+                        f"pct_change derived indicator must have exactly one dependency: {indicator.indicator_name}"
+                    )
+                if not isinstance(periods, int) or periods <= 0:
+                    raise ValueError(
+                        f"pct_change derived indicator requires positive integer periods: {indicator.indicator_name}"
+                    )
+            else:
+                raise ValueError(
+                    f"Unsupported derivation_method '{indicator.derivation_method}' for {indicator.indicator_name}"
+                )
 
     for indicator in indicators:
         if indicator.series_type != "derived":
