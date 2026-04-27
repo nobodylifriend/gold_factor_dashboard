@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 DEFAULT_XAU_CATEGORY = "黄金价格"
+DEFAULT_FX_CATEGORY = "汇率"
 
 INDICATOR_DEFINITIONS: dict[str, str] = {
     "CPIAUCSL": "美国城市消费者价格指数，衡量居民消费端的整体通胀水平。",
@@ -21,6 +22,13 @@ INDICATOR_DEFINITIONS: dict[str, str] = {
     "DFII10": "10年期TIPS实际收益率，代表长期实际利率水平。",
     "DFII30": "30年期TIPS实际收益率，代表超长端实际利率水平。",
     "DTWEXBGS": "美元广义贸易加权指数，衡量美元相对主要贸易伙伴货币的强弱。",
+    "DXY": "ICE U.S. Dollar Index，衡量美元相对一篮子主要货币的强弱。",
+    "EURUSD": "EUR/USD，欧元兑美元，全球交易量最大的货币对之一。",
+    "GBPUSD": "GBP/USD，英镑兑美元。",
+    "USDJPY": "USD/JPY，美元兑日元。",
+    "AUDUSD": "AUD/USD，澳元兑美元。",
+    "USDCAD": "USD/CAD，美元兑加元。",
+    "USDCHF": "USD/CHF，美元兑瑞士法郎。",
     "M1SL": "美国M1货币供应量，反映高流动性狭义货币规模。",
     "M2SL": "美国M2货币供应量，反映广义货币条件。",
     "BOGMBASE": "美国货币基础，衡量央行基础货币投放规模。",
@@ -56,5 +64,71 @@ XAU_INDICATORS: tuple[dict[str, str], ...] = (
         "source": "macrotrends",
         "frequency": "m",
         "file_name": "xau_usd_monthly_close.csv",
+    },
+)
+
+FX_INDICATORS: tuple[dict[str, str], ...] = (
+    {
+        "indicator_id": "DXY",
+        "category": DEFAULT_FX_CATEGORY,
+        "indicator_name": "DXY",
+        "english_code": "DXY",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "DXY.csv",
+    },
+    {
+        "indicator_id": "EURUSD",
+        "category": DEFAULT_FX_CATEGORY,
+        "indicator_name": "EURUSD",
+        "english_code": "EURUSD",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "EURUSD.csv",
+    },
+    {
+        "indicator_id": "GBPUSD",
+        "category": DEFAULT_FX_CATEGORY,
+        "indicator_name": "GBPUSD",
+        "english_code": "GBPUSD",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "GBPUSD.csv",
+    },
+    {
+        "indicator_id": "USDJPY",
+        "category": DEFAULT_FX_CATEGORY,
+        "indicator_name": "USDJPY",
+        "english_code": "USDJPY",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "USDJPY.csv",
+    },
+    {
+        "indicator_id": "AUDUSD",
+        "category": DEFAULT_FX_CATEGORY,
+        "indicator_name": "AUDUSD",
+        "english_code": "AUDUSD",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "AUDUSD.csv",
+    },
+    {
+        "indicator_id": "USDCAD",
+        "category": DEFAULT_FX_CATEGORY,
+        "indicator_name": "USDCAD",
+        "english_code": "USDCAD",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "USDCAD.csv",
+    },
+    {
+        "indicator_id": "USDCHF",
+        "category": DEFAULT_FX_CATEGORY,
+        "indicator_name": "USDCHF",
+        "english_code": "USDCHF",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "USDCHF.csv",
     },
 )

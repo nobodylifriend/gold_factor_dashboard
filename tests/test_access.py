@@ -107,6 +107,44 @@ indicators:
             self.assertIn("DGS10", frame["indicator_id"].tolist())
             self.assertIn("XAU_USD_DAILY_OHLC", frame["indicator_id"].tolist())
 
+    def test_refresh_indicator_directory_includes_fx_manifest_artifacts(self) -> None:
+        with WorkspaceTempDir() as tmp:
+            base = Path(tmp)
+            write_file(base / "config" / "indicators.yml", "indicators: []\n")
+            write_file(
+                base / "data" / "fx" / "manifest.json",
+                json.dumps(
+                    {
+                        "artifacts": [
+                            {
+                                "name": "DXY",
+                                "file_name": "DXY.csv",
+                                "notes": "ICE U.S. Dollar Index",
+                            },
+                            {
+                                "name": "EURUSD",
+                                "file_name": "EURUSD.csv",
+                                "notes": "EUR/USD spot",
+                            },
+                        ]
+                    },
+                    ensure_ascii=False,
+                ),
+            )
+            write_file(
+                base / "data" / "fx" / "DXY.csv",
+                "date,open,high,low,close,volume,source\n2024-01-01,100,101,99,100.5,0,test\n",
+            )
+            write_file(
+                base / "data" / "fx" / "EURUSD.csv",
+                "date,open,high,low,close,volume,source\n2024-01-01,1.1,1.2,1.0,1.15,0,test\n",
+            )
+
+            frame = refresh_indicator_directory(base)
+
+            self.assertIn("DXY", frame["indicator_id"].tolist())
+            self.assertIn("EURUSD", frame["indicator_id"].tolist())
+
     def test_indicator_store_filters_by_id_name_frequency_and_date_range(self) -> None:
         with WorkspaceTempDir() as tmp:
             base = Path(tmp)
@@ -136,6 +174,27 @@ indicators:
             xau = store.get_one(name="XAU/USD", frequency="d", start_date="2024-01-02")
             self.assertEqual(xau["date"].tolist(), ["2024-01-02"])
             self.assertEqual(xau["close"].tolist(), [2012])
+
+    def test_indicator_store_reads_fx_data_by_english_name(self) -> None:
+        with WorkspaceTempDir() as tmp:
+            base = Path(tmp)
+            write_file(
+                base / "data" / "indicator_catalog.csv",
+                "indicator_id,category,indicator_name,english_code,source,frequency,file_path,definition,status,enabled\n"
+                f"DXY,汇率,DXY,DXY,yahoo,d,{(base / 'data' / 'fx' / 'DXY.csv')},desc,active,True\n",
+            )
+            write_file(
+                base / "data" / "fx" / "DXY.csv",
+                "date,open,high,low,close,volume,source\n"
+                "2024-01-01,100,101,99,100.5,0,test\n"
+                "2024-01-02,100.5,101.2,100.1,100.8,0,test\n",
+            )
+
+            store = IndicatorStore(base)
+            dxy = store.get_one(name="DXY", frequency="d", start_date="2024-01-02")
+
+            self.assertEqual(dxy["date"].tolist(), ["2024-01-02"])
+            self.assertEqual(dxy["close"].tolist(), [100.8])
 
     def test_refresh_indicator_directory_keeps_dfii_series_in_nominal_rate_category(self) -> None:
         with WorkspaceTempDir() as tmp:

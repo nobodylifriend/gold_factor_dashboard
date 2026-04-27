@@ -4,18 +4,22 @@ import json
 from dataclasses import dataclass
 from io import StringIO
 from pathlib import Path
+import sys
 from typing import Iterable
 
 import pandas as pd
 import requests
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from src.gold_data.catalog import refresh_indicator_directory
 
-
-ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "data" / "xau"
 START_DATE = pd.Timestamp("2006-04-25")
 HTTP_HEADERS = {"User-Agent": "Mozilla/5.0"}
+INVESTING_XAU_PAGE = "https://www.investing.com/currencies/xau-usd-historical-data"
 
 
 @dataclass(frozen=True)
@@ -38,6 +42,22 @@ def fetch_json(url: str) -> dict:
     response = requests.get(url, headers=HTTP_HEADERS, timeout=60)
     response.raise_for_status()
     return response.json()
+
+
+def extract_next_data_build_id(html: str) -> str:
+    start = '<script id="__NEXT_DATA__" type="application/json">'
+    end = "</script>"
+    start_index = html.find(start)
+    if start_index == -1:
+        raise RuntimeError("Could not locate __NEXT_DATA__ payload on Investing page")
+    end_index = html.find(end, start_index)
+    if end_index == -1:
+        raise RuntimeError("Could not find end of __NEXT_DATA__ payload on Investing page")
+    payload = json.loads(html[start_index + len(start) : end_index])
+    build_id = str(payload.get("buildId", "")).strip()
+    if not build_id:
+        raise RuntimeError("Investing __NEXT_DATA__ payload is missing buildId")
+    return build_id
 
 
 def normalize_daily_frame(frame: pd.DataFrame) -> pd.DataFrame:
@@ -105,8 +125,9 @@ def fetch_fokan_m1(file_name: str) -> pd.DataFrame:
 
 
 def fetch_investing_recent_daily() -> pd.DataFrame:
+    build_id = extract_next_data_build_id(fetch_text(INVESTING_XAU_PAGE))
     payload = fetch_json(
-        "https://www.investing.com/_next/data/d7c1388/currencies/xau-usd-historical-data.json"
+        f"https://www.investing.com/_next/data/{build_id}/currencies/xau-usd-historical-data.json"
     )
     rows = payload["pageProps"]["state"]["historicalDataStore"]["historicalData"]["data"]
     frame = pd.DataFrame(

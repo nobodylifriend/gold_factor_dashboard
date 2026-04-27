@@ -18,6 +18,13 @@ This file is generated from project metadata and local data artifacts.
 | 就业指标 | 失业率 | UNRATE | UNRATE | fred | M | D:\note\pandas_project\gold_price_analysis\data\fred\就业指标\失业率.csv | 美国失业率，反映劳动力市场松紧程度。 |
 | 就业指标 | 非农就业人数 | PAYEMS | PAYEMS | fred | M | D:\note\pandas_project\gold_price_analysis\data\fred\就业指标\非农就业人数.csv | 美国非农就业人数，反映劳动力市场扩张或收缩。 |
 | 工业金属 | 铜价 | PCOPPUSDM | PCOPPUSDM | fred | M | D:\note\pandas_project\gold_price_analysis\data\fred\工业金属\铜价.csv | 铜价，用于刻画工业需求和全球增长预期。 |
+| 汇率 | AUDUSD | AUDUSD | AUDUSD | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\fx\AUDUSD.csv | AUD/USD，澳元兑美元。 |
+| 汇率 | DXY | DXY | DXY | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\fx\DXY.csv | ICE U.S. Dollar Index，衡量美元相对一篮子主要货币的强弱。 |
+| 汇率 | EURUSD | EURUSD | EURUSD | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\fx\EURUSD.csv | EUR/USD，欧元兑美元，全球交易量最大的货币对之一。 |
+| 汇率 | GBPUSD | GBPUSD | GBPUSD | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\fx\GBPUSD.csv | GBP/USD，英镑兑美元。 |
+| 汇率 | USDCAD | USDCAD | USDCAD | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\fx\USDCAD.csv | USD/CAD，美元兑加元。 |
+| 汇率 | USDCHF | USDCHF | USDCHF | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\fx\USDCHF.csv | USD/CHF，美元兑瑞士法郎。 |
+| 汇率 | USDJPY | USDJPY | USDJPY | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\fx\USDJPY.csv | USD/JPY，美元兑日元。 |
 | 汇率 | 美元广义贸易加权指数 | DTWEXBGS | DTWEXBGS | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\汇率\美元广义贸易加权指数.csv | 美元广义贸易加权指数，衡量美元相对主要贸易伙伴货币的强弱。 |
 | 油价指标 | Brent原油现货价 | DCOILBRENTEU | DCOILBRENTEU | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\Brent原油现货价.csv | Brent原油现货价格，用于跟踪全球能源价格变化。 |
 | 油价指标 | WTI原油现货价 | DCOILWTICO | DCOILWTICO | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\WTI原油现货价.csv | WTI原油现货价格，用于跟踪能源价格和通胀传导。 |

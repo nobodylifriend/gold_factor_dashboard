@@ -6,7 +6,7 @@ import json
 import pandas as pd
 
 from .config import IndicatorConfig, indicator_path, load_indicators
-from .metadata import INDICATOR_DEFINITIONS, XAU_INDICATORS
+from .metadata import FX_INDICATORS, INDICATOR_DEFINITIONS, XAU_INDICATORS
 
 CATALOG_COLUMNS = [
     "indicator_id",
@@ -26,10 +26,12 @@ def build_indicator_directory(base_dir: Path, config_path: Path | None = None) -
     config_file = config_path or (base_dir / "config" / "indicators.yml")
     indicators = load_indicators(config_file)
     fred_catalog = _read_csv_if_exists(base_dir / "data" / "fred" / "_catalog.csv")
-    xau_manifest = _read_xau_manifest(base_dir / "data" / "xau" / "manifest.json")
+    xau_manifest = _read_manifest(base_dir / "data" / "xau" / "manifest.json")
+    fx_manifest = _read_manifest(base_dir / "data" / "fx" / "manifest.json")
 
     rows = _build_fred_rows(base_dir, indicators, fred_catalog)
-    rows.extend(_build_xau_rows(base_dir, xau_manifest))
+    rows.extend(_build_external_rows(base_dir, "xau", XAU_INDICATORS, xau_manifest))
+    rows.extend(_build_external_rows(base_dir, "fx", FX_INDICATORS, fx_manifest))
 
     frame = pd.DataFrame(rows, columns=CATALOG_COLUMNS)
     if frame.empty:
@@ -113,14 +115,19 @@ def _build_fred_rows(
     return rows
 
 
-def _build_xau_rows(base_dir: Path, xau_manifest: dict[str, object]) -> list[dict[str, str]]:
+def _build_external_rows(
+    base_dir: Path,
+    data_dirname: str,
+    indicators: tuple[dict[str, str], ...],
+    manifest: dict[str, object],
+) -> list[dict[str, str]]:
     artifacts = {
         item.get("file_name", ""): item
-        for item in xau_manifest.get("artifacts", [])
+        for item in manifest.get("artifacts", [])
         if isinstance(item, dict)
     }
     rows: list[dict[str, str]] = []
-    for item in XAU_INDICATORS:
+    for item in indicators:
         artifact = artifacts.get(item["file_name"], {})
         rows.append(
             {
@@ -130,7 +137,7 @@ def _build_xau_rows(base_dir: Path, xau_manifest: dict[str, object]) -> list[dic
                 "english_code": item["english_code"],
                 "source": item["source"],
                 "frequency": item["frequency"],
-                "file_path": str(base_dir / "data" / "xau" / item["file_name"]),
+                "file_path": str(base_dir / "data" / data_dirname / item["file_name"]),
                 "definition": INDICATOR_DEFINITIONS.get(item["indicator_id"], "") or str(artifact.get("notes", "")),
                 "status": "active" if artifact else "missing",
                 "enabled": "True",
@@ -156,7 +163,7 @@ def _read_csv_if_exists(path: Path) -> pd.DataFrame:
     return pd.read_csv(path, dtype="string").fillna("")
 
 
-def _read_xau_manifest(path: Path) -> dict[str, object]:
+def _read_manifest(path: Path) -> dict[str, object]:
     if not path.exists():
         return {}
     return json.loads(path.read_text(encoding="utf-8"))
@@ -165,4 +172,3 @@ def _read_xau_manifest(path: Path) -> dict[str, object]:
 def _escape_markdown(value: object) -> str:
     text = str(value or "")
     return text.replace("|", "\\|").replace("\n", " ")
-
