@@ -482,10 +482,30 @@ indicators:
   enabled: true
   status: active
   update_window_days: 30
-- category: 真实利率
+- category: 名义利率
+  indicator_name: 5年期TIPS实际收益率
+  source: fred
+  series_id: DFII5
+  series_type: direct
+  frequency: d
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 30
+- category: 名义利率
   indicator_name: 10年期TIPS实际收益率
   source: fred
   series_id: DFII10
+  series_type: direct
+  frequency: d
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 30
+- category: 名义利率
+  indicator_name: 30年期TIPS实际收益率
+  source: fred
+  series_id: DFII30
   series_type: direct
   frequency: d
   start_date: '2006-04-25'

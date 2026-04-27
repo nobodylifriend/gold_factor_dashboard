@@ -137,6 +137,61 @@ indicators:
             self.assertEqual(xau["date"].tolist(), ["2024-01-02"])
             self.assertEqual(xau["close"].tolist(), [2012])
 
+    def test_refresh_indicator_directory_keeps_dfii_series_in_nominal_rate_category(self) -> None:
+        with WorkspaceTempDir() as tmp:
+            base = Path(tmp)
+            write_file(
+                base / "config" / "indicators.yml",
+                """
+indicators:
+  - category: 名义利率
+    indicator_name: 5年期TIPS实际收益率
+    source: fred
+    series_id: DFII5
+    series_type: direct
+    frequency: d
+    start_date: "2024-01-01"
+    enabled: true
+    status: active
+    update_window_days: 30
+  - category: 名义利率
+    indicator_name: 10年期TIPS实际收益率
+    source: fred
+    series_id: DFII10
+    series_type: direct
+    frequency: d
+    start_date: "2024-01-01"
+    enabled: true
+    status: active
+    update_window_days: 30
+  - category: 名义利率
+    indicator_name: 30年期TIPS实际收益率
+    source: fred
+    series_id: DFII30
+    series_type: direct
+    frequency: d
+    start_date: "2024-01-01"
+    enabled: true
+    status: active
+    update_window_days: 30
+""".strip(),
+            )
+            write_file(
+                base / "data" / "fred" / "_catalog.csv",
+                "category,indicator_name,source,series_id,frequency,units,enabled,status,file_path\n"
+                f"名义利率,5年期TIPS实际收益率,fred,DFII5,D,Percent,True,active,{(base / 'data' / 'fred' / '名义利率' / '5年期TIPS实际收益率.csv')}\n"
+                f"名义利率,10年期TIPS实际收益率,fred,DFII10,D,Percent,True,active,{(base / 'data' / 'fred' / '名义利率' / '10年期TIPS实际收益率.csv')}\n"
+                f"名义利率,30年期TIPS实际收益率,fred,DFII30,D,Percent,True,active,{(base / 'data' / 'fred' / '名义利率' / '30年期TIPS实际收益率.csv')}\n",
+            )
+            for name in ["5年期TIPS实际收益率", "10年期TIPS实际收益率", "30年期TIPS实际收益率"]:
+                write_file(base / "data" / "fred" / "名义利率" / f"{name}.csv", "date,value\n2024-01-01,1.0\n")
+
+            frame = refresh_indicator_directory(base)
+            tips_rows = frame[frame["indicator_id"].isin(["DFII5", "DFII10", "DFII30"])].copy()
+
+            self.assertEqual(sorted(tips_rows["category"].tolist()), ["名义利率", "名义利率", "名义利率"])
+            self.assertEqual(sorted(tips_rows["english_code"].tolist()), ["DFII10", "DFII30", "DFII5"])
+
 
 if __name__ == "__main__":
     unittest.main()

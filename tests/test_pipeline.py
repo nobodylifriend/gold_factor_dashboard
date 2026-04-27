@@ -213,6 +213,84 @@ indicators:
             self.assertEqual(frame["date"].tolist(), ["2024-01-01", "2024-01-02", "2024-01-03"])
             self.assertEqual(frame["value"].tolist(), [4.0, 4.1, 4.2])
 
+    def test_update_writes_tips_series_under_nominal_rate_category(self) -> None:
+        with WorkspaceTempDir() as tmp:
+            base = Path(tmp)
+            write_file(base / ".env", "FRED_API_KEY=test-key\n")
+            config_path = base / "config" / "indicators.yml"
+            write_file(
+                config_path,
+                """
+indicators:
+  - category: 名义利率
+    indicator_name: 5年期TIPS实际收益率
+    source: fred
+    series_id: DFII5
+    series_type: direct
+    frequency: d
+    start_date: "2024-01-01"
+    enabled: true
+    status: active
+    update_window_days: 30
+  - category: 名义利率
+    indicator_name: 10年期TIPS实际收益率
+    source: fred
+    series_id: DFII10
+    series_type: direct
+    frequency: d
+    start_date: "2024-01-01"
+    enabled: true
+    status: active
+    update_window_days: 30
+  - category: 名义利率
+    indicator_name: 30年期TIPS实际收益率
+    source: fred
+    series_id: DFII30
+    series_type: direct
+    frequency: d
+    start_date: "2024-01-01"
+    enabled: true
+    status: active
+    update_window_days: 30
+""".strip(),
+            )
+            client = FakeFredClient(
+                observations={
+                    "DFII5": [{"date": "2024-01-02", "value": 1.50}],
+                    "DFII10": [{"date": "2024-01-02", "value": 1.75}],
+                    "DFII30": [{"date": "2024-01-02", "value": 2.00}],
+                },
+                metadata={
+                    "DFII5": {"frequency_short": "D", "units_short": "Percent"},
+                    "DFII10": {"frequency_short": "D", "units_short": "Percent"},
+                    "DFII30": {"frequency_short": "D", "units_short": "Percent"},
+                },
+            )
+            pipeline = DataPipeline(
+                base_dir=base,
+                config_path=config_path,
+                env_path=base / ".env",
+                client=client,
+                today=date(2024, 1, 2),
+            )
+
+            result = pipeline.run("update")
+            self.assertTrue(result.success)
+
+            for name, series_id, expected in [
+                ("5年期TIPS实际收益率", "DFII5", 1.50),
+                ("10年期TIPS实际收益率", "DFII10", 1.75),
+                ("30年期TIPS实际收益率", "DFII30", 2.00),
+            ]:
+                path = base / "data" / "fred" / "名义利率" / f"{name}.csv"
+                self.assertTrue(path.exists())
+                frame = pd.read_csv(path)
+                self.assertEqual(frame["value"].tolist(), [expected])
+
+            catalog = pd.read_csv(base / "data" / "fred" / "_catalog.csv")
+            tips_rows = catalog[catalog["series_id"].isin(["DFII5", "DFII10", "DFII30"])]
+            self.assertEqual(sorted(tips_rows["category"].tolist()), ["名义利率", "名义利率", "名义利率"])
+
     def test_pct_change_derived_indicators_are_computed_for_monthly_and_quarterly_series(self) -> None:
         with WorkspaceTempDir() as tmp:
             base = Path(tmp)
