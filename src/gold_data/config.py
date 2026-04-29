@@ -26,6 +26,7 @@ class IndicatorConfig:
     dependencies: tuple[str, ...] = ()
     indicator_id: str = ""
     description: str = ""
+    chinese_name: str = ""
     english_code: str = ""
     derivation_method: str = "expression"
     transform_params: dict[str, Any] = field(default_factory=dict)
@@ -55,6 +56,12 @@ class IndicatorConfig:
         if self.formula:
             return self.formula
         return self.resolved_indicator_id
+
+    @property
+    def resolved_chinese_name(self) -> str:
+        if self.chinese_name:
+            return self.chinese_name
+        return self.indicator_name if not self.indicator_name.isascii() else ""
 
 
 def sanitize_component(value: str) -> str:
@@ -140,6 +147,7 @@ def build_catalog_rows(
             {
                 "category": indicator.category,
                 "indicator_name": indicator.indicator_name,
+                "chinese_name": indicator.resolved_chinese_name,
                 "source": indicator.source,
                 "series_id": indicator.series_id,
                 "frequency": meta.get("frequency_short") or indicator.frequency,

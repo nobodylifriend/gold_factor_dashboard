@@ -1,64 +1,79 @@
-indicator_id,category,indicator_name,english_code,source,frequency,file_path,definition,status,enabled
-TEDRATE,信用利差,TED利差,TEDRATE,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\信用利差\TED利差.csv,TED利差，反映银行间融资风险与流动性压力。,active,True
-BAMLC0A0CM,信用利差,投资级信用利差_OAS,BAMLC0A0CM,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\信用利差\投资级信用利差_OAS.csv,ICE BofA美国投资级企业债OAS，衡量投资级信用利差。,active,True
-BAMLH0A0HYM2,信用利差,高收益信用利差_OAS,BAMLH0A0HYM2,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\信用利差\高收益信用利差_OAS.csv,ICE BofA美国高收益企业债OAS，衡量高收益信用风险溢价。,active,True
-DFII10,名义利率,10年期TIPS实际收益率,DFII10,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\10年期TIPS实际收益率.csv,10年期TIPS实际收益率，代表长期实际利率水平。,active,True
-DGS10,名义利率,10年期美债收益率,DGS10,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\10年期美债收益率.csv,10年期美国国债收益率，代表长期名义利率水平。,active,True
-DFII30,名义利率,30年期TIPS实际收益率,DFII30,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\30年期TIPS实际收益率.csv,30年期TIPS实际收益率，代表超长端实际利率水平。,active,True
-TB3MS,名义利率,3个月美债收益率,TB3MS,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\3个月美债收益率.csv,3个月期美国国债收益率，代表短端无风险名义利率。,active,True
-DFII5,名义利率,5年期TIPS实际收益率,DFII5,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\5年期TIPS实际收益率.csv,5年期TIPS实际收益率，代表中短端实际利率水平。,active,True
-SOFR,名义利率,SOFR,SOFR,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\SOFR.csv,担保隔夜融资利率，美国美元无风险短端利率基准之一。,active,True
-FEDFUNDS,名义利率,联邦基金利率,FEDFUNDS,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\联邦基金利率.csv,联邦基金利率，有效代表美国短端政策利率环境。,active,True
-DERIVED__GPR Index,地缘政治,GPR Index,DERIVED__GPR Index,policyuncertainty,m,D:\note\pandas_project\gold_price_analysis\data\fred\地缘政治\GPR Index.csv,,deferred,False
-UNRATE,就业指标,失业率,UNRATE,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\就业指标\失业率.csv,美国失业率，反映劳动力市场松紧程度。,active,True
-PAYEMS,就业指标,非农就业人数,PAYEMS,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\就业指标\非农就业人数.csv,美国非农就业人数，反映劳动力市场扩张或收缩。,active,True
-PCOPPUSDM,工业金属,铜价,PCOPPUSDM,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\工业金属\铜价.csv,铜价，用于刻画工业需求和全球增长预期。,active,True
-AUDUSD,汇率,AUDUSD,AUDUSD,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\AUDUSD.csv,AUD/USD，澳元兑美元。,active,True
-DXY,汇率,DXY,DXY,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\DXY.csv,ICE U.S. Dollar Index，衡量美元相对一篮子主要货币的强弱。,active,True
-EURUSD,汇率,EURUSD,EURUSD,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\EURUSD.csv,EUR/USD，欧元兑美元，全球交易量最大的货币对之一。,active,True
-GBPUSD,汇率,GBPUSD,GBPUSD,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\GBPUSD.csv,GBP/USD，英镑兑美元。,active,True
-USDCAD,汇率,USDCAD,USDCAD,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\USDCAD.csv,USD/CAD，美元兑加元。,active,True
-USDCHF,汇率,USDCHF,USDCHF,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\USDCHF.csv,USD/CHF，美元兑瑞士法郎。,active,True
-USDJPY,汇率,USDJPY,USDJPY,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\USDJPY.csv,USD/JPY，美元兑日元。,active,True
-DTWEXBGS,汇率,美元广义贸易加权指数,DTWEXBGS,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\汇率\美元广义贸易加权指数.csv,美元广义贸易加权指数，衡量美元相对主要贸易伙伴货币的强弱。,active,True
-DCOILBRENTEU,油价指标,Brent原油现货价,DCOILBRENTEU,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\Brent原油现货价.csv,Brent原油现货价格，用于跟踪全球能源价格变化。,active,True
-DCOILWTICO,油价指标,WTI原油现货价,DCOILWTICO,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\WTI原油现货价.csv,WTI原油现货价格，用于跟踪能源价格和通胀传导。,active,True
-DERIVED__GVZ,波动率,GVZ,DERIVED__GVZ,cboe,d,D:\note\pandas_project\gold_price_analysis\data\fred\波动率\GVZ.csv,,deferred,False
-M1SL,货币供应量指标,M1,M1SL,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\M1.csv,美国M1货币供应量，反映高流动性狭义货币规模。,active,True
-M2SL,货币供应量指标,M2,M2SL,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\M2.csv,美国M2货币供应量，反映广义货币条件。,active,True
-BOGMBASE,货币供应量指标,货币基础,BOGMBASE,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\货币基础.csv,美国货币基础，衡量央行基础货币投放规模。,active,True
-DERIVED__10年期通胀预期_名义减实际,通胀 / 通胀预期,10年期通胀预期_名义减实际,DGS10 - DFII10,fred,d,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\10年期通胀预期_名义减实际.csv,10年期美债收益率减去10年期TIPS实际收益率，近似长期通胀预期。,active,True
-T10YIE,通胀 / 通胀预期,10年盈亏平衡通胀率,T10YIE,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\10年盈亏平衡通胀率.csv,10年盈亏平衡通胀率，近似市场隐含的10年期平均通胀预期。,active,True
-T5YIFR,通胀 / 通胀预期,5年期5年期前瞻通胀预期,T5YIFR,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\5年期5年期前瞻通胀预期.csv,5年期5年期前瞻通胀补偿，反映中长期通胀预期。,active,True
-T5YIE,通胀 / 通胀预期,5年盈亏平衡通胀率,T5YIE,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\5年盈亏平衡通胀率.csv,5年盈亏平衡通胀率，近似市场隐含的5年期平均通胀预期。,active,True
-CPIAUCSL,通胀 / 通胀预期,CPI,CPIAUCSL,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\CPI.csv,美国城市消费者价格指数原始值。,active,True
-CPIAUCSL_YOY,通胀 / 通胀预期,CPI_同比,CPIAUCSL_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\CPI_同比.csv,CPI相对12个月前的同比涨幅，单位为百分比。,active,True
-CPIAUCSL_MOM,通胀 / 通胀预期,CPI_环比,CPIAUCSL_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\CPI_环比.csv,CPI相对上月的环比涨幅，单位为百分比。,active,True
-CPIAUCSL_MOM_ANNUALIZED,通胀 / 通胀预期,CPI_环比年化,CPIAUCSL_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\CPI_环比年化.csv,CPI环比按月频折算年化后的涨幅，单位为百分比。,active,True
-GDPDEF,通胀 / 通胀预期,GDP平减指数,GDPDEF,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\GDP平减指数.csv,GDP平减指数原始值。,active,True
-GDPDEF_YOY,通胀 / 通胀预期,GDP平减指数_同比,GDPDEF_YOY,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\GDP平减指数_同比.csv,GDP平减指数相对4个季度前的同比涨幅，单位为百分比。,active,True
-GDPDEF_QOQ,通胀 / 通胀预期,GDP平减指数_环比,GDPDEF_QOQ,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\GDP平减指数_环比.csv,GDP平减指数相对上季度的环比涨幅，单位为百分比。,active,True
-GDPDEF_QOQ_ANNUALIZED,通胀 / 通胀预期,GDP平减指数_环比年化,GDPDEF_QOQ_ANNUALIZED,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\GDP平减指数_环比年化.csv,GDP平减指数环比按季频折算年化后的涨幅，单位为百分比。,active,True
-PCEPI,通胀 / 通胀预期,PCE,PCEPI,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE.csv,个人消费支出价格指数原始值。,active,True
-PCEPI_YOY,通胀 / 通胀预期,PCE_同比,PCEPI_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_同比.csv,PCE相对12个月前的同比涨幅，单位为百分比。,active,True
-PCEPI_MOM,通胀 / 通胀预期,PCE_环比,PCEPI_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_环比.csv,PCE相对上月的环比涨幅，单位为百分比。,active,True
-PCEPI_MOM_ANNUALIZED,通胀 / 通胀预期,PCE_环比年化,PCEPI_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_环比年化.csv,PCE环比按月频折算年化后的涨幅，单位为百分比。,active,True
-PPIACO,通胀 / 通胀预期,PPI,PPIACO,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI.csv,全部商品生产者价格指数原始值。,active,True
-PPIACO_YOY,通胀 / 通胀预期,PPI_同比,PPIACO_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_同比.csv,PPI相对12个月前的同比涨幅，单位为百分比。,active,True
-PPIACO_MOM,通胀 / 通胀预期,PPI_环比,PPIACO_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_环比.csv,PPI相对上月的环比涨幅，单位为百分比。,active,True
-PPIACO_MOM_ANNUALIZED,通胀 / 通胀预期,PPI_环比年化,PPIACO_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_环比年化.csv,PPI环比按月频折算年化后的涨幅，单位为百分比。,active,True
-DERIVED__SPF通胀预期,通胀 / 通胀预期,SPF通胀预期,DERIVED__SPF通胀预期,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\SPF通胀预期.csv,,deferred,False
-MICH,通胀 / 通胀预期,密歇根大学1年通胀预期,MICH,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\密歇根大学1年通胀预期.csv,密歇根大学消费者1年通胀预期调查，衡量居民短期通胀预期。,active,True
-CPILFESL,通胀 / 通胀预期,核心CPI,CPILFESL,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心CPI.csv,剔除食品和能源后的核心CPI原始值。,active,True
-CPILFESL_YOY,通胀 / 通胀预期,核心CPI_同比,CPILFESL_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心CPI_同比.csv,核心CPI相对12个月前的同比涨幅，单位为百分比。,active,True
-CPILFESL_MOM,通胀 / 通胀预期,核心CPI_环比,CPILFESL_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心CPI_环比.csv,核心CPI相对上月的环比涨幅，单位为百分比。,active,True
-CPILFESL_MOM_ANNUALIZED,通胀 / 通胀预期,核心CPI_环比年化,CPILFESL_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心CPI_环比年化.csv,核心CPI环比按月频折算年化后的涨幅，单位为百分比。,active,True
-PCEPILFE,通胀 / 通胀预期,核心PCE,PCEPILFE,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE.csv,剔除食品和能源后的核心PCE原始值。,active,True
-PCEPILFE_YOY,通胀 / 通胀预期,核心PCE_同比,PCEPILFE_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_同比.csv,核心PCE相对12个月前的同比涨幅，单位为百分比。,active,True
-PCEPILFE_MOM,通胀 / 通胀预期,核心PCE_环比,PCEPILFE_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_环比.csv,核心PCE相对上月的环比涨幅，单位为百分比。,active,True
-PCEPILFE_MOM_ANNUALIZED,通胀 / 通胀预期,核心PCE_环比年化,PCEPILFE_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_环比年化.csv,核心PCE环比按月频折算年化后的涨幅，单位为百分比。,active,True
-STLFSI4,金融压力,圣路易斯金融压力指数,STLFSI4,fred,W,D:\note\pandas_project\gold_price_analysis\data\fred\金融压力\圣路易斯金融压力指数.csv,圣路易斯联储金融压力指数，综合刻画金融市场紧张程度。,active,True
-DERIVED__GLD持仓,黄金ETF,GLD持仓,DERIVED__GLD持仓,wgc,d,D:\note\pandas_project\gold_price_analysis\data\fred\黄金ETF\GLD持仓.csv,,deferred,False
-XAU_USD_DAILY_OHLC,黄金价格,XAU/USD日线OHLC,XAU_USD_DAILY_OHLC,huggingface+investing,d,D:\note\pandas_project\gold_price_analysis\data\xau\xau_usd_daily_ohlc.csv,XAU/USD黄金兑美元日线OHLC价格序列，适合构造收益率、波动率和技术特征。,active,True
-XAU_USD_MONTHLY_CLOSE,黄金价格,XAU/USD月度收盘价,XAU_USD_MONTHLY_CLOSE,macrotrends,m,D:\note\pandas_project\gold_price_analysis\data\xau\xau_usd_monthly_close.csv,XAU/USD黄金兑美元月度收盘价序列，适合月频对齐和中长期建模。,active,True
-DERIVED__COT黄金净多头,黄金衍生品,COT黄金净多头,DERIVED__COT黄金净多头,cftc,w,D:\note\pandas_project\gold_price_analysis\data\fred\黄金衍生品\COT黄金净多头.csv,,deferred,False
+indicator_id,category,indicator_name,chinese_name,english_code,source,frequency,file_path,definition,status,enabled
+TEDRATE,信用利差,TED利差,TED利差,TEDRATE,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\信用利差\TED利差.csv,TED利差，反映银行间融资风险与流动性压力。,active,True
+BAMLC0A0CM,信用利差,投资级信用利差_OAS,投资级信用利差_OAS,BAMLC0A0CM,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\信用利差\投资级信用利差_OAS.csv,ICE BofA美国投资级企业债OAS，衡量投资级信用利差。,active,True
+BAMLH0A0HYM2,信用利差,高收益信用利差_OAS,高收益信用利差_OAS,BAMLH0A0HYM2,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\信用利差\高收益信用利差_OAS.csv,ICE BofA美国高收益企业债OAS，衡量高收益信用风险溢价。,active,True
+AVERAGE_INTEREST_RATE_ON_TOTAL_INTEREST_BEARING_DEBT,债务 / 财政,Average Interest Rate on Total Interest-Bearing Debt,平均付息成本,AVERAGE_INTEREST_RATE_ON_TOTAL_INTEREST_BEARING_DEBT,treasury_fiscal_data,m,D:\note\pandas_project\gold_price_analysis\data\us_debt\Average Interest Rate on Total Interest-Bearing Debt.csv,"Average interest rate on total interest-bearing debt from Treasury Fiscal Data, monthly percent.",active,True
+W018RC1Q027SBEA,债务 / 财政,Federal Current Receipts,联邦财政收入,W018RC1Q027SBEA,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Federal Current Receipts.csv,"Federal current receipts from BEA via FRED, quarterly seasonally adjusted annual rate.",active,True
+FYGFDPUN,债务 / 财政,Federal Debt Held by Public,公众持有的联邦债务,FYGFDPUN,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Federal Debt Held by Public.csv,"Federal debt held by the public from FRED, representing the portion absorbed by the market.",active,True
+FYGFGDQ188S,债务 / 财政,Federal Debt Held by Public to GDP,公众持有债务/GDP,FYGFGDQ188S,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Federal Debt Held by Public to GDP.csv,Federal debt held by the public as a share of GDP from FRED.,active,True
+FEDERAL_DEBT_INTRAGOVERNMENTAL_HOLDINGS,债务 / 财政,Federal Debt Intragovernmental Holdings,政府内部持有债务,FEDERAL_DEBT_INTRAGOVERNMENTAL_HOLDINGS,treasury_fiscal_data,d,D:\note\pandas_project\gold_price_analysis\data\us_debt\Federal Debt Intragovernmental Holdings.csv,"Intragovernmental holdings from Treasury Debt to the Penny, expressed in millions of dollars.",active,True
+A091RC1Q027SBEA,债务 / 财政,Federal Interest Payments,联邦政府利息支出,A091RC1Q027SBEA,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Federal Interest Payments.csv,"Federal government interest payments from BEA via FRED, quarterly.",active,True
+FEDERAL_INTEREST_PAYMENTS_TO_GDP,债务 / 财政,Federal Interest Payments to GDP,利息支出/GDP,FEDERAL_INTEREST_PAYMENTS_TO_GDP,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Federal Interest Payments to GDP.csv,"Federal interest payments divided by nominal GDP, expressed as a percent.",active,True
+FEDERAL_INTEREST_PAYMENTS_TO_RECEIPTS,债务 / 财政,Federal Interest Payments to Receipts,利息支出/财政收入,FEDERAL_INTEREST_PAYMENTS_TO_RECEIPTS,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Federal Interest Payments to Receipts.csv,"Federal interest payments divided by federal current receipts, expressed as a percent.",active,True
+FYFSD,债务 / 财政,Federal Surplus or Deficit,联邦财政盈余/赤字,FYFSD,fred,A,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Federal Surplus or Deficit.csv,Federal surplus or deficit from FRED; negative values indicate a deficit.,active,True
+FYFSGDA188S,债务 / 财政,Federal Surplus or Deficit to GDP,财政赤字/GDP,FYFSGDA188S,fred,A,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Federal Surplus or Deficit to GDP.csv,Federal surplus or deficit as a share of GDP from FRED.,active,True
+MARKETABLE_TREASURY_SECURITIES_OUTSTANDING,债务 / 财政,Marketable Treasury Securities Outstanding,可流通国债余额,MARKETABLE_TREASURY_SECURITIES_OUTSTANDING,treasury_fiscal_data,m,D:\note\pandas_project\gold_price_analysis\data\us_debt\Marketable Treasury Securities Outstanding.csv,"Total marketable Treasury securities outstanding from the Monthly Statement of the Public Debt, expressed in millions of dollars.",active,True
+GDP,债务 / 财政,Nominal GDP,名义GDP,GDP,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Nominal GDP.csv,"Nominal gross domestic product from FRED, quarterly seasonally adjusted annual rate.",active,True
+GFDEBTN,债务 / 财政,Total Federal Debt,美国联邦政府总债务,GFDEBTN,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Total Federal Debt.csv,"Total federal debt from FRED, covering debt held by the public and intragovernmental holdings.",active,True
+GFDEGDQ188S,债务 / 财政,Total Federal Debt to GDP,总联邦债务/GDP,GFDEGDQ188S,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\债务_财政\Total Federal Debt to GDP.csv,Total federal debt as a share of GDP from FRED.,active,True
+TREASURY_NET_MARKETABLE_BORROWING_ESTIMATE,债务 / 财政,Treasury Net Marketable Borrowing Estimate,净融资需求,TREASURY_NET_MARKETABLE_BORROWING_ESTIMATE,treasury_quarterly_refunding,q,D:\note\pandas_project\gold_price_analysis\data\us_debt\Treasury Net Marketable Borrowing Estimate.csv,"Treasury quarterly financing estimate series built from official Financing Estimates releases, with value equal to the current-quarter net marketable borrowing estimate in billions of dollars.",active,True
+DFII10,名义利率,10年期TIPS实际收益率,10年期TIPS实际收益率,DFII10,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\10年期TIPS实际收益率.csv,10年期TIPS实际收益率，代表长期实际利率水平。,active,True
+DGS10,名义利率,10年期美债收益率,10年期美债收益率,DGS10,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\10年期美债收益率.csv,10年期美国国债收益率，代表长期名义利率水平。,active,True
+DFII30,名义利率,30年期TIPS实际收益率,30年期TIPS实际收益率,DFII30,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\30年期TIPS实际收益率.csv,30年期TIPS实际收益率，代表超长端实际利率水平。,active,True
+TB3MS,名义利率,3个月美债收益率,3个月美债收益率,TB3MS,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\3个月美债收益率.csv,3个月期美国国债收益率，代表短端无风险名义利率。,active,True
+DFII5,名义利率,5年期TIPS实际收益率,5年期TIPS实际收益率,DFII5,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\5年期TIPS实际收益率.csv,5年期TIPS实际收益率，代表中短端实际利率水平。,active,True
+SOFR,名义利率,SOFR,,SOFR,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\SOFR.csv,担保隔夜融资利率，美国美元无风险短端利率基准之一。,active,True
+FEDFUNDS,名义利率,联邦基金利率,联邦基金利率,FEDFUNDS,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\名义利率\联邦基金利率.csv,联邦基金利率，有效代表美国短端政策利率环境。,active,True
+DERIVED__GPR Index,地缘政治,GPR Index,,DERIVED__GPR Index,policyuncertainty,m,D:\note\pandas_project\gold_price_analysis\data\fred\地缘政治\GPR Index.csv,,deferred,False
+UNRATE,就业指标,失业率,失业率,UNRATE,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\就业指标\失业率.csv,美国失业率，反映劳动力市场松紧程度。,active,True
+PAYEMS,就业指标,非农就业人数,非农就业人数,PAYEMS,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\就业指标\非农就业人数.csv,美国非农就业人数，反映劳动力市场扩张或收缩。,active,True
+PCOPPUSDM,工业金属,铜价,铜价,PCOPPUSDM,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\工业金属\铜价.csv,铜价，用于刻画工业需求和全球增长预期。,active,True
+AUDUSD,汇率,AUDUSD,澳元/美元,AUDUSD,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\AUDUSD.csv,AUD/USD，澳元兑美元。,active,True
+DXY,汇率,DXY,美元指数,DXY,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\DXY.csv,ICE U.S. Dollar Index，衡量美元相对一篮子主要货币的强弱。,active,True
+EURUSD,汇率,EURUSD,欧元/美元,EURUSD,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\EURUSD.csv,EUR/USD，欧元兑美元，全球交易量最大的货币对之一。,active,True
+GBPUSD,汇率,GBPUSD,英镑/美元,GBPUSD,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\GBPUSD.csv,GBP/USD，英镑兑美元。,active,True
+USDCAD,汇率,USDCAD,美元/加元,USDCAD,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\USDCAD.csv,USD/CAD，美元兑加元。,active,True
+USDCHF,汇率,USDCHF,美元/瑞士法郎,USDCHF,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\USDCHF.csv,USD/CHF，美元兑瑞士法郎。,active,True
+USDJPY,汇率,USDJPY,美元/日元,USDJPY,yahoo,d,D:\note\pandas_project\gold_price_analysis\data\fx\USDJPY.csv,USD/JPY，美元兑日元。,active,True
+DTWEXBGS,汇率,美元广义贸易加权指数,美元广义贸易加权指数,DTWEXBGS,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\汇率\美元广义贸易加权指数.csv,美元广义贸易加权指数，衡量美元相对主要贸易伙伴货币的强弱。,active,True
+DCOILBRENTEU,油价指标,Brent原油现货价,Brent原油现货价,DCOILBRENTEU,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\Brent原油现货价.csv,Brent原油现货价格，用于跟踪全球能源价格变化。,active,True
+DCOILWTICO,油价指标,WTI原油现货价,WTI原油现货价,DCOILWTICO,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\WTI原油现货价.csv,WTI原油现货价格，用于跟踪能源价格和通胀传导。,active,True
+DERIVED__GVZ,波动率,GVZ,,DERIVED__GVZ,cboe,d,D:\note\pandas_project\gold_price_analysis\data\fred\波动率\GVZ.csv,,deferred,False
+M1SL,货币供应量指标,M1,,M1SL,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\M1.csv,美国M1货币供应量，反映高流动性狭义货币规模。,active,True
+M2SL,货币供应量指标,M2,,M2SL,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\M2.csv,美国M2货币供应量，反映广义货币条件。,active,True
+BOGMBASE,货币供应量指标,货币基础,货币基础,BOGMBASE,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\货币基础.csv,美国货币基础，衡量央行基础货币投放规模。,active,True
+DERIVED__10年期通胀预期_名义减实际,通胀 / 通胀预期,10年期通胀预期_名义减实际,10年期通胀预期_名义减实际,DGS10 - DFII10,fred,d,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\10年期通胀预期_名义减实际.csv,10年期美债收益率减去10年期TIPS实际收益率，近似长期通胀预期。,active,True
+T10YIE,通胀 / 通胀预期,10年盈亏平衡通胀率,10年盈亏平衡通胀率,T10YIE,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\10年盈亏平衡通胀率.csv,10年盈亏平衡通胀率，近似市场隐含的10年期平均通胀预期。,active,True
+T5YIFR,通胀 / 通胀预期,5年期5年期前瞻通胀预期,5年期5年期前瞻通胀预期,T5YIFR,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\5年期5年期前瞻通胀预期.csv,5年期5年期前瞻通胀补偿，反映中长期通胀预期。,active,True
+T5YIE,通胀 / 通胀预期,5年盈亏平衡通胀率,5年盈亏平衡通胀率,T5YIE,fred,D,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\5年盈亏平衡通胀率.csv,5年盈亏平衡通胀率，近似市场隐含的5年期平均通胀预期。,active,True
+CPIAUCSL,通胀 / 通胀预期,CPI,,CPIAUCSL,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\CPI.csv,美国城市消费者价格指数原始值。,active,True
+CPIAUCSL_YOY,通胀 / 通胀预期,CPI_同比,CPI_同比,CPIAUCSL_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\CPI_同比.csv,CPI相对12个月前的同比涨幅，单位为百分比。,active,True
+CPIAUCSL_MOM,通胀 / 通胀预期,CPI_环比,CPI_环比,CPIAUCSL_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\CPI_环比.csv,CPI相对上月的环比涨幅，单位为百分比。,active,True
+CPIAUCSL_MOM_ANNUALIZED,通胀 / 通胀预期,CPI_环比年化,CPI_环比年化,CPIAUCSL_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\CPI_环比年化.csv,CPI环比按月频折算年化后的涨幅，单位为百分比。,active,True
+GDPDEF,通胀 / 通胀预期,GDP平减指数,GDP平减指数,GDPDEF,fred,Q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\GDP平减指数.csv,GDP平减指数原始值。,active,True
+GDPDEF_YOY,通胀 / 通胀预期,GDP平减指数_同比,GDP平减指数_同比,GDPDEF_YOY,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\GDP平减指数_同比.csv,GDP平减指数相对4个季度前的同比涨幅，单位为百分比。,active,True
+GDPDEF_QOQ,通胀 / 通胀预期,GDP平减指数_环比,GDP平减指数_环比,GDPDEF_QOQ,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\GDP平减指数_环比.csv,GDP平减指数相对上季度的环比涨幅，单位为百分比。,active,True
+GDPDEF_QOQ_ANNUALIZED,通胀 / 通胀预期,GDP平减指数_环比年化,GDP平减指数_环比年化,GDPDEF_QOQ_ANNUALIZED,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\GDP平减指数_环比年化.csv,GDP平减指数环比按季频折算年化后的涨幅，单位为百分比。,active,True
+PCEPI,通胀 / 通胀预期,PCE,,PCEPI,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE.csv,个人消费支出价格指数原始值。,active,True
+PCEPI_YOY,通胀 / 通胀预期,PCE_同比,PCE_同比,PCEPI_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_同比.csv,PCE相对12个月前的同比涨幅，单位为百分比。,active,True
+PCEPI_MOM,通胀 / 通胀预期,PCE_环比,PCE_环比,PCEPI_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_环比.csv,PCE相对上月的环比涨幅，单位为百分比。,active,True
+PCEPI_MOM_ANNUALIZED,通胀 / 通胀预期,PCE_环比年化,PCE_环比年化,PCEPI_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_环比年化.csv,PCE环比按月频折算年化后的涨幅，单位为百分比。,active,True
+PPIACO,通胀 / 通胀预期,PPI,,PPIACO,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI.csv,全部商品生产者价格指数原始值。,active,True
+PPIACO_YOY,通胀 / 通胀预期,PPI_同比,PPI_同比,PPIACO_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_同比.csv,PPI相对12个月前的同比涨幅，单位为百分比。,active,True
+PPIACO_MOM,通胀 / 通胀预期,PPI_环比,PPI_环比,PPIACO_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_环比.csv,PPI相对上月的环比涨幅，单位为百分比。,active,True
+PPIACO_MOM_ANNUALIZED,通胀 / 通胀预期,PPI_环比年化,PPI_环比年化,PPIACO_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_环比年化.csv,PPI环比按月频折算年化后的涨幅，单位为百分比。,active,True
+DERIVED__SPF通胀预期,通胀 / 通胀预期,SPF通胀预期,SPF通胀预期,DERIVED__SPF通胀预期,fred,q,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\SPF通胀预期.csv,,deferred,False
+MICH,通胀 / 通胀预期,密歇根大学1年通胀预期,密歇根大学1年通胀预期,MICH,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\密歇根大学1年通胀预期.csv,密歇根大学消费者1年通胀预期调查，衡量居民短期通胀预期。,active,True
+CPILFESL,通胀 / 通胀预期,核心CPI,核心CPI,CPILFESL,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心CPI.csv,剔除食品和能源后的核心CPI原始值。,active,True
+CPILFESL_YOY,通胀 / 通胀预期,核心CPI_同比,核心CPI_同比,CPILFESL_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心CPI_同比.csv,核心CPI相对12个月前的同比涨幅，单位为百分比。,active,True
+CPILFESL_MOM,通胀 / 通胀预期,核心CPI_环比,核心CPI_环比,CPILFESL_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心CPI_环比.csv,核心CPI相对上月的环比涨幅，单位为百分比。,active,True
+CPILFESL_MOM_ANNUALIZED,通胀 / 通胀预期,核心CPI_环比年化,核心CPI_环比年化,CPILFESL_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心CPI_环比年化.csv,核心CPI环比按月频折算年化后的涨幅，单位为百分比。,active,True
+PCEPILFE,通胀 / 通胀预期,核心PCE,核心PCE,PCEPILFE,fred,M,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE.csv,剔除食品和能源后的核心PCE原始值。,active,True
+PCEPILFE_YOY,通胀 / 通胀预期,核心PCE_同比,核心PCE_同比,PCEPILFE_YOY,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_同比.csv,核心PCE相对12个月前的同比涨幅，单位为百分比。,active,True
+PCEPILFE_MOM,通胀 / 通胀预期,核心PCE_环比,核心PCE_环比,PCEPILFE_MOM,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_环比.csv,核心PCE相对上月的环比涨幅，单位为百分比。,active,True
+PCEPILFE_MOM_ANNUALIZED,通胀 / 通胀预期,核心PCE_环比年化,核心PCE_环比年化,PCEPILFE_MOM_ANNUALIZED,fred,m,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_环比年化.csv,核心PCE环比按月频折算年化后的涨幅，单位为百分比。,active,True
+STLFSI4,金融压力,圣路易斯金融压力指数,圣路易斯金融压力指数,STLFSI4,fred,W,D:\note\pandas_project\gold_price_analysis\data\fred\金融压力\圣路易斯金融压力指数.csv,圣路易斯联储金融压力指数，综合刻画金融市场紧张程度。,active,True
+DERIVED__GLD持仓,黄金ETF,GLD持仓,GLD持仓,DERIVED__GLD持仓,wgc,d,D:\note\pandas_project\gold_price_analysis\data\fred\黄金ETF\GLD持仓.csv,,deferred,False
+XAU_USD_DAILY_OHLC,黄金价格,XAU/USD日线OHLC,XAU/USD日线OHLC,XAU_USD_DAILY_OHLC,huggingface+investing,d,D:\note\pandas_project\gold_price_analysis\data\xau\xau_usd_daily_ohlc.csv,XAU/USD黄金兑美元日线OHLC价格序列，适合构造收益率、波动率和技术特征。,active,True
+XAU_USD_MONTHLY_CLOSE,黄金价格,XAU/USD月度收盘价,XAU/USD月度收盘价,XAU_USD_MONTHLY_CLOSE,macrotrends,m,D:\note\pandas_project\gold_price_analysis\data\xau\xau_usd_monthly_close.csv,XAU/USD黄金兑美元月度收盘价序列，适合月频对齐和中长期建模。,active,True
+DERIVED__COT黄金净多头,黄金衍生品,COT黄金净多头,COT黄金净多头,DERIVED__COT黄金净多头,cftc,w,D:\note\pandas_project\gold_price_analysis\data\fred\黄金衍生品\COT黄金净多头.csv,,deferred,False

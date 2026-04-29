@@ -512,6 +512,141 @@ indicators:
   enabled: true
   status: active
   update_window_days: 30
+- category: 债务 / 财政
+  indicator_name: Total Federal Debt
+  chinese_name: 美国联邦政府总债务
+  source: fred
+  series_id: GFDEBTN
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Federal Debt Held by Public
+  chinese_name: 公众持有的联邦债务
+  source: fred
+  series_id: FYGFDPUN
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Total Federal Debt to GDP
+  chinese_name: 总联邦债务/GDP
+  source: fred
+  series_id: GFDEGDQ188S
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Federal Debt Held by Public to GDP
+  chinese_name: 公众持有债务/GDP
+  source: fred
+  series_id: FYGFGDQ188S
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Federal Surplus or Deficit
+  chinese_name: 联邦财政盈余/赤字
+  source: fred
+  series_id: FYFSD
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Federal Surplus or Deficit to GDP
+  chinese_name: 财政赤字/GDP
+  source: fred
+  series_id: FYFSGDA188S
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Federal Interest Payments
+  chinese_name: 联邦政府利息支出
+  source: fred
+  series_id: A091RC1Q027SBEA
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Nominal GDP
+  chinese_name: 名义GDP
+  source: fred
+  series_id: GDP
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Federal Current Receipts
+  chinese_name: 联邦财政收入
+  source: fred
+  series_id: W018RC1Q027SBEA
+  series_type: direct
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+- category: 债务 / 财政
+  indicator_name: Federal Interest Payments to GDP
+  chinese_name: 利息支出/GDP
+  indicator_id: FEDERAL_INTEREST_PAYMENTS_TO_GDP
+  english_code: FEDERAL_INTEREST_PAYMENTS_TO_GDP
+  source: fred
+  series_type: derived
+  derivation_method: expression
+  formula: A091RC1Q027SBEA / GDP * 100
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+  dependencies:
+  - Federal Interest Payments
+  - Nominal GDP
+  description: Federal interest payments divided by nominal GDP, expressed as a percent.
+- category: 债务 / 财政
+  indicator_name: Federal Interest Payments to Receipts
+  chinese_name: 利息支出/财政收入
+  indicator_id: FEDERAL_INTEREST_PAYMENTS_TO_RECEIPTS
+  english_code: FEDERAL_INTEREST_PAYMENTS_TO_RECEIPTS
+  source: fred
+  series_type: derived
+  derivation_method: expression
+  formula: A091RC1Q027SBEA / W018RC1Q027SBEA * 100
+  frequency: q
+  start_date: '2006-04-25'
+  enabled: true
+  status: active
+  update_window_days: 720
+  dependencies:
+  - Federal Interest Payments
+  - Federal Current Receipts
+  description: Federal interest payments divided by federal current receipts, expressed as a percent.
 - category: 汇率
   indicator_name: 美元广义贸易加权指数
   source: fred

@@ -1,0 +1,16 @@
+date,value,source
+2025-01-31,3.282,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-02-28,3.282,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-03-31,3.284,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-04-30,3.289,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-05-31,3.294,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-06-30,3.304,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-07-31,3.352,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-08-31,3.372,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-09-30,3.363,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-10-31,3.355,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-11-30,3.348,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2025-12-31,3.324,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2026-01-31,3.316,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2026-02-28,3.32,treasury_fiscal_data:v2/accounting/od/avg_interest_rates
+2026-03-31,3.327,treasury_fiscal_data:v2/accounting/od/avg_interest_rates

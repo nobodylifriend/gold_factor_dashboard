@@ -6,12 +6,13 @@ import json
 import pandas as pd
 
 from .config import IndicatorConfig, indicator_path, load_indicators
-from .metadata import FX_INDICATORS, INDICATOR_DEFINITIONS, XAU_INDICATORS
+from .metadata import FX_INDICATORS, INDICATOR_DEFINITIONS, US_DEBT_INDICATORS, XAU_INDICATORS
 
 CATALOG_COLUMNS = [
     "indicator_id",
     "category",
     "indicator_name",
+    "chinese_name",
     "english_code",
     "source",
     "frequency",
@@ -28,10 +29,12 @@ def build_indicator_directory(base_dir: Path, config_path: Path | None = None) -
     fred_catalog = _read_csv_if_exists(base_dir / "data" / "fred" / "_catalog.csv")
     xau_manifest = _read_manifest(base_dir / "data" / "xau" / "manifest.json")
     fx_manifest = _read_manifest(base_dir / "data" / "fx" / "manifest.json")
+    us_debt_manifest = _read_manifest(base_dir / "data" / "us_debt" / "manifest.json")
 
     rows = _build_fred_rows(base_dir, indicators, fred_catalog)
     rows.extend(_build_external_rows(base_dir, "xau", XAU_INDICATORS, xau_manifest))
     rows.extend(_build_external_rows(base_dir, "fx", FX_INDICATORS, fx_manifest))
+    rows.extend(_build_external_rows(base_dir, "us_debt", US_DEBT_INDICATORS, us_debt_manifest))
 
     frame = pd.DataFrame(rows, columns=CATALOG_COLUMNS)
     if frame.empty:
@@ -72,12 +75,12 @@ def render_indicator_directory_markdown(frame: pd.DataFrame) -> str:
         "",
         "This file is generated from project metadata and local data artifacts.",
         "",
-        "| Category | Name | Indicator ID | English Code | Source | Frequency | File Path | Definition |",
-        "| --- | --- | --- | --- | --- | --- | --- | --- |",
+        "| Category | Name | Chinese Name | Indicator ID | English Code | Source | Frequency | File Path | Definition |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
     for row in frame.to_dict(orient="records"):
         lines.append(
-            "| {category} | {indicator_name} | {indicator_id} | {english_code} | {source} | {frequency} | {file_path} | {definition} |".format(
+            "| {category} | {indicator_name} | {chinese_name} | {indicator_id} | {english_code} | {source} | {frequency} | {file_path} | {definition} |".format(
                 **{key: _escape_markdown(value) for key, value in row.items()}
             )
         )
@@ -103,6 +106,7 @@ def _build_fred_rows(
                 "indicator_id": indicator.resolved_indicator_id,
                 "category": indicator.category,
                 "indicator_name": indicator.indicator_name,
+                "chinese_name": str(catalog_row.get("chinese_name", "")) or indicator.resolved_chinese_name,
                 "english_code": indicator.resolved_english_code,
                 "source": indicator.source,
                 "frequency": str(catalog_row.get("frequency", "")) or indicator.frequency,
@@ -134,6 +138,7 @@ def _build_external_rows(
                 "indicator_id": item["indicator_id"],
                 "category": item["category"],
                 "indicator_name": item["indicator_name"],
+                "chinese_name": item["chinese_name"],
                 "english_code": item["english_code"],
                 "source": item["source"],
                 "frequency": item["frequency"],

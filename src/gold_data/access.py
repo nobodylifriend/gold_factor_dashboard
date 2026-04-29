@@ -32,6 +32,7 @@ class IndicatorStore:
             needle = name.casefold()
             frame = frame.loc[
                 frame["indicator_name"].str.casefold().str.contains(needle)
+                | frame.get("chinese_name", pd.Series("", index=frame.index, dtype="string")).str.casefold().str.contains(needle)
                 | frame["english_code"].str.casefold().str.contains(needle)
             ]
         if frequency:
@@ -95,4 +96,3 @@ class IndicatorStore:
         if len(result) != 1:
             raise ValueError(f"Expected exactly one indicator, found {len(result)}")
         return next(iter(result.values()))
-

@@ -106,6 +106,7 @@ indicators:
             self.assertTrue((base / "data" / "indicator_catalog.md").exists())
             self.assertIn("DGS10", frame["indicator_id"].tolist())
             self.assertIn("XAU_USD_DAILY_OHLC", frame["indicator_id"].tolist())
+            self.assertIn("chinese_name", frame.columns.tolist())
 
     def test_refresh_indicator_directory_includes_fx_manifest_artifacts(self) -> None:
         with WorkspaceTempDir() as tmp:
@@ -144,15 +145,64 @@ indicators:
 
             self.assertIn("DXY", frame["indicator_id"].tolist())
             self.assertIn("EURUSD", frame["indicator_id"].tolist())
+            self.assertEqual(
+                frame.loc[frame["indicator_id"] == "DXY", "chinese_name"].iloc[0],
+                "美元指数",
+            )
+
+    def test_refresh_indicator_directory_includes_us_debt_manifest_artifacts(self) -> None:
+        with WorkspaceTempDir() as tmp:
+            base = Path(tmp)
+            write_file(base / "config" / "indicators.yml", "indicators: []\n")
+            write_file(
+                base / "data" / "us_debt" / "manifest.json",
+                json.dumps(
+                    {
+                        "artifacts": [
+                            {
+                                "name": "Federal Debt Intragovernmental Holdings",
+                                "file_name": "Federal Debt Intragovernmental Holdings.csv",
+                                "notes": "Daily intragovernmental holdings.",
+                            },
+                            {
+                                "name": "Marketable Treasury Securities Outstanding",
+                                "file_name": "Marketable Treasury Securities Outstanding.csv",
+                                "notes": "Monthly total marketable debt outstanding.",
+                            },
+                        ]
+                    },
+                    ensure_ascii=False,
+                ),
+            )
+            write_file(
+                base / "data" / "us_debt" / "Federal Debt Intragovernmental Holdings.csv",
+                "date,value,source\n2024-01-01,7000000,test\n",
+            )
+            write_file(
+                base / "data" / "us_debt" / "Marketable Treasury Securities Outstanding.csv",
+                "date,value,source\n2024-01-31,27000000,test\n",
+            )
+
+            frame = refresh_indicator_directory(base)
+
+            self.assertIn("FEDERAL_DEBT_INTRAGOVERNMENTAL_HOLDINGS", frame["indicator_id"].tolist())
+            self.assertIn("MARKETABLE_TREASURY_SECURITIES_OUTSTANDING", frame["indicator_id"].tolist())
+            self.assertEqual(
+                frame.loc[
+                    frame["indicator_id"] == "FEDERAL_DEBT_INTRAGOVERNMENTAL_HOLDINGS",
+                    "chinese_name",
+                ].iloc[0],
+                "政府内部持有债务",
+            )
 
     def test_indicator_store_filters_by_id_name_frequency_and_date_range(self) -> None:
         with WorkspaceTempDir() as tmp:
             base = Path(tmp)
             write_file(
                 base / "data" / "indicator_catalog.csv",
-                "indicator_id,category,indicator_name,english_code,source,frequency,file_path,definition,status,enabled\n"
-                f"DGS10,名义利率,10年期美债收益率,DGS10,fred,d,{(base / 'data' / 'fred' / '名义利率' / '10年期美债收益率.csv')},desc,active,True\n"
-                f"XAU_USD_DAILY_OHLC,黄金价格,XAU/USD日线OHLC,XAU_USD_DAILY_OHLC,huggingface+investing,d,{(base / 'data' / 'xau' / 'xau_usd_daily_ohlc.csv')},desc,active,True\n",
+                "indicator_id,category,indicator_name,chinese_name,english_code,source,frequency,file_path,definition,status,enabled\n"
+                f"DGS10,名义利率,10年期美债收益率,10年期美债收益率,DGS10,fred,d,{(base / 'data' / 'fred' / '名义利率' / '10年期美债收益率.csv')},desc,active,True\n"
+                f"XAU_USD_DAILY_OHLC,黄金价格,XAU/USD日线OHLC,XAU/USD日线OHLC,XAU_USD_DAILY_OHLC,huggingface+investing,d,{(base / 'data' / 'xau' / 'xau_usd_daily_ohlc.csv')},desc,active,True\n",
             )
             write_file(
                 base / "data" / "fred" / "名义利率" / "10年期美债收益率.csv",
@@ -180,8 +230,8 @@ indicators:
             base = Path(tmp)
             write_file(
                 base / "data" / "indicator_catalog.csv",
-                "indicator_id,category,indicator_name,english_code,source,frequency,file_path,definition,status,enabled\n"
-                f"DXY,汇率,DXY,DXY,yahoo,d,{(base / 'data' / 'fx' / 'DXY.csv')},desc,active,True\n",
+                "indicator_id,category,indicator_name,chinese_name,english_code,source,frequency,file_path,definition,status,enabled\n"
+                f"DXY,汇率,DXY,美元指数,DXY,yahoo,d,{(base / 'data' / 'fx' / 'DXY.csv')},desc,active,True\n",
             )
             write_file(
                 base / "data" / "fx" / "DXY.csv",
@@ -192,9 +242,11 @@ indicators:
 
             store = IndicatorStore(base)
             dxy = store.get_one(name="DXY", frequency="d", start_date="2024-01-02")
+            dxy_cn = store.get_one(name="美元指数", frequency="d", start_date="2024-01-02")
 
             self.assertEqual(dxy["date"].tolist(), ["2024-01-02"])
             self.assertEqual(dxy["close"].tolist(), [100.8])
+            self.assertEqual(dxy_cn["date"].tolist(), ["2024-01-02"])
 
     def test_refresh_indicator_directory_keeps_dfii_series_in_nominal_rate_category(self) -> None:
         with WorkspaceTempDir() as tmp:
