@@ -6,7 +6,13 @@ import json
 import pandas as pd
 
 from .config import IndicatorConfig, indicator_path, load_indicators
-from .metadata import FX_INDICATORS, INDICATOR_DEFINITIONS, US_DEBT_INDICATORS, XAU_INDICATORS
+from .metadata import (
+    FX_INDICATORS,
+    INDICATOR_DEFINITIONS,
+    STOCK_VOLATILITY_INDICATORS,
+    US_DEBT_INDICATORS,
+    XAU_INDICATORS,
+)
 
 CATALOG_COLUMNS = [
     "indicator_id",
@@ -29,11 +35,20 @@ def build_indicator_directory(base_dir: Path, config_path: Path | None = None) -
     fred_catalog = _read_csv_if_exists(base_dir / "data" / "fred" / "_catalog.csv")
     xau_manifest = _read_manifest(base_dir / "data" / "xau" / "manifest.json")
     fx_manifest = _read_manifest(base_dir / "data" / "fx" / "manifest.json")
+    stock_volatility_manifest = _read_manifest(base_dir / "data" / "stock_volatility" / "manifest.json")
     us_debt_manifest = _read_manifest(base_dir / "data" / "us_debt" / "manifest.json")
 
     rows = _build_fred_rows(base_dir, indicators, fred_catalog)
     rows.extend(_build_external_rows(base_dir, "xau", XAU_INDICATORS, xau_manifest))
     rows.extend(_build_external_rows(base_dir, "fx", FX_INDICATORS, fx_manifest))
+    rows.extend(
+        _build_external_rows(
+            base_dir,
+            "stock_volatility",
+            STOCK_VOLATILITY_INDICATORS,
+            stock_volatility_manifest,
+        )
+    )
     rows.extend(_build_external_rows(base_dir, "us_debt", US_DEBT_INDICATORS, us_debt_manifest))
 
     frame = pd.DataFrame(rows, columns=CATALOG_COLUMNS)

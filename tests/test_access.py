@@ -150,6 +150,48 @@ indicators:
                 "美元指数",
             )
 
+    def test_refresh_indicator_directory_includes_stock_volatility_manifest_artifacts(self) -> None:
+        with WorkspaceTempDir() as tmp:
+            base = Path(tmp)
+            write_file(base / "config" / "indicators.yml", "indicators: []\n")
+            write_file(
+                base / "data" / "stock_volatility" / "manifest.json",
+                json.dumps(
+                    {
+                        "artifacts": [
+                            {
+                                "name": "VIX",
+                                "file_name": "VIX.csv",
+                                "notes": "Cboe Volatility Index from Yahoo Finance.",
+                            },
+                            {
+                                "name": "VVIX",
+                                "file_name": "VVIX.csv",
+                                "notes": "VVIX from Yahoo Finance.",
+                            },
+                        ]
+                    },
+                    ensure_ascii=False,
+                ),
+            )
+            write_file(
+                base / "data" / "stock_volatility" / "VIX.csv",
+                "date,open,high,low,close,volume,source\n2024-01-01,12,13,11,12.5,0,test\n",
+            )
+            write_file(
+                base / "data" / "stock_volatility" / "VVIX.csv",
+                "date,open,high,low,close,volume,source\n2024-01-01,80,82,79,81,0,test\n",
+            )
+
+            frame = refresh_indicator_directory(base)
+
+            self.assertIn("VIX", frame["indicator_id"].tolist())
+            self.assertIn("VVIX", frame["indicator_id"].tolist())
+            self.assertEqual(
+                frame.loc[frame["indicator_id"] == "VIX", "category"].iloc[0],
+                "股票波动率",
+            )
+
     def test_refresh_indicator_directory_includes_us_debt_manifest_artifacts(self) -> None:
         with WorkspaceTempDir() as tmp:
             base = Path(tmp)

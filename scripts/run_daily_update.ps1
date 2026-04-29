@@ -14,5 +14,7 @@ python .\scripts\fetch_xau_data.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python .\scripts\fetch_fx_data.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+python .\scripts\fetch_stock_volatility_data.py
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python .\scripts\fetch_us_debt_data.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

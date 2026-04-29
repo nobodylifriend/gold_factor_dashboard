@@ -43,7 +43,16 @@ This file is generated from project metadata and local data artifacts.
 | 汇率 | 美元广义贸易加权指数 | 美元广义贸易加权指数 | DTWEXBGS | DTWEXBGS | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\汇率\美元广义贸易加权指数.csv | 美元广义贸易加权指数，衡量美元相对主要贸易伙伴货币的强弱。 |
 | 油价指标 | Brent原油现货价 | Brent原油现货价 | DCOILBRENTEU | DCOILBRENTEU | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\Brent原油现货价.csv | Brent原油现货价格，用于跟踪全球能源价格变化。 |
 | 油价指标 | WTI原油现货价 | WTI原油现货价 | DCOILWTICO | DCOILWTICO | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\WTI原油现货价.csv | WTI原油现货价格，用于跟踪能源价格和通胀传导。 |
-| 波动率 | GVZ |  | DERIVED__GVZ | DERIVED__GVZ | cboe | d | D:\note\pandas_project\gold_price_analysis\data\fred\波动率\GVZ.csv |  |
+| 波动率 | GVZ |  | GVZ | GVZ | cboe | d | D:\note\pandas_project\gold_price_analysis\data\fred\波动率\GVZ.csv | Cboe Gold ETF Volatility Index，基于GLD期权定价构造的30天黄金隐含波动率指数。 |
+| 股票波动率 | SKEW |  | SKEW | SKEW | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\SKEW.csv | Cboe SKEW Index，用于衡量标普500收益分布左尾尾部风险的定价水平和崩盘保护需求。 |
+| 股票波动率 | VIX |  | VIX | VIX | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VIX.csv | Cboe Volatility Index，衡量标普500期权隐含的未来30天年化波动率预期，常被视为美股恐慌指数。 |
+| 股票波动率 | VIX1D |  | VIX1D | VIX1D | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VIX1D.csv | Cboe 1-Day Volatility Index，衡量标普500期权隐含的未来1个交易日波动率预期。 |
+| 股票波动率 | VIX1Y |  | VIX1Y | VIX1Y | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VIX1Y.csv | Cboe 1-Year Volatility Index，衡量标普500期权隐含的未来1年波动率预期。 |
+| 股票波动率 | VIX3M |  | VIX3M | VIX3M | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VIX3M.csv | Cboe 3-Month Volatility Index，衡量标普500期权隐含的未来3个月波动率预期。 |
+| 股票波动率 | VIX6M |  | VIX6M | VIX6M | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VIX6M.csv | Cboe 6-Month Volatility Index，衡量标普500期权隐含的未来6个月波动率预期。 |
+| 股票波动率 | VIX9D |  | VIX9D | VIX9D | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VIX9D.csv | Cboe 9-Day Volatility Index，衡量标普500期权隐含的未来9天波动率预期。 |
+| 股票波动率 | VVIX |  | VVIX | VVIX | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VVIX.csv | Cboe VVIX Index，衡量VIX期权所隐含的未来30天VIX波动率，即波动率的波动率。 |
+| 股票波动率 | VXN |  | VXN | VXN | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VXN.csv | Cboe NASDAQ-100 Volatility Index，衡量纳斯达克100指数期权隐含的未来30天波动率预期。 |
 | 货币供应量指标 | M1 |  | M1SL | M1SL | fred | M | D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\M1.csv | 美国M1货币供应量，反映高流动性狭义货币规模。 |
 | 货币供应量指标 | M2 |  | M2SL | M2SL | fred | M | D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\M2.csv | 美国M2货币供应量，反映广义货币条件。 |
 | 货币供应量指标 | 货币基础 | 货币基础 | BOGMBASE | BOGMBASE | fred | M | D:\note\pandas_project\gold_price_analysis\data\fred\货币供应量指标\货币基础.csv | 美国货币基础，衡量央行基础货币投放规模。 |

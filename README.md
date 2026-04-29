@@ -1,9 +1,12 @@
 # gold_price_analysis
 
-这个仓库当前已经实现了两条数据准备链路：
+这个仓库当前已经实现了五条数据准备链路：
 
 1. `FRED` 宏观与金融指标抓取、初始化和日更
 2. `XAU/USD` 黄金价格数据补充抓取和日更
+3. `FX` 汇率数据抓取和日更
+4. `股票波动率` 指标抓取和日更
+5. `美国债务 / 财政` 补充数据抓取和日更
 
 目标是为《[黄金价格预测.md](/D:/note/pandas_project/gold_price_analysis/黄金价格预测.md)》里的黄金价格预测做一期可复用的数据准备。
 
@@ -29,14 +32,26 @@ gold_price_analysis/
 │     └─ storage.py
 ├─ scripts/
 │  ├─ run_daily_update.ps1
-│  └─ fetch_xau_data.py
+│  ├─ fetch_xau_data.py
+│  ├─ fetch_fx_data.py
+│  ├─ fetch_stock_volatility_data.py
+│  └─ fetch_us_debt_data.py
 ├─ data/
 │  ├─ fred/
 │  │  ├─ _catalog.csv
 │  │  └─ <类别>/<指标名>.csv
-│  └─ xau/
-│     ├─ xau_usd_daily_ohlc.csv
-│     ├─ xau_usd_monthly_close.csv
+│  ├─ xau/
+│  │  ├─ xau_usd_daily_ohlc.csv
+│  │  ├─ xau_usd_monthly_close.csv
+│  │  └─ manifest.json
+│  ├─ fx/
+│  │  ├─ <pair>.csv
+│  │  └─ manifest.json
+│  ├─ stock_volatility/
+│  │  ├─ <indicator>.csv
+│  │  └─ manifest.json
+│  └─ us_debt/
+│     ├─ <indicator>.csv
 │     └─ manifest.json
 └─ tests/
    └─ test_pipeline.py
@@ -309,6 +324,73 @@ date,close,source
   - 缺口报告
   - 来源冲突比对
 
+## 股票波动率数据链路
+
+### 脚本入口
+
+- [scripts/fetch_stock_volatility_data.py](/D:/note/pandas_project/gold_price_analysis/scripts/fetch_stock_volatility_data.py)
+
+手动执行：
+
+```powershell
+python .\scripts\fetch_stock_volatility_data.py
+```
+
+### 输出目录
+
+- [data/stock_volatility/VIX.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/VIX.csv)
+- [data/stock_volatility/VIX1D.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/VIX1D.csv)
+- [data/stock_volatility/VIX9D.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/VIX9D.csv)
+- [data/stock_volatility/VIX3M.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/VIX3M.csv)
+- [data/stock_volatility/VIX6M.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/VIX6M.csv)
+- [data/stock_volatility/VIX1Y.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/VIX1Y.csv)
+- [data/stock_volatility/VXN.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/VXN.csv)
+- [data/stock_volatility/VVIX.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/VVIX.csv)
+- [data/stock_volatility/SKEW.csv](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/SKEW.csv)
+- [data/stock_volatility/manifest.json](/D:/note/pandas_project/gold_price_analysis/data/stock_volatility/manifest.json)
+
+### 当前历史覆盖
+
+- `VIX`: `1990-01-02` 到 `2026-04-29`
+- `VIX1D`: `2022-05-13` 到 `2026-04-28`
+- `VIX9D`: `2011-01-03` 到 `2026-04-28`
+- `VIX3M`: `2006-07-17` 到 `2026-04-28`
+- `VIX6M`: `2008-01-02` 到 `2026-04-28`
+- `VIX1Y`: `2007-01-03` 到 `2026-04-28`
+- `VXN`: `2001-01-23` 到 `2026-04-28`
+- `VVIX`: `2006-03-06` 到 `2026-04-28`
+- `SKEW`: `1990-01-02` 到 `2026-04-28`
+
+每个 CSV 结构固定为：
+
+```csv
+date,value,source
+```
+
+### 数据来源与合并逻辑
+
+当前股票波动率链路覆盖：
+
+- `VIX`
+- `VIX1D`
+- `VIX9D`
+- `VIX3M`
+- `VIX6M`
+- `VIX1Y`
+- `VXN`
+- `VVIX`
+- `SKEW`
+
+抓取策略：
+
+1. 优先使用 `Cboe` 官方历史 CSV：
+   - `https://cdn.cboe.com/api/global/us_indices/daily_prices/<SYMBOL>_History.csv`
+2. 若 `Yahoo Finance` 能提供更早起点，则用 Yahoo 回补早期历史：
+   - `https://query1.finance.yahoo.com/v8/finance/chart/<symbol>`
+3. 合并后按 `date` 去重，并保留最终来源到 `source` 列
+
+当前实现下，这批指标已经纳入统一指标目录，类别为 `股票波动率`。
+
 ## 每日调度
 
 统一调度脚本：
@@ -321,7 +403,10 @@ date,close,source
 2. 设置代理
 3. 执行 `python -m gold_data update`
 4. 若成功，继续执行 `python .\scripts\fetch_xau_data.py`
-5. 任一步失败则退出非零
+5. 继续执行 `python .\scripts\fetch_fx_data.py`
+6. 继续执行 `python .\scripts\fetch_stock_volatility_data.py`
+7. 继续执行 `python .\scripts\fetch_us_debt_data.py`
+8. 任一步失败则退出非零
 
 脚本内容核心如下：
 
@@ -332,6 +417,9 @@ $env:http_proxy = "http://127.0.0.1:4780"
 $env:https_proxy = "http://127.0.0.1:4780"
 python -m gold_data update
 python .\scripts\fetch_xau_data.py
+python .\scripts\fetch_fx_data.py
+python .\scripts\fetch_stock_volatility_data.py
+python .\scripts\fetch_us_debt_data.py
 ```
 
 手动运行：
@@ -425,7 +513,7 @@ python -m unittest discover -s tests -v
 
 ## Unified indicator access
 
-The repo now has a unified indicator registry and query layer for both `FRED` and `XAU/USD`.
+The repo now has a unified indicator registry and query layer for `FRED`, `XAU/USD`, `FX`, `股票波动率`, and `美国债务 / 财政`.
 
 ### Generated files
 
@@ -443,6 +531,9 @@ It is generated from:
 - `config/indicators.yml`
 - `data/fred/_catalog.csv`
 - `data/xau/manifest.json`
+- `data/fx/manifest.json`
+- `data/stock_volatility/manifest.json`
+- `data/us_debt/manifest.json`
 
 ### Refresh catalog
 
@@ -455,6 +546,9 @@ The catalog is also refreshed automatically after:
 - `python -m gold_data init`
 - `python -m gold_data update`
 - `python .\scripts\fetch_xau_data.py`
+- `python .\scripts\fetch_fx_data.py`
+- `python .\scripts\fetch_stock_volatility_data.py`
+- `python .\scripts\fetch_us_debt_data.py`
 
 ### Query API
 

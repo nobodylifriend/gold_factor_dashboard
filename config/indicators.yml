@@ -806,6 +806,8 @@ indicators:
   update_window_days: 90
 - category: 波动率
   indicator_name: GVZ
+  indicator_id: GVZ
+  english_code: GVZ
   source: cboe
   series_type: deferred
   frequency: d
