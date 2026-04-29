@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-27T13:56:06.813318+00:00",
+  "generated_at": "2026-04-29T15:11:53.671123+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
       "name": "xau_usd_daily_ohlc",
       "file_name": "xau_usd_daily_ohlc.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-04-27",
+      "end_date": "2026-04-29",
       "rows": 5154,
       "notes": "Daily OHLC merged from multiple public sources. Coverage is strongest from 2006-04-25 to 2026-01-09 and 2026-03-25 to the latest recent window. See source column for provenance."
     },
@@ -17,6 +17,94 @@
       "end_date": "2026-04-01",
       "rows": 240,
       "notes": "Complete monthly close series from Macrotrends through the latest published month."
+    },
+    {
+      "name": "GVZ",
+      "file_name": "GVZ.csv",
+      "start_date": "2008-06-03",
+      "end_date": "2026-04-29",
+      "rows": 4507,
+      "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
+    },
+    {
+      "name": "GLOBAL_GOLD_ETF_HOLDINGS_WEEKLY",
+      "file_name": "global_gold_etf_holdings_weekly.csv",
+      "start_date": "2003-02-28",
+      "end_date": "2026-04-24",
+      "rows": 1206,
+      "notes": "Weekly global physically backed gold ETF holdings aggregated across North America, Europe, Asia, and Other; units are tonnes."
+    },
+    {
+      "name": "GLOBAL_GOLD_ETF_HOLDINGS_MONTHLY",
+      "file_name": "global_gold_etf_holdings_monthly.csv",
+      "start_date": "2003-02-28",
+      "end_date": "2026-03-31",
+      "rows": 278,
+      "notes": "Monthly global physically backed gold ETF holdings aggregated across North America, Europe, Asia, and Other; units are tonnes."
+    },
+    {
+      "name": "GLOBAL_GOLD_ETF_NET_FLOWS_WEEKLY",
+      "file_name": "global_gold_etf_net_flows_weekly.csv",
+      "start_date": "2018-01-05",
+      "end_date": "2026-04-24",
+      "rows": 434,
+      "notes": "Weekly global gold ETF net flows aggregated across regions using WGC tonnage flow series."
+    },
+    {
+      "name": "GLOBAL_GOLD_ETF_NET_FLOWS_MONTHLY",
+      "file_name": "global_gold_etf_net_flows_monthly.csv",
+      "start_date": "2003-02-28",
+      "end_date": "2026-03-31",
+      "rows": 278,
+      "notes": "Monthly global gold ETF net flows aggregated across regions using WGC tonnage flow series."
+    },
+    {
+      "name": "GLD_TOTAL_HOLDINGS_TONNES",
+      "file_name": "GLD_total_holdings_tonnes.csv",
+      "start_date": "2004-11-18",
+      "end_date": "2026-04-28",
+      "rows": 5392,
+      "notes": "Daily GLD trust gold holdings in tonnes from the official SPDR Gold Shares historical archive."
+    },
+    {
+      "name": "GLD_DAILY_SHARE_VOLUME",
+      "file_name": "GLD_share_volume.csv",
+      "start_date": "2004-11-18",
+      "end_date": "2026-04-28",
+      "rows": 5392,
+      "notes": "Daily GLD exchange share volume from the official SPDR Gold Shares historical archive."
+    },
+    {
+      "name": "GLOBAL_GOLD_MINE_PRODUCTION_QUARTERLY",
+      "file_name": "global_gold_mine_production_quarterly.csv",
+      "start_date": "2010-03-31",
+      "end_date": "2026-03-31",
+      "rows": 65,
+      "notes": "Quarterly global mine production from the World Gold Council supply and demand dataset; units are tonnes."
+    },
+    {
+      "name": "GLOBAL_GOLD_MINE_PRODUCTION_ANNUAL",
+      "file_name": "global_gold_mine_production_annual.csv",
+      "start_date": "2010-12-31",
+      "end_date": "2025-12-31",
+      "rows": 16,
+      "notes": "Annual global mine production from the World Gold Council supply and demand dataset; units are tonnes."
+    },
+    {
+      "name": "GLOBAL_GOLD_AISC_QUARTERLY",
+      "file_name": "global_gold_aisc_quarterly.csv",
+      "start_date": "2012-03-31",
+      "end_date": "2025-09-30",
+      "rows": 55,
+      "notes": "Quarterly global average all-in sustaining cost (AISC) from the World Gold Council production costs dataset; units are US$/oz."
+    },
+    {
+      "name": "GLOBAL_GOLD_AISC_ANNUAL",
+      "file_name": "global_gold_aisc_annual.csv",
+      "start_date": "2012-12-31",
+      "end_date": "2024-12-31",
+      "rows": 13,
+      "notes": "Annual average AISC derived as the simple mean of complete quarterly WGC AISC observations within each calendar year; units are US$/oz."
     }
   ]
 }

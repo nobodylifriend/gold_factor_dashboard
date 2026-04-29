@@ -786,15 +786,32 @@ indicators:
   enabled: false
   status: deferred
   update_window_days: 720
-- category: 黄金ETF
-  indicator_name: GLD持仓
-  source: wgc
+- category: 黄金价格
+  indicator_name: Global Gold Cash Cost (Quarterly)
+  chinese_name: 全球黄金矿山现金成本（季度）
+  indicator_id: GLOBAL_GOLD_CASH_COST_QUARTERLY
+  english_code: GLOBAL_GOLD_CASH_COST_QUARTERLY
+  source: metals_focus
   series_type: deferred
-  frequency: d
-  start_date: '2004-01-01'
+  frequency: q
+  start_date: '2012-01-01'
   enabled: false
   status: deferred
-  update_window_days: 30
+  update_window_days: 120
+  description: 全球黄金矿业平均现金成本季度序列，目标口径为美元/盎司；待补充可稳定自动更新的公开历史源。
+- category: 黄金价格
+  indicator_name: Global Gold Cash Cost (Annual)
+  chinese_name: 全球黄金矿山现金成本（年度）
+  indicator_id: GLOBAL_GOLD_CASH_COST_ANNUAL
+  english_code: GLOBAL_GOLD_CASH_COST_ANNUAL
+  source: metals_focus
+  series_type: deferred
+  frequency: A
+  start_date: '2012-01-01'
+  enabled: false
+  status: deferred
+  update_window_days: 365
+  description: 全球黄金矿业平均现金成本年度序列，目标口径为美元/盎司；待补充可稳定自动更新的公开历史源。
 - category: 黄金衍生品
   indicator_name: COT黄金净多头
   source: cftc
@@ -804,17 +821,6 @@ indicators:
   enabled: false
   status: deferred
   update_window_days: 90
-- category: 波动率
-  indicator_name: GVZ
-  indicator_id: GVZ
-  english_code: GVZ
-  source: cboe
-  series_type: deferred
-  frequency: d
-  start_date: '2008-01-01'
-  enabled: false
-  status: deferred
-  update_window_days: 30
 - category: 地缘政治
   indicator_name: GPR Index
   source: policyuncertainty

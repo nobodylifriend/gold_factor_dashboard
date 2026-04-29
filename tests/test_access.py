@@ -89,7 +89,22 @@ indicators:
                                 "name": "xau_usd_daily_ohlc",
                                 "file_name": "xau_usd_daily_ohlc.csv",
                                 "notes": "Daily gold price series.",
-                            }
+                            },
+                            {
+                                "name": "GVZ",
+                                "file_name": "GVZ.csv",
+                                "notes": "Gold volatility index series.",
+                            },
+                            {
+                                "name": "GLOBAL_GOLD_ETF_HOLDINGS_MONTHLY",
+                                "file_name": "global_gold_etf_holdings_monthly.csv",
+                                "notes": "Monthly global gold ETF holdings.",
+                            },
+                            {
+                                "name": "GLD_TOTAL_HOLDINGS_TONNES",
+                                "file_name": "GLD_total_holdings_tonnes.csv",
+                                "notes": "Daily GLD holdings in tonnes.",
+                            },
                         ]
                     },
                     ensure_ascii=False,
@@ -99,6 +114,18 @@ indicators:
                 base / "data" / "xau" / "xau_usd_daily_ohlc.csv",
                 "date,open,high,low,close,volume,source\n2024-01-01,2000,2010,1995,2005,0,test\n",
             )
+            write_file(
+                base / "data" / "xau" / "GVZ.csv",
+                "date,value,source\n2024-01-01,18.5,test\n",
+            )
+            write_file(
+                base / "data" / "xau" / "global_gold_etf_holdings_monthly.csv",
+                "date,value,source\n2024-01-31,2500.0,test\n",
+            )
+            write_file(
+                base / "data" / "xau" / "GLD_total_holdings_tonnes.csv",
+                "date,value,source\n2024-01-01,850.0,test\n",
+            )
 
             frame = refresh_indicator_directory(base)
 
@@ -106,7 +133,18 @@ indicators:
             self.assertTrue((base / "data" / "indicator_catalog.md").exists())
             self.assertIn("DGS10", frame["indicator_id"].tolist())
             self.assertIn("XAU_USD_DAILY_OHLC", frame["indicator_id"].tolist())
+            self.assertIn("GVZ", frame["indicator_id"].tolist())
+            self.assertIn("GLOBAL_GOLD_ETF_HOLDINGS_MONTHLY", frame["indicator_id"].tolist())
+            self.assertIn("GLD_TOTAL_HOLDINGS_TONNES", frame["indicator_id"].tolist())
             self.assertIn("chinese_name", frame.columns.tolist())
+            self.assertEqual(
+                frame.loc[frame["indicator_id"] == "GVZ", "category"].iloc[0],
+                "黄金价格",
+            )
+            self.assertEqual(
+                frame.loc[frame["indicator_id"] == "GLD_TOTAL_HOLDINGS_TONNES", "category"].iloc[0],
+                "黄金价格",
+            )
 
     def test_refresh_indicator_directory_includes_fx_manifest_artifacts(self) -> None:
         with WorkspaceTempDir() as tmp:

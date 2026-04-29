@@ -60,7 +60,5 @@ category,indicator_name,chinese_name,source,series_id,frequency,units,enabled,st
 油价指标,Brent原油现货价,Brent原油现货价,fred,DCOILBRENTEU,D,$ per Barrel,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\Brent原油现货价.csv
 工业金属,铜价,铜价,fred,PCOPPUSDM,M,U.S. $ per Metric Ton,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\工业金属\铜价.csv
 通胀 / 通胀预期,SPF通胀预期,SPF通胀预期,fred,,q,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\SPF通胀预期.csv
-黄金ETF,GLD持仓,GLD持仓,wgc,,d,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\黄金ETF\GLD持仓.csv
 黄金衍生品,COT黄金净多头,COT黄金净多头,cftc,,w,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\黄金衍生品\COT黄金净多头.csv
-波动率,GVZ,,cboe,,d,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\波动率\GVZ.csv
 地缘政治,GPR Index,,policyuncertainty,,m,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\地缘政治\GPR Index.csv

@@ -182,9 +182,9 @@ FRED 指标配置唯一事实源：
 这些指标已在 `indicators.yml` 中保留，但当前为 `enabled: false, status: deferred`：
 
 - SPF 通胀预期
-- GLD 持仓
+- Global Gold Cash Cost (Quarterly)
+- Global Gold Cash Cost (Annual)
 - COT 黄金净多头
-- GVZ
 - GPR Index
 
 ### FRED 存储约定
@@ -254,6 +254,17 @@ python .\scripts\fetch_xau_data.py
 
 - [data/xau/xau_usd_daily_ohlc.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/xau_usd_daily_ohlc.csv)
 - [data/xau/xau_usd_monthly_close.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/xau_usd_monthly_close.csv)
+- [data/xau/GVZ.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/GVZ.csv)
+- [data/xau/global_gold_etf_holdings_weekly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_etf_holdings_weekly.csv)
+- [data/xau/global_gold_etf_holdings_monthly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_etf_holdings_monthly.csv)
+- [data/xau/global_gold_etf_net_flows_weekly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_etf_net_flows_weekly.csv)
+- [data/xau/global_gold_etf_net_flows_monthly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_etf_net_flows_monthly.csv)
+- [data/xau/GLD_total_holdings_tonnes.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/GLD_total_holdings_tonnes.csv)
+- [data/xau/GLD_share_volume.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/GLD_share_volume.csv)
+- [data/xau/global_gold_mine_production_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_mine_production_quarterly.csv)
+- [data/xau/global_gold_mine_production_annual.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_mine_production_annual.csv)
+- [data/xau/global_gold_aisc_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_aisc_quarterly.csv)
+- [data/xau/global_gold_aisc_annual.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_aisc_annual.csv)
 - [data/xau/manifest.json](/D:/note/pandas_project/gold_price_analysis/data/xau/manifest.json)
 
 ### XAU 当前数据覆盖
@@ -261,7 +272,7 @@ python .\scripts\fetch_xau_data.py
 #### 日线 OHLC
 
 - 文件：`xau_usd_daily_ohlc.csv`
-- 覆盖：`2006-04-25` 到 `2026-04-24`
+- 覆盖：`2006-04-25` 到 `2026-04-29`
 - 列：
 
 ```csv
@@ -278,6 +289,50 @@ date,open,high,low,close,volume,source
 date,close,source
 ```
 
+#### GVZ
+
+- 文件：`GVZ.csv`
+- 覆盖：`2008-06-03` 到 `2026-04-29`
+- 列：
+
+```csv
+date,value,source
+```
+
+#### 全球黄金 ETF
+
+- `global_gold_etf_holdings_weekly.csv`: `2003-02-28` 到 `2026-04-24`
+- `global_gold_etf_holdings_monthly.csv`: `2003-02-28` 到 `2026-03-31`
+- `global_gold_etf_net_flows_weekly.csv`: `2018-01-05` 到 `2026-04-24`
+- `global_gold_etf_net_flows_monthly.csv`: `2003-02-28` 到 `2026-03-31`
+- 列：
+
+```csv
+date,value,source
+```
+
+#### GLD
+
+- `GLD_total_holdings_tonnes.csv`: `2004-11-18` 到 `2026-04-28`
+- `GLD_share_volume.csv`: `2004-11-18` 到 `2026-04-28`
+- 列：
+
+```csv
+date,value,source
+```
+
+#### 矿产金供给与成本
+
+- `global_gold_mine_production_quarterly.csv`: `2010-03-31` 到 `2026-03-31`
+- `global_gold_mine_production_annual.csv`: `2010-12-31` 到 `2025-12-31`
+- `global_gold_aisc_quarterly.csv`: `2012-03-31` 到 `2025-09-30`
+- `global_gold_aisc_annual.csv`: `2012-12-31` 到 `2024-12-31`
+- 列：
+
+```csv
+date,value,source
+```
+
 #### Manifest
 
 - 文件：`manifest.json`
@@ -285,7 +340,7 @@ date,close,source
 
 ### XAU 数据来源与合并逻辑
 
-当前 `XAU/USD` 免费公开数据源不够干净，因此采用多源拼接：
+当前 `XAU/USD` 免费公开数据源不够干净，因此采用多源拼接；黄金 ETF / GLD / 矿业成本指标则直接接官方接口：
 
 1. `huggingface:kafka7:1d`
    - `XAU_1d_data.jsonl`
@@ -304,6 +359,21 @@ date,close,source
 5. `macrotrends:monthly`
    - 使用 `https://www.macrotrends.net/economic-data/1333/5/D`
    - 提供月度收盘价序列
+
+6. `cboe+yahoo`
+   - `GVZ` 优先使用 Cboe 官方历史 CSV，早期缺口用 Yahoo Finance 回补
+
+7. `wgc_fsapi`
+   - `https://fsapi.gold.org/api/v11/charts/etfv2/revised/...`
+   - 提供全球黄金 ETF 周/月频持仓与净流量
+   - `https://fsapi.gold.org/api/v11/charts/supply-and-demand/42`
+   - 提供全球矿产金产量季度/年度序列
+   - `https://fsapi.gold.org/api/productioncosts/v11/charts/aisc`
+   - 提供全球黄金行业季度 AISC
+
+8. `spdr_api`
+   - `https://api.spdrgoldshares.com/api/v1/historical-archive?...`
+   - 提供 GLD 官方历史归档，包括持仓吨数和日成交量
 
 合并规则：
 
@@ -509,7 +579,7 @@ python -m unittest discover -s tests -v
 1. 给 `XAU/USD` 日线做交易日完整性检查和缺口报告
 2. 把 `XAU/USD` 也纳入统一 catalog
 3. 给 FRED 和 XAU 增加统一的数据质量检查脚本
-4. 再扩到 deferred 指标，比如 GLD、COT、GVZ、GPR
+4. 再扩到 deferred 指标，比如全球黄金现金成本、COT、GPR
 
 ## Unified indicator access
 
