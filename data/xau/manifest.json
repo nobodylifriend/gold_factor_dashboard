@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T15:11:53.671123+00:00",
+  "generated_at": "2026-04-29T16:03:35.193000+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
@@ -105,6 +105,22 @@
       "end_date": "2024-12-31",
       "rows": 13,
       "notes": "Annual average AISC derived as the simple mean of complete quarterly WGC AISC observations within each calendar year; units are US$/oz."
+    },
+    {
+      "name": "GLD_GOLD_OPTIONS_ATM_IV",
+      "file_name": "gld_gold_options_atm_iv.csv",
+      "start_date": "2026-04-29",
+      "end_date": "2026-04-29",
+      "rows": 1,
+      "notes": "Daily GLD option ATM implied volatility proxy derived from Nasdaq option-chain bid/ask prices with Black-Scholes inversion."
+    },
+    {
+      "name": "GLD_GOLD_OPTIONS_25D_IV",
+      "file_name": "gld_gold_options_25d_iv.csv",
+      "start_date": "2026-04-29",
+      "end_date": "2026-04-29",
+      "rows": 1,
+      "notes": "Daily GLD option 25-delta implied volatility proxy derived from Nasdaq option-chain bid/ask prices and Black-Scholes deltas."
     }
   ]
 }

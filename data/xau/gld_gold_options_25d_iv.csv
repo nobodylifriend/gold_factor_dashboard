@@ -1,0 +1,2 @@
+date,value,call_25d_iv,put_25d_iv,iv_skew_25d,expiration_date,dte,call_strike,put_strike,call_delta,put_delta,underlying_price,source
+2026-04-29,0.2422330661773682,0.22836691894531252,0.2560992134094239,-0.02773229446411135,2026-05-29,30,440.0,401.0,0.25430315009741916,-0.24755367578458531,418.91,nasdaq_gld_option_chain+black_scholes

@@ -33,6 +33,8 @@ gold_price_analysis/
 ├─ scripts/
 │  ├─ run_daily_update.ps1
 │  ├─ fetch_xau_data.py
+│  ├─ fetch_gld_options_iv_data.py
+│  ├─ fetch_cme_gold_options_data.py
 │  ├─ fetch_fx_data.py
 │  ├─ fetch_stock_volatility_data.py
 │  └─ fetch_us_debt_data.py
@@ -44,6 +46,8 @@ gold_price_analysis/
 │  │  ├─ xau_usd_daily_ohlc.csv
 │  │  ├─ xau_usd_monthly_close.csv
 │  │  └─ manifest.json
+│  ├─ vendor/
+│  │  └─ cme/gold_options/
 │  ├─ fx/
 │  │  ├─ <pair>.csv
 │  │  └─ manifest.json
@@ -243,11 +247,15 @@ category,indicator_name,source,series_id,frequency,units,enabled,status,file_pat
 ### 脚本入口
 
 - [scripts/fetch_xau_data.py](/D:/note/pandas_project/gold_price_analysis/scripts/fetch_xau_data.py)
+- [scripts/fetch_gld_options_iv_data.py](/D:/note/pandas_project/gold_price_analysis/scripts/fetch_gld_options_iv_data.py)
+- [scripts/fetch_cme_gold_options_data.py](/D:/note/pandas_project/gold_price_analysis/scripts/fetch_cme_gold_options_data.py)
 
 手动执行：
 
 ```powershell
 python .\scripts\fetch_xau_data.py
+python .\scripts\fetch_gld_options_iv_data.py
+python .\scripts\fetch_cme_gold_options_data.py
 ```
 
 ### XAU 输出目录
@@ -265,6 +273,17 @@ python .\scripts\fetch_xau_data.py
 - [data/xau/global_gold_mine_production_annual.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_mine_production_annual.csv)
 - [data/xau/global_gold_aisc_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_aisc_quarterly.csv)
 - [data/xau/global_gold_aisc_annual.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_aisc_annual.csv)
+- [data/xau/gld_gold_options_atm_iv.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/gld_gold_options_atm_iv.csv)
+- [data/xau/gld_gold_options_25d_iv.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/gld_gold_options_25d_iv.csv)
+- [data/xau/cme_gold_options_premium_recent.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_premium_recent.csv)
+- [data/xau/cme_gold_options_strike_oi_change_recent.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_strike_oi_change_recent.csv)
+- [data/xau/cme_gold_options_max_pain_strike.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_max_pain_strike.csv)
+- [data/xau/cme_gold_options_atm_iv.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_atm_iv.csv)
+- [data/xau/cme_gold_options_25d_iv.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_25d_iv.csv)
+- [data/xau/cme_gold_options_put_call_oi_ratio.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_put_call_oi_ratio.csv)
+- [data/xau/cme_gold_options_call_volume.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_call_volume.csv)
+- [data/xau/cme_gold_options_put_volume.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_put_volume.csv)
+- [data/xau/cme_gold_options_neutral_value.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_neutral_value.csv)
 - [data/xau/manifest.json](/D:/note/pandas_project/gold_price_analysis/data/xau/manifest.json)
 
 ### XAU 当前数据覆盖
@@ -331,6 +350,39 @@ date,value,source
 
 ```csv
 date,value,source
+```
+
+#### CME 黄金期权
+
+CME 网站页面对脚本访问返回官方 403；自动抓取不接入每日调度。当前脚本读取本地官方导出的 CME/DataMine/清算 CSV，目录为：
+
+```text
+data/vendor/cme/gold_options/
+```
+
+输入文件至少需要包含 `date`、`option_type`、`strike`、`premium`，可选列包括 `volume`、`open_interest`、`implied_volatility`、`delta`、`underlying_price`、`neutral_value`、`contract_multiplier`。脚本默认只保留最近 365 天，并生成：
+
+- `cme_gold_options_premium_recent.csv`: 黄金期权价格 / premium 明细
+- `cme_gold_options_strike_oi_change_recent.csv`: 不同行权价 Call/Put OI 与日变动
+- `cme_gold_options_max_pain_strike.csv`: Max Pain Strike
+- `cme_gold_options_atm_iv.csv`: ATM IV
+- `cme_gold_options_25d_iv.csv`: 25D IV
+- `cme_gold_options_put_call_oi_ratio.csv`: Put/Call OI Ratio
+- `cme_gold_options_call_volume.csv`: Call Volume
+- `cme_gold_options_put_volume.csv`: Put Volume
+- `cme_gold_options_neutral_value.csv`: 中性价值
+
+#### GLD 黄金期权隐含波动率
+
+由于 CME 黄金期权链没有稳定免费自动下载入口，仓库另接了 Nasdaq 的 GLD ETF 期权链作为黄金期权 IV 代理。脚本会选择接近 30 天到期的 GLD 期权，用 bid/ask 中间价优先、last 价格回退，通过 Black-Scholes 反推隐含波动率并计算：
+
+- `gld_gold_options_atm_iv.csv`: ATM IV，选取最接近 GLD 现价的行权价，并平均 Call/Put IV
+- `gld_gold_options_25d_iv.csv`: 25D IV，分别选取 Delta 最接近 `+0.25` 的 Call 和 `-0.25` 的 Put，并记录 `call_25d_iv`、`put_25d_iv`、`iv_skew_25d`
+
+默认参数：
+
+```powershell
+python .\scripts\fetch_gld_options_iv_data.py --target-days 30 --min-days 7 --horizon-days 90 --risk-free-rate 0.045
 ```
 
 #### Manifest
@@ -473,10 +525,11 @@ date,value,source
 2. 设置代理
 3. 执行 `python -m gold_data update`
 4. 若成功，继续执行 `python .\scripts\fetch_xau_data.py`
-5. 继续执行 `python .\scripts\fetch_fx_data.py`
-6. 继续执行 `python .\scripts\fetch_stock_volatility_data.py`
-7. 继续执行 `python .\scripts\fetch_us_debt_data.py`
-8. 任一步失败则退出非零
+5. 继续执行 `python .\scripts\fetch_gld_options_iv_data.py`
+6. 继续执行 `python .\scripts\fetch_fx_data.py`
+7. 继续执行 `python .\scripts\fetch_stock_volatility_data.py`
+8. 继续执行 `python .\scripts\fetch_us_debt_data.py`
+9. 任一步失败则退出非零
 
 脚本内容核心如下：
 
@@ -487,6 +540,7 @@ $env:http_proxy = "http://127.0.0.1:4780"
 $env:https_proxy = "http://127.0.0.1:4780"
 python -m gold_data update
 python .\scripts\fetch_xau_data.py
+python .\scripts\fetch_gld_options_iv_data.py
 python .\scripts\fetch_fx_data.py
 python .\scripts\fetch_stock_volatility_data.py
 python .\scripts\fetch_us_debt_data.py
@@ -566,7 +620,8 @@ python -m unittest discover -s tests -v
 请先阅读 README.md。这个项目已经有：
 1. FRED 指标抓取链路（python -m gold_data init/update）
 2. XAU/USD 抓取脚本（scripts/fetch_xau_data.py）
-3. 每日调度脚本（scripts/run_daily_update.ps1）
+3. GLD 黄金期权 IV 抓取脚本（scripts/fetch_gld_options_iv_data.py）
+4. 每日调度脚本（scripts/run_daily_update.ps1）
 
 代理固定用 http://127.0.0.1:4780。
 请基于现有结构继续，不要重做脚手架。
