@@ -4505,4 +4505,5 @@ date,value,source
 2026-04-24,25.88,cboe:GVZ_History.csv
 2026-04-27,25.37,cboe:GVZ_History.csv
 2026-04-28,26.19,cboe:GVZ_History.csv
-2026-04-29,27.040000915527344,yahoo:^GVZ
+2026-04-29,27.77,cboe:GVZ_History.csv
+2026-04-30,26.64,cboe:GVZ_History.csv

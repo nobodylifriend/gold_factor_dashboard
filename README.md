@@ -273,6 +273,12 @@ python .\scripts\fetch_cme_gold_options_data.py
 - [data/xau/global_gold_mine_production_annual.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_mine_production_annual.csv)
 - [data/xau/global_gold_aisc_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_aisc_quarterly.csv)
 - [data/xau/global_gold_aisc_annual.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/global_gold_aisc_annual.csv)
+- [data/xau/official_gold_reserves_latest.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/official_gold_reserves_latest.csv)
+- [data/xau/official_gold_reserves_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/official_gold_reserves_quarterly.csv)
+- [data/xau/official_gold_reserves_tonnes_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/official_gold_reserves_tonnes_quarterly.csv)
+- [data/xau/change_in_official_gold_reserves_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/change_in_official_gold_reserves_quarterly.csv)
+- [data/xau/gold_as_percent_of_total_reserves_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/gold_as_percent_of_total_reserves_quarterly.csv)
+- [data/xau/reported_central_bank_gold_purchases_sales_quarterly.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/reported_central_bank_gold_purchases_sales_quarterly.csv)
 - [data/xau/gld_gold_options_atm_iv.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/gld_gold_options_atm_iv.csv)
 - [data/xau/gld_gold_options_25d_iv.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/gld_gold_options_25d_iv.csv)
 - [data/xau/cme_gold_options_premium_recent.csv](/D:/note/pandas_project/gold_price_analysis/data/xau/cme_gold_options_premium_recent.csv)
@@ -352,6 +358,27 @@ date,value,source
 date,value,source
 ```
 
+#### 央行黄金储备
+
+- `official_gold_reserves_latest.csv`: 最新官方黄金储备截面，当前覆盖 `2025-12-31`，共 `123` 个国家/地区
+- `official_gold_reserves_quarterly.csv`: 分国家季度历史，覆盖 `2000-12-31` 到 `2025-12-31`
+- `official_gold_reserves_tonnes_quarterly.csv`: 分国家官方黄金储备吨数序列
+- `change_in_official_gold_reserves_quarterly.csv`: 分国家官方黄金储备变化，按相邻季度吨数差分得到
+- `reported_central_bank_gold_purchases_sales_quarterly.csv`: 将非零储备变化映射为 `purchase` / `sale`
+- `gold_as_percent_of_total_reserves_quarterly.csv`: 黄金占总储备比例
+
+常用轻量表结构：
+
+```csv
+date,country,iso3,region_group,economic_group,value,source
+```
+
+完整季度底表 `official_gold_reserves_quarterly.csv` 额外包含：
+
+```csv
+date,iso3,country,country_wgc,region_group,economic_group,source,fx_reserves_usd_mn,fx_reserves_usd_pct_change,total_reserves_usd_mn,total_reserves_usd_pct_change,gold_reserves_usd_mn,gold_reserves_usd_pct_change,gold_reserves_tonnes,gold_reserves_tonnes_pct_change,gold_holdings_pct,gold_holdings_pct_change
+```
+
 #### CME 黄金期权
 
 CME 网站页面对脚本访问返回官方 403；自动抓取不接入每日调度。当前脚本读取本地官方导出的 CME/DataMine/清算 CSV，目录为：
@@ -422,6 +449,9 @@ python .\scripts\fetch_gld_options_iv_data.py --target-days 30 --min-days 7 --ho
    - 提供全球矿产金产量季度/年度序列
    - `https://fsapi.gold.org/api/productioncosts/v11/charts/aisc`
    - 提供全球黄金行业季度 AISC
+
+   - `https://fsapi.gold.org/api/cbd/v11/charts/getPage?...`
+   - 提供主要央行官方黄金储备的最新截面和公开季度历史，含吨数、美元估值、外储、总储备和黄金占比
 
 8. `spdr_api`
    - `https://api.spdrgoldshares.com/api/v1/historical-archive?...`

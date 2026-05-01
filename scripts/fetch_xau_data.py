@@ -7,6 +7,7 @@ from io import BytesIO, StringIO
 from pathlib import Path
 import sys
 from typing import Iterable
+from urllib.parse import urlencode
 
 import pandas as pd
 import requests
@@ -30,6 +31,8 @@ WGC_SUPPLY_AND_DEMAND_PAGE = "https://www.gold.org/goldhub/data/gold-demand-by-c
 WGC_SUPPLY_AND_DEMAND_URL = "https://fsapi.gold.org/api/v11/charts/supply-and-demand/42"
 WGC_AISC_PAGE = "https://www.gold.org/goldhub/data/aisc-gold"
 WGC_AISC_URL = "https://fsapi.gold.org/api/productioncosts/v11/charts/aisc?break-cache=25-04-25"
+WGC_CBD_PAGE = "https://www.gold.org/goldhub/data/monthly-central-bank-statistics"
+WGC_CBD_API_BASE = "https://fsapi.gold.org/api/cbd/v11/charts"
 SPDR_GLD_PAGE = "https://www.spdrgoldshares.com/usa/gld/"
 SPDR_GLD_HISTORICAL_ARCHIVE_URL = (
     "https://api.spdrgoldshares.com/api/v1/historical-archive?product=gld&exchange=NYSE&lang=en"
@@ -95,6 +98,12 @@ def fetch_binary(url: str, referer: str | None = None) -> bytes:
     response = requests.get(url, headers=headers, timeout=60)
     response.raise_for_status()
     return response.content
+
+
+def fetch_wgc_cbd_page(page: str, **params: str) -> dict:
+    query = {"page": page}
+    query.update({key: value for key, value in params.items() if value})
+    return fetch_json(f"{WGC_CBD_API_BASE}/getPage?{urlencode(query)}", referer=WGC_CBD_PAGE)["chartData"]
 
 
 def normalize_yahoo_close(
@@ -412,6 +421,159 @@ def derive_full_year_average(frame: pd.DataFrame, source: str) -> pd.DataFrame:
     return normalize_value_frame(annual[["date", "value", "source"]])
 
 
+def flatten_wgc_cbd_snapshot(chart_data: dict, source: str) -> pd.DataFrame:
+    latest_date = str(chart_data["options"]["maxDateAvailable"])
+    countries = chart_data.get("countries", {})
+    table_root = chart_data["table"]
+    if latest_date in table_root:
+        table = table_root[latest_date]
+    else:
+        periodicity = str(chart_data["options"].get("selectedPeriodicity", ""))
+        table = table_root[periodicity][latest_date]
+    headers = [cell.get("filterId", "") for cell in table["headers"][0]]
+    column_map = {
+        "countryNameDefault": "country",
+        "regionGroup": "region_group",
+        "economicGroup": "economic_group",
+        "fx_reserves": "fx_reserves_usd_mn",
+        "total_reserves": "total_reserves_usd_mn",
+        "gold_reserves": "gold_reserves_usd_mn",
+        "gold_reserves_tns": "gold_reserves_tonnes",
+        "holdings_pct": "gold_holdings_pct",
+    }
+
+    records: list[dict[str, object]] = []
+    for row in table["rows"]:
+        iso3 = str(row[0].get("rowId", "")).strip()
+        metadata = countries.get(iso3, {})
+        record: dict[str, object] = {
+            "date": latest_date,
+            "iso3": iso3,
+            "country": metadata.get("countryNameDefault", ""),
+            "country_wgc": metadata.get("countryWGC", ""),
+            "region_group": metadata.get("regionGroup", ""),
+            "economic_group": metadata.get("economicGroup", ""),
+            "source": source,
+        }
+        for header, cell in zip(headers, row):
+            target = column_map.get(header)
+            if not target:
+                continue
+            if target in {"country", "region_group", "economic_group"}:
+                record[target] = cell.get("val", "")
+            else:
+                record[target] = pd.to_numeric(cell.get("val"), errors="coerce")
+        records.append(record)
+
+    frame = pd.DataFrame(records)
+    frame = frame.sort_values(["date", "gold_reserves_tonnes", "country"], ascending=[True, False, True])
+    return frame.reset_index(drop=True)
+
+
+def flatten_wgc_cbd_linechart(chart_data: dict, periodicity: str, source: str) -> pd.DataFrame:
+    countries = chart_data.get("countries", {})
+    metric_map = {
+        "gold_reserves": "gold_reserves_usd_mn",
+        "gold_reserves_pct_chng": "gold_reserves_usd_pct_change",
+        "total_reserves": "total_reserves_usd_mn",
+        "total_reserves_pct_chng": "total_reserves_usd_pct_change",
+        "fx_reserves": "fx_reserves_usd_mn",
+        "fx_reserves_pct_chng": "fx_reserves_usd_pct_change",
+        "gold_reserves_tns": "gold_reserves_tonnes",
+        "gold_reserves_tns_pct_chng": "gold_reserves_tonnes_pct_change",
+        "holdings_pct": "gold_holdings_pct",
+        "holdings_pct_pct_chng": "gold_holdings_pct_change",
+    }
+    records_by_key: dict[tuple[str, str], dict[str, object]] = {}
+
+    for metric_key, payload in chart_data["linechart"][periodicity].items():
+        target = metric_map.get(metric_key)
+        if not target:
+            continue
+        for series in payload.get("data", []):
+            iso3 = str(series.get("name", "")).strip()
+            metadata = countries.get(iso3, {})
+            for timestamp_ms, value in series.get("data", []):
+                if value is None:
+                    continue
+                date = pd.to_datetime(timestamp_ms, unit="ms").strftime("%Y-%m-%d")
+                record = records_by_key.setdefault(
+                    (iso3, date),
+                    {
+                        "date": date,
+                        "iso3": iso3,
+                        "country": metadata.get("countryNameDefault", ""),
+                        "country_wgc": metadata.get("countryWGC", ""),
+                        "region_group": metadata.get("regionGroup", ""),
+                        "economic_group": metadata.get("economicGroup", ""),
+                        "source": source,
+                    },
+                )
+                record[target] = float(value)
+
+    frame = pd.DataFrame(records_by_key.values())
+    frame = frame.sort_values(["iso3", "date"]).reset_index(drop=True)
+    numeric_columns = [column for column in frame.columns if column.endswith(("_mn", "_pct", "_change", "_tonnes"))]
+    for column in numeric_columns:
+        frame[column] = pd.to_numeric(frame[column], errors="coerce")
+    return frame
+
+
+def derive_wgc_cbd_change(frame: pd.DataFrame, source: str) -> pd.DataFrame:
+    working = frame.copy()
+    working["date"] = pd.to_datetime(working["date"])
+    working = working.sort_values(["iso3", "date"]).reset_index(drop=True)
+    working["value"] = working.groupby("iso3")["gold_reserves_tonnes"].diff().round(2)
+    working = working.dropna(subset=["value"])
+    working = working.loc[working["value"] != 0].copy()
+    working["direction"] = working["value"].map(lambda value: "purchase" if value > 0 else "sale")
+    working["source"] = source
+    return working[
+        [
+            "date",
+            "country",
+            "iso3",
+            "region_group",
+            "economic_group",
+            "value",
+            "direction",
+            "source",
+        ]
+    ].reset_index(drop=True)
+
+
+def build_country_metric_series(
+    frame: pd.DataFrame,
+    value_column: str,
+    source: str,
+    extra_columns: Iterable[str] = (),
+) -> pd.DataFrame:
+    columns = ["date", "country", "iso3", *extra_columns]
+    normalized = frame[columns].copy()
+    normalized["value"] = pd.to_numeric(frame[value_column], errors="coerce")
+    normalized["source"] = source
+    normalized = normalized.dropna(subset=["value"])
+    normalized = normalized.sort_values(["date", "country", "iso3"]).reset_index(drop=True)
+    return normalized
+
+
+def enrich_country_metadata(frame: pd.DataFrame, countries: dict[str, dict[str, object]]) -> pd.DataFrame:
+    enriched = frame.copy()
+    for column, source_key in [
+        ("country", "countryNameDefault"),
+        ("country_wgc", "countryWGC"),
+        ("region_group", "regionGroup"),
+        ("economic_group", "economicGroup"),
+    ]:
+        if column not in enriched.columns:
+            continue
+        enriched[column] = enriched.apply(
+            lambda row: row[column] if str(row[column] or "").strip() else countries.get(str(row["iso3"]), {}).get(source_key, ""),
+            axis=1,
+        )
+    return enriched
+
+
 def summarize(frame: pd.DataFrame, name: str, file_name: str, notes: str = "") -> SourceSummary:
     return SourceSummary(
         name=name,
@@ -473,6 +635,43 @@ def main() -> int:
         global_gold_aisc_quarterly,
         "wgc_fsapi:gold_aisc:annual_mean",
     )
+    cbd_snapshot_page = fetch_wgc_cbd_page("snapshot")
+    cbd_quarterly_page = fetch_wgc_cbd_page(
+            "date_range",
+            periodicity="QTD_FULL",
+            startDate="2000-03-31",
+            endDate=str(cbd_snapshot_page["options"]["maxDateAvailable"]),
+        )
+    country_metadata = {**cbd_snapshot_page.get("countries", {}), **cbd_quarterly_page.get("countries", {})}
+    official_gold_reserves_latest = flatten_wgc_cbd_snapshot(
+        cbd_snapshot_page,
+        "wgc_fsapi:cbd_v11:snapshot_latest",
+    )
+    official_gold_reserves_quarterly = enrich_country_metadata(
+        flatten_wgc_cbd_linechart(
+            cbd_quarterly_page,
+            "QTD_FULL",
+            "wgc_fsapi:cbd_v11:quarterly",
+        ),
+        country_metadata,
+    )
+    official_gold_reserves_change_quarterly = derive_wgc_cbd_change(
+        official_gold_reserves_quarterly,
+        "wgc_fsapi:cbd_v11:quarterly_change",
+    )
+    official_gold_reserves_tonnes_quarterly = build_country_metric_series(
+        official_gold_reserves_quarterly,
+        "gold_reserves_tonnes",
+        "wgc_fsapi:cbd_v11:quarterly",
+        extra_columns=("region_group", "economic_group"),
+    )
+    gold_as_percent_of_total_reserves_quarterly = build_country_metric_series(
+        official_gold_reserves_quarterly,
+        "gold_holdings_pct",
+        "wgc_fsapi:cbd_v11:quarterly",
+        extra_columns=("region_group", "economic_group"),
+    )
+    reported_central_bank_gold_purchases_sales_quarterly = official_gold_reserves_change_quarterly.copy()
 
     artifacts = [
         (
@@ -556,6 +755,57 @@ def main() -> int:
             "global_gold_aisc_annual.csv",
             global_gold_aisc_annual,
             "Annual average AISC derived as the simple mean of complete quarterly WGC AISC observations within each calendar year; units are US$/oz.",
+        ),
+        (
+            "OFFICIAL_GOLD_RESERVES_LATEST",
+            "official_gold_reserves_latest.csv",
+            official_gold_reserves_latest,
+            (
+                "Latest reported official gold reserve snapshot by country from the World Gold Council central bank dashboard. "
+                "Fields include gold reserves in tonnes and US$ millions, FX reserves, total reserves, and gold holdings as a percent of total reserves. "
+                "Data are monthly in source but represented here as the latest available cross-section."
+            ),
+        ),
+        (
+            "OFFICIAL_GOLD_RESERVES_QUARTERLY",
+            "official_gold_reserves_quarterly.csv",
+            official_gold_reserves_quarterly,
+            (
+                "Quarterly country-level official gold reserve history from the public World Gold Council central bank dashboard API, "
+                "including gold reserves in tonnes and US$ millions, FX reserves, total reserves, and gold holdings percent. "
+                "The public API exposes quarterly and year-end history; monthly history is not publicly downloadable without login."
+            ),
+        ),
+        (
+            "CHANGE_IN_OFFICIAL_GOLD_RESERVES_QUARTERLY",
+            "change_in_official_gold_reserves_quarterly.csv",
+            official_gold_reserves_change_quarterly,
+            (
+                "Quarterly change in reported official gold reserves by country, derived as the difference in tonnes from consecutive public WGC quarterly observations. "
+                "Positive values indicate reported purchases and negative values indicate reported sales."
+            ),
+        ),
+        (
+            "GOLD_AS_PERCENT_OF_TOTAL_RESERVES_QUARTERLY",
+            "gold_as_percent_of_total_reserves_quarterly.csv",
+            gold_as_percent_of_total_reserves_quarterly,
+            (
+                "Quarterly gold holdings as a percent of total reserves by country from the World Gold Council central bank dashboard API."
+            ),
+        ),
+        (
+            "REPORTED_CENTRAL_BANK_GOLD_PURCHASES_SALES_QUARTERLY",
+            "reported_central_bank_gold_purchases_sales_quarterly.csv",
+            reported_central_bank_gold_purchases_sales_quarterly,
+            (
+                "Quarterly reported central bank gold purchases or sales by country, based on non-zero changes in official gold reserve tonnes between public WGC quarterly observations."
+            ),
+        ),
+        (
+            "OFFICIAL_GOLD_RESERVES_TONNES_QUARTERLY",
+            "official_gold_reserves_tonnes_quarterly.csv",
+            official_gold_reserves_tonnes_quarterly,
+            "Quarterly reported official gold reserves by country in tonnes from the World Gold Council central bank dashboard API.",
         ),
     ]
 
