@@ -15,7 +15,7 @@ category,indicator_name,chinese_name,source,series_id,frequency,units,enabled,st
 通胀 / 通胀预期,核心PCE_同比,核心PCE_同比,fred,,m,,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_同比.csv
 通胀 / 通胀预期,核心PCE_环比,核心PCE_环比,fred,,m,,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_环比.csv
 通胀 / 通胀预期,核心PCE_环比年化,核心PCE_环比年化,fred,,m,,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\核心PCE_环比年化.csv
-通胀 / 通胀预期,PPI,,fred,PPIACO,m,,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI.csv
+通胀 / 通胀预期,PPI,,fred,PPIACO,M,Index 1982=100,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI.csv
 通胀 / 通胀预期,PPI_同比,PPI_同比,fred,,m,,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_同比.csv
 通胀 / 通胀预期,PPI_环比,PPI_环比,fred,,m,,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_环比.csv
 通胀 / 通胀预期,PPI_环比年化,PPI_环比年化,fred,,m,,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_环比年化.csv
@@ -60,5 +60,7 @@ category,indicator_name,chinese_name,source,series_id,frequency,units,enabled,st
 油价指标,Brent原油现货价,Brent原油现货价,fred,DCOILBRENTEU,D,$ per Barrel,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\Brent原油现货价.csv
 工业金属,铜价,铜价,fred,PCOPPUSDM,M,U.S. $ per Metric Ton,True,active,D:\note\pandas_project\gold_price_analysis\data\fred\工业金属\铜价.csv
 通胀 / 通胀预期,SPF通胀预期,SPF通胀预期,fred,,q,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\SPF通胀预期.csv
+黄金价格,Global Gold Cash Cost (Quarterly),全球黄金矿山现金成本（季度）,metals_focus,,q,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\黄金价格\Global Gold Cash Cost (Quarterly).csv
+黄金价格,Global Gold Cash Cost (Annual),全球黄金矿山现金成本（年度）,metals_focus,,A,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\黄金价格\Global Gold Cash Cost (Annual).csv
 黄金衍生品,COT黄金净多头,COT黄金净多头,cftc,,w,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\黄金衍生品\COT黄金净多头.csv
 地缘政治,GPR Index,,policyuncertainty,,m,,False,deferred,D:\note\pandas_project\gold_price_analysis\data\fred\地缘政治\GPR Index.csv

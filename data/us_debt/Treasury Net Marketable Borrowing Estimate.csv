@@ -4,3 +4,4 @@ date,value,release_year,release_quarter,current_quarter_label,current_quarter_bo
 2025-07-28,1006.9999999999999,2025,3rd Quarter,July - September 2025,1006.9999999999999,850.0,October - December 2025,590.0,850.0,April - June 2025,65.0,457.0,,,https://home.treasury.gov/news/press-releases/sb0209,treasury_quarterly_refunding
 2025-11-03,569.0,2025,4th Quarter,October-December 2025,569.0,850.0,January-March 2026,578.0,850.0,July-September 2025,1058.0,891.0,,,https://home.treasury.gov/news/press-releases/sb0300,treasury_quarterly_refunding
 2026-02-02,574.0,2026,1st Quarter,January-March 2026,574.0,850.0,April-June 2026,109.0,900.0,October-December 2025,550.0,873.0,,,https://home.treasury.gov/news/press-releases/sb0377,treasury_quarterly_refunding
+2026-05-04,189.0,2026,2nd Quarter,April-June 2026,189.0,900.0,July-September 2026,671.0,950.0,January-March 2026,577.0,893.0,,,https://home.treasury.gov/news/press-releases/sb0485,treasury_quarterly_refunding

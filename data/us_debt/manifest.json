@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-29T12:54:59.272549+00:00",
+  "generated_at": "2026-05-05T09:26:00.935935+00:00",
   "base_start_date": "2025-01-01",
   "artifacts": [
     {
       "name": "Federal Debt Intragovernmental Holdings",
       "file_name": "Federal Debt Intragovernmental Holdings.csv",
       "start_date": "2025-01-02",
-      "end_date": "2026-04-27",
-      "rows": 330,
+      "end_date": "2026-05-01",
+      "rows": 334,
       "notes": "Daily intragovernmental holdings from Treasury Debt to the Penny, converted to millions of dollars."
     },
     {
@@ -30,8 +30,8 @@
       "name": "Treasury Net Marketable Borrowing Estimate",
       "file_name": "Treasury Net Marketable Borrowing Estimate.csv",
       "start_date": "2025-02-03",
-      "end_date": "2026-02-02",
-      "rows": 5,
+      "end_date": "2026-05-04",
+      "rows": 6,
       "notes": "Quarterly financing estimate releases from Treasury, with value equal to the current-quarter estimate in billions of dollars."
     }
   ]

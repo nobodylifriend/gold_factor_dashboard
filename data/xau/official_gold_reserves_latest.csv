@@ -1,124 +1,124 @@
 date,iso3,country,country_wgc,region_group,economic_group,source,fx_reserves_usd_mn,total_reserves_usd_mn,gold_reserves_tonnes,gold_reserves_usd_mn,gold_holdings_pct
-2025-12-31,ITA,Italy,Italy,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,89426.82,433740.49,2451.87,344313.67,79.38
+2025-12-31,USA,United States of America,United States,North America,High income,wgc_fsapi:cbd_v11:snapshot_latest,243272.1,1385447.11,8133.46,1142175.01,82.44
+2025-12-31,DEU,Germany,Germany,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,101728.75,572201.96,3350.25,470473.21,82.22
+2025-12-31,ITA,Italy,Italy,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,89705.21,434014.52,2451.84,344309.31,79.33
+2025-12-31,FRA,France,France,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,85982.51,428208.37,2437.0,342225.87,79.92
 2025-12-31,RUS,Russian Federation,Russian Federation,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,2326.52,326711.44,
-2025-12-31,CHN,China,"China, P.R.: Mainland",East Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,3424872.0,3748744.37,2306.3,323872.37,8.64
-2025-12-31,IND,India,India,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,583290.0,706892.13,880.17,123602.13,17.49
-2025-12-31,JPN,Japan,Japan,East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,1252027.17,1370826.44,845.97,118799.27,8.67
-2025-12-31,TUR,Turkey,"Türkiye, Rep of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,71558.99,157740.35,613.7,86181.36,54.63
-2025-12-31,POL,Poland,"Poland, Rep. of",Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,194481.16,271746.87,550.21,77265.71,28.43
+2025-12-31,CHN,China,"China, P.R.: Mainland",East Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,3424872.58,3748744.95,2306.3,323872.37,8.64
+2025-12-31,CHE,Switzerland,Switzerland,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,929642.67,1075680.06,1039.94,146037.39,13.58
+2025-12-31,IND,India,India,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,576448.95,700073.8,880.34,123624.85,17.66
+2025-12-31,JPN,Japan,Japan,East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,1252602.95,1371402.22,845.97,118799.27,8.66
+2025-12-31,TUR,Turkey,"Türkiye, Rep of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,71620.52,157886.53,614.3,86266.01,54.64
+2025-12-31,NLD,Netherlands,"Netherlands, The",Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,32050.33,118056.68,612.45,86006.35,72.85
+2025-12-31,POL,Poland,"Poland, Rep. of",Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,194539.46,271805.17,550.21,77265.71,28.43
+2025-12-31,TWN,"Taiwan, China",Taiwan Province of China,East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,602553.0,662086.11,423.94,59533.11,8.99
 2025-12-31,UZB,Uzbekistan,"Uzbekistan, Rep. of",Central Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,11219.33,66035.22,390.35,54815.89,83.01
-2025-12-31,KAZ,Kazakhstan,"Kazakhstan, Rep. of",Central Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,18470.79,66363.24,341.04,47892.45,72.17
-2025-12-31,GBR,United Kingdom,United Kingdom,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,170406.74,213980.09,310.29,43573.35,20.36
-2025-12-31,THA,Thailand,Thailand,South East Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,249273.05,282206.26,234.52,32933.21,11.67
-2025-12-31,SGP,Singapore,Singapore,South East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,404931.1,432112.85,193.56,27181.75,6.29
-2025-12-31,BRA,Brazil,Brazil,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,334103.93,358320.23,172.44,24216.3,6.76
-2025-12-31,PHL,Philippines,Philippines,South East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,92255.96,110950.14,133.12,18694.18,16.85
-2025-12-31,EGY,Egypt,"Egypt, Arab Rep. of",Middle East & North Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,30709.8,48875.52,129.36,18165.72,37.17
-2025-12-31,SWE,Sweden,Sweden,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,56451.31,74105.96,125.72,17654.65,23.82
-2025-12-31,ZAF,South Africa,South Africa,Sub-Saharan Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,58342.68,75966.75,125.5,17624.07,23.2
-2025-12-31,MEX,Mexico,Mexico,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,239152.0,256021.05,120.12,16869.05,6.59
-2025-12-31,QAT,Qatar,Qatar,Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,39656.99,55834.38,115.2,16177.39,28.97
-2025-12-31,HUN,Hungary,Hungary,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,43624.62,59073.53,110.01,15448.91,26.15
-2025-12-31,KOR,South Korea,"Korea, Rep. of",East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,421754.42,436421.79,104.45,14667.37,3.36
-2025-12-31,ROU,Romania,Romania,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,76066.21,90618.41,103.63,14552.2,16.06
-2025-12-31,IDN,Indonesia,Indonesia,South East Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,144538.64,156550.09,85.53,12011.45,7.67
-2025-12-31,AUS,Australia,Australia,Australasia / Oceania,High income,wgc_fsapi:cbd_v11:snapshot_latest,61978.07,73194.58,79.87,11216.51,15.32
-2025-12-31,CZE,Czech Republic,Czech Rep.,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,165670.41,175726.09,71.61,10055.68,5.72
-2025-12-31,DNK,Denmark,Denmark,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,66.55,9345.34,
-2025-12-31,PAK,Pakistan,Pakistan,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,17358.57,26453.94,64.77,9095.37,34.38
-2025-12-31,ARG,Argentina,Argentina,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,32328.31,40998.22,61.74,8669.92,21.15
-2025-12-31,KHM,Cambodia,Cambodia,South East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,19877.69,27521.36,54.43,7643.67,27.77
+2025-12-31,PRT,Portugal,Portugal,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,15102.11,68839.16,382.66,53737.04,78.06
+2025-12-31,KAZ,Kazakhstan,"Kazakhstan, Rep. of",Central Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,18176.19,66068.64,341.04,47892.45,72.49
+2025-12-31,SAU,Saudi Arabia,Saudi Arabia2),Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,459795.91,505163.99,323.07,45368.08,8.98
+2025-12-31,GBR,United Kingdom,United Kingdom,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,170782.0,214355.35,310.29,43573.35,20.33
+2025-12-31,ESP,Spain,Spain,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,89051.78,128593.47,281.58,39541.69,30.75
+2025-12-31,AUT,Austria,Austria,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,14113.73,53437.03,280.02,39323.3,73.59
+2025-12-31,THA,Thailand,Thailand,South East Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,249327.91,282261.12,234.52,32933.21,11.67
+2025-12-31,BEL,Belgium,Belgium,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,24459.54,56392.53,227.4,31932.99,56.63
+2025-12-31,SGP,Singapore,Singapore,South East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,404932.76,432113.58,193.56,27180.82,6.29
+2025-12-31,DZA,Algeria,Algeria,Middle East & North Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,48123.35,72495.67,173.56,24372.32,33.62
+2025-12-31,BRA,Brazil,Brazil,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,334296.83,358513.13,172.44,24216.3,6.75
+2025-12-31,LBY,Libya,Libya,Middle East & North Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,84062.71,104656.89,146.65,20594.18,19.68
+2025-12-31,PHL,Philippines,Philippines,South East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,92255.96,110928.78,132.97,18672.82,16.83
+2025-12-31,EGY,Egypt,"Egypt, Arab Rep. of",Middle East & North Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,30709.77,48875.49,129.36,18165.72,37.17
+2025-12-31,SWE,Sweden,Sweden,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,56540.58,74195.22,125.72,17654.65,23.79
+2025-12-31,ZAF,South Africa,South Africa,Sub-Saharan Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,58399.33,76023.4,125.5,17624.07,23.18
+2025-12-31,MEX,Mexico,Mexico,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,239309.64,256178.68,120.12,16869.05,6.58
+2025-12-31,QAT,Qatar,Qatar,Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,39669.93,55847.32,115.2,16177.39,28.97
+2025-12-31,GRC,Greece,Greece,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,7939.07,24047.52,114.71,16108.45,66.99
+2025-12-31,HUN,Hungary,Hungary,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,43645.67,59094.58,110.01,15448.91,26.14
+2025-12-31,KOR,South Korea,"Korea, Rep. of",East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,421905.41,436572.79,104.45,14667.37,3.36
+2025-12-31,ROU,Romania,Romania,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,76096.17,90648.37,103.63,14552.2,16.05
+2025-12-31,IDN,Indonesia,Indonesia,South East Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,144531.06,156542.51,85.53,12011.45,7.67
+2025-12-31,AUS,Australia,Australia,Australasia / Oceania,High income,wgc_fsapi:cbd_v11:snapshot_latest,62115.04,73331.55,79.87,11216.51,15.3
+2025-12-31,KWT,Kuwait,Kuwait,Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,40647.39,51737.96,78.98,11090.58,21.44
+2025-12-31,ARE,United Arab Emirates,United Arab Emirates,Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,281855.33,292319.26,74.51,10463.93,3.58
+2025-12-31,CZE,Czech Republic,Czech Rep.,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,166270.21,176325.88,71.61,10055.68,5.7
+2025-12-31,DNK,Denmark,Denmark,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,118411.02,127756.36,66.55,9345.34,7.31
+2025-12-31,PAK,Pakistan,Pakistan,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,17360.45,26455.82,64.77,9095.37,34.38
+2025-12-31,ARG,Argentina,Argentina,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,32328.85,40998.76,61.74,8669.92,21.15
+2025-12-31,KHM,Cambodia,Cambodia,South East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,19880.76,27524.43,54.43,7643.67,27.77
 2025-12-31,BLR,Belarus,"Belarus, Rep. of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,5838.8,11531.02,53.86,5692.22,49.36
+2025-12-31,SRB,Serbia,"Serbia, Rep. of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,26777.45,34150.99,52.51,7373.54,21.59
 2025-12-31,KGZ,Kyrgyzstan,Kyrgyz Rep.,Central Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,2087.57,8528.89,45.87,6441.32,75.52
-2025-12-31,BGR,Bulgaria,Bulgaria,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,41099.3,47127.3,42.93,6028.0,12.79
-2025-12-31,MYS,Malaysia,Malaysia,South East Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,120111.55,125571.3,38.88,5459.75,4.35
-2025-12-31,PER,Peru,Peru,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,85501.67,90370.37,34.67,4868.7,5.39
-2025-12-31,UKR,Ukraine,Ukraine,Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,53414.73,57258.39,27.37,3843.66,6.71
+2025-12-31,FIN,Finland,Finland,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,16311.6,22457.1,43.76,6145.49,27.37
+2025-12-31,BGR,Bulgaria,Bulgaria,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,41117.33,47145.33,42.93,6028.0,12.79
+2025-12-31,MYS,Malaysia,Malaysia,South East Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,120169.5,125629.25,38.88,5459.75,4.35
+2025-12-31,PER,Peru,Peru,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,85525.02,90393.72,34.67,4868.7,5.39
+2025-12-31,SVK,Slovakia,Slovak Rep.,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,13711.2,18161.99,31.69,4450.79,24.51
+2025-12-31,UKR,Ukraine,Ukraine,Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,53424.77,57268.43,27.37,3843.66,6.71
+2025-12-31,ECU,Ecuador,Ecuador,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,6107.3,9797.93,26.28,3690.63,37.67
+2025-12-31,MAR,Morocco,Morocco,Middle East & North Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,45387.35,48493.19,22.12,3105.85,6.4
+2025-12-31,NGA,Nigeria,Nigeria,Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,43014.11,46024.92,21.44,3010.8,6.54
 2025-12-31,GHA,Ghana,Ghana,Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,18.6,2611.98,
-2025-12-31,GTM,Guatemala,Guatemala,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,30918.86,32747.23,13.02,1828.36,5.58
-2025-12-31,MUS,Mauritius,Mauritius,Sub-Saharan Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,8561.71,10305.33,12.42,1743.63,16.92
-2025-12-31,MNG,Mongolia,Mongolia,East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,5907.48,7003.33,7.8,1095.85,15.65
-2025-12-31,MKD,North Macedonia,"North Macedonia, Republic of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,4835.95,5803.95,6.89,968.01,16.68
-2025-12-31,COL,Colombia,Colombia,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,65116.59,65773.1,4.68,656.51,1.0
+2025-12-31,BGD,Bangladesh,Bangladesh,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,26557.12,28562.65,14.28,2005.53,7.02
+2025-12-31,CYP,Cyprus,Cyprus,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,999.53,2947.57,13.87,1948.04,66.09
+2025-12-31,GTM,Guatemala,Guatemala,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,30925.23,32753.59,13.02,1828.36,5.58
+2025-12-31,MUS,Mauritius,Mauritius,Sub-Saharan Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,8564.5,10308.13,12.42,1743.63,16.92
+2025-12-31,IRL,Ireland,Ireland,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,11969.07,13659.4,12.04,1690.34,12.37
+2025-12-31,NPL,Nepal,Nepal,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,19978.62,21100.33,7.99,1121.71,5.32
+2025-12-31,MNG,Mongolia,Mongolia,East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,5908.25,7004.1,7.8,1095.85,15.65
+2025-12-31,MKD,North Macedonia,"North Macedonia, Republic of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,4835.95,5803.96,6.89,968.01,16.68
+2025-12-31,LVA,Latvia,Latvia,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,5155.68,6090.39,6.66,934.71,15.35
+2025-12-31,LTU,Lithuania,Lithuania,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,6242.35,7059.13,5.82,816.78,11.57
+2025-12-31,COL,Colombia,Colombia,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,65149.77,65806.28,4.68,656.51,1.0
+2025-12-31,SVN,Slovenia,"Slovenia, Rep. of",Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,2955.82,3549.85,4.23,594.02,16.73
+2025-12-31,ALB,Albania,Albania,Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,8077.48,8601.61,3.73,524.14,6.09
 2025-12-31,ABW,Aruba,"Aruba, Kingdom of the Netherlands",Latin America & Caribbean,High income,wgc_fsapi:cbd_v11:snapshot_latest,1794.65,2231.43,3.11,436.78,19.57
-2025-12-31,ISL,Iceland,Iceland,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,7448.05,7726.72,1.98,278.67,3.61
-2025-12-31,SLV,El Salvador,El Salvador,Latin America & Caribbean,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,4560.83,4814.62,1.81,253.79,5.27
-2025-12-31,SUR,Suriname,Suriname,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,1444.44,1614.9,1.21,170.46,10.56
-2025-12-31,KEN,Kenya,Kenya,Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,12094.92,12097.36,0.02,2.45,0.02
-2025-12-31,ARM,Armenia,"Armenia, Rep. of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,5086.22,5086.22,0.0,0.0,0.0
-2025-12-31,CAN,Canada,Canada,North America,High income,wgc_fsapi:cbd_v11:snapshot_latest,125409.44,125409.44,0.0,0.0,0.0
-2025-12-31,CRI,Costa Rica,Costa Rica,Latin America & Caribbean,High income,wgc_fsapi:cbd_v11:snapshot_latest,17080.88,17080.88,0.0,0.0,0.0
-2025-12-31,NOR,Norway,Norway,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,85356.4,85356.4,0.0,0.0,0.0
+2025-12-31,LUX,Luxembourg,Luxembourg,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,2740.73,3055.21,2.24,314.48,10.29
+2025-12-31,HKG,Hong Kong SAR,"China, P.R.: Hong Kong",East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,2.08,292.64,
+2025-12-31,ISL,Iceland,Iceland,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,7453.51,7732.18,1.98,278.67,3.6
+2025-12-31,SLV,El Salvador,El Salvador,Latin America & Caribbean,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,4562.54,4816.33,1.81,253.79,5.27
+2025-12-31,HTI,Haiti,Haiti,Latin America & Caribbean,Low income,wgc_fsapi:cbd_v11:snapshot_latest,3138.8,3393.06,1.81,254.26,7.49
+2025-12-31,SUR,Suriname,Suriname,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,1445.3,1615.76,1.21,170.46,10.55
+2025-12-31,HND,Honduras,Honduras,Latin America & Caribbean,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,10106.4,10204.18,0.7,97.78,0.96
+2025-12-31,DOM,Dominican Republic,Dominican Rep.,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,14699.23,14779.14,0.57,79.91,0.54
+2025-12-31,MLT,Malta,Malta,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,1491.1,1543.52,0.37,52.41,3.4
+2025-12-31,CHL,Chile,Chile,Latin America & Caribbean,High income,wgc_fsapi:cbd_v11:snapshot_latest,49415.27,49449.77,0.25,34.51,0.07
+2025-12-31,EST,Estonia,"Estonia, Rep. of",Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,2403.88,2438.82,0.25,34.94,1.43
+2025-12-31,URY,Uruguay,Uruguay,Latin America & Caribbean,High income,wgc_fsapi:cbd_v11:snapshot_latest,18973.06,18987.05,0.1,13.99,0.07
+2025-12-31,FJI,Fiji,"Fiji, Rep. of",Australasia / Oceania,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,1654.55,1658.92,0.03,4.37,0.26
+2025-12-31,COM,Comoros,"Comoros, Union of the",Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,406.54,409.07,0.02,2.53,0.62
+2025-12-31,KEN,Kenya,Kenya,Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,12096.17,12098.62,0.02,2.45,0.02
+2025-12-31,ARM,Armenia,"Armenia, Rep. of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,5088.26,5088.26,0.0,0.0,0.0
+2025-12-31,AZE,Azerbaijan,"Azerbaijan, Rep. of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,13555.77,13555.77,0.0,0.0,0.0
+2025-12-31,CAN,Canada,Canada,North America,High income,wgc_fsapi:cbd_v11:snapshot_latest,125626.9,125626.9,0.0,0.0,0.0
+2025-12-31,CRI,Costa Rica,Costa Rica,Latin America & Caribbean,High income,wgc_fsapi:cbd_v11:snapshot_latest,17086.42,17086.42,0.0,0.0,0.0
+2025-12-31,HRV,Croatia,"Croatia, Rep. of",Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,4216.23,4216.23,0.0,0.0,0.0
+2025-12-31,NOR,Norway,Norway,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,85494.77,85494.77,0.0,0.0,0.0
 2025-12-31,AFG,Afghanistan,"Afghanistan, Islamic Rep. of",Central Asia,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,ALB,Albania,Albania,Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,DZA,Algeria,Algeria,Middle East & North Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,AUT,Austria,Austria,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,AZE,Azerbaijan,"Azerbaijan, Rep. of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,BHR,Bahrain,"Bahrain, Kingdom of",Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,BGD,Bangladesh,Bangladesh,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,BEL,Belgium,Belgium,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,BOL,Bolivia,Bolivia,Latin America & Caribbean,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
+2025-12-31,BOL,Bolivia,Bolivia,Latin America & Caribbean,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,579.91,,,,
 2025-12-31,BIH,Bosnia and Herzegovina,Bosnia and Herzegovina,Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,BDI,Burundi,Burundi,Sub-Saharan Africa,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,CMR,Cameroon,Cameroon,Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,TCD,Chad,Chad,Sub-Saharan Africa,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,CHL,Chile,Chile,Latin America & Caribbean,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,COM,Comoros,"Comoros, Union of the",Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,COG,Congo,"Congo, Rep. of",Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,HRV,Croatia,"Croatia, Rep. of",Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,CYP,Cyprus,Cyprus,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,DOM,Dominican Republic,Dominican Rep.,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,ECU,Ecuador,Ecuador,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,ERI,Eritrea,"Eritrea, The State of",Sub-Saharan Africa,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,EST,Estonia,"Estonia, Rep. of",Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,FJI,Fiji,"Fiji, Rep. of",Australasia / Oceania,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,FIN,Finland,Finland,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,FRA,France,France,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,GAB,Gabon,Gabon,Sub-Saharan Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,DEU,Germany,Germany,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,GRC,Greece,Greece,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,HTI,Haiti,Haiti,Latin America & Caribbean,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,HND,Honduras,Honduras,Latin America & Caribbean,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,HKG,Hong Kong SAR,"China, P.R.: Hong Kong",East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,IRQ,Iraq,Iraq,Middle East & North Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,IRL,Ireland,Ireland,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,JOR,Jordan,Jordan,Middle East & North Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,KWT,Kuwait,Kuwait,Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,LAO,Lao PDR,Lao People's Dem. Rep.,South East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,LVA,Latvia,Latvia,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,LBN,Lebanon,Lebanon,Middle East & North Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,LBY,Libya,Libya,Middle East & North Africa,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,LTU,Lithuania,Lithuania,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,LUX,Luxembourg,Luxembourg,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,MWI,Malawi,Malawi,Sub-Saharan Africa,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,MLT,Malta,Malta,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,MRT,Mauritania,"Mauritania, Islamic Rep. of",Middle East & North Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,MAR,Morocco,Morocco,Middle East & North Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,MOZ,Mozambique,"Mozambique, Rep. of",Sub-Saharan Africa,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,MMR,Myanmar,Myanmar,South East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,NPL,Nepal,Nepal,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,NLD,Netherlands,"Netherlands, The",Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,NIC,Nicaragua,Nicaragua,Latin America & Caribbean,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,8321.04,,,,
-2025-12-31,NGA,Nigeria,Nigeria,Sub-Saharan Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
+2025-12-31,NIC,Nicaragua,Nicaragua,Latin America & Caribbean,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,8324.39,,,,
 2025-12-31,OMN,Oman,Oman,Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,PNG,Papua New Guinea,Papua New Guinea,South East Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,PRY,Paraguay,Paraguay,Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,PRT,Portugal,Portugal,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,SAU,Saudi Arabia,Saudi Arabia2),Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,SRB,Serbia,"Serbia, Rep. of",Central and Eastern Europe,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,SVK,Slovakia,Slovak Rep.,Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,SVN,Slovenia,"Slovenia, Rep. of",Central and Eastern Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,ESP,Spain,Spain,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,LKA,Sri Lanka,Sri Lanka,South Asia,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,CHE,Switzerland,Switzerland,Western Europe,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,SYR,Syrian Arab Republic,Syrian Arab Rep.,Middle East & North Africa,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,TWN,"Taiwan, China",Taiwan Province of China,East Asia,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,TJK,Tajikistan,"Tajikistan, Rep. of",Central Asia,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
+2025-12-31,TJK,Tajikistan,"Tajikistan, Rep. of",Central Asia,Low income,wgc_fsapi:cbd_v11:snapshot_latest,4309.99,,,,
 2025-12-31,TTO,Trinidad and Tobago,Trinidad and Tobago,Latin America & Caribbean,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,TUN,Tunisia,Tunisia,Middle East & North Africa,Lower middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,TKM,Turkmenistan,Turkmenistan,Central Asia,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,ARE,United Arab Emirates,United Arab Emirates,Middle East & North Africa,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,USA,United States of America,United States,North America,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
-2025-12-31,URY,Uruguay,Uruguay,Latin America & Caribbean,High income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,VEN,Venezuela,"Venezuela, Rep. Bolivariana de",Latin America & Caribbean,Upper middle income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,
 2025-12-31,YEM,Yemen,"Yemen, Rep. of",Middle East & North Africa,Low income,wgc_fsapi:cbd_v11:snapshot_latest,,,,,

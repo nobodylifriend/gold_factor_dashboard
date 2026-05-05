@@ -12,6 +12,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2019-12-31,Albania,ALB,Central and Eastern Europe,upper_middle_income,0.62,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2022-06-30,Albania,ALB,Central and Eastern Europe,upper_middle_income,0.31,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2023-03-31,Albania,ALB,Central and Eastern Europe,upper_middle_income,0.31,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,Albania,ALB,Central and Eastern Europe,upper_middle_income,0.31,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2003-06-30,United Arab Emirates,ARE,Middle East & North Africa,high_income,-6.19,sale,wgc_fsapi:cbd_v11:quarterly_change
 2003-12-31,United Arab Emirates,ARE,Middle East & North Africa,high_income,-6.16,sale,wgc_fsapi:cbd_v11:quarterly_change
 2015-06-30,United Arab Emirates,ARE,Middle East & North Africa,high_income,2.51,purchase,wgc_fsapi:cbd_v11:quarterly_change
@@ -55,6 +56,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2025-03-31,United Arab Emirates,ARE,Middle East & North Africa,high_income,0.16,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-06-30,United Arab Emirates,ARE,Middle East & North Africa,high_income,-0.15,sale,wgc_fsapi:cbd_v11:quarterly_change
 2025-09-30,United Arab Emirates,ARE,Middle East & North Africa,high_income,-0.15,sale,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,United Arab Emirates,ARE,Middle East & North Africa,high_income,0.25,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-06-30,Argentina,ARG,Latin America & Caribbean,upper_middle_income,-0.28,sale,wgc_fsapi:cbd_v11:quarterly_change
 2001-12-31,Argentina,ARG,Latin America & Caribbean,upper_middle_income,-0.03,sale,wgc_fsapi:cbd_v11:quarterly_change
 2002-06-30,Argentina,ARG,Latin America & Caribbean,upper_middle_income,0.01,purchase,wgc_fsapi:cbd_v11:quarterly_change
@@ -99,6 +101,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2006-09-30,Austria,AUT,Western Europe,high_income,-4.04,sale,wgc_fsapi:cbd_v11:quarterly_change
 2007-06-30,Austria,AUT,Western Europe,high_income,-3.98,sale,wgc_fsapi:cbd_v11:quarterly_change
 2007-09-30,Austria,AUT,Western Europe,high_income,-4.76,sale,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,Austria,AUT,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2013-03-31,Azerbaijan,AZE,Central and Eastern Europe,upper_middle_income,3.01,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2013-06-30,Azerbaijan,AZE,Central and Eastern Europe,upper_middle_income,5.0,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2013-09-30,Azerbaijan,AZE,Central and Eastern Europe,upper_middle_income,6.01,purchase,wgc_fsapi:cbd_v11:quarterly_change
@@ -857,6 +860,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2025-03-31,Greece,GRC,Western Europe,high_income,0.04,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-06-30,Greece,GRC,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-09-30,Greece,GRC,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,Greece,GRC,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-09-30,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,0.04,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2002-06-30,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,0.14,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2002-09-30,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,-0.08,sale,wgc_fsapi:cbd_v11:quarterly_change
@@ -952,6 +956,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2025-03-31,India,IND,South Asia,lower_middle_income,3.4,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-06-30,India,IND,South Asia,lower_middle_income,0.4,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-09-30,India,IND,South Asia,lower_middle_income,0.19,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,India,IND,South Asia,lower_middle_income,0.17,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2007-06-30,Ireland,IRL,Western Europe,high_income,0.13,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2007-09-30,Ireland,IRL,Western Europe,high_income,-0.13,sale,wgc_fsapi:cbd_v11:quarterly_change
 2008-03-31,Ireland,IRL,Western Europe,high_income,0.53,purchase,wgc_fsapi:cbd_v11:quarterly_change
@@ -992,7 +997,6 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2005-09-30,Iceland,ISL,Western Europe,high_income,0.01,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2007-06-30,Iceland,ISL,Western Europe,high_income,-0.01,sale,wgc_fsapi:cbd_v11:quarterly_change
 2008-09-30,Iceland,ISL,Western Europe,high_income,-0.01,sale,wgc_fsapi:cbd_v11:quarterly_change
-2025-12-31,Italy,ITA,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-03-31,Jordan,JOR,Middle East & North Africa,upper_middle_income,0.02,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-06-30,Jordan,JOR,Middle East & North Africa,upper_middle_income,0.04,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-09-30,Jordan,JOR,Middle East & North Africa,upper_middle_income,0.04,purchase,wgc_fsapi:cbd_v11:quarterly_change
@@ -1548,13 +1552,13 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2022-12-31,Malta,MLT,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2023-03-31,Malta,MLT,Western Europe,high_income,-0.03,sale,wgc_fsapi:cbd_v11:quarterly_change
 2023-06-30,Malta,MLT,Western Europe,high_income,0.22,purchase,wgc_fsapi:cbd_v11:quarterly_change
-2023-09-30,Malta,MLT,Western Europe,high_income,0.01,purchase,wgc_fsapi:cbd_v11:quarterly_change
-2023-12-31,Malta,MLT,Western Europe,high_income,0.02,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2023-12-31,Malta,MLT,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2024-03-31,Malta,MLT,Western Europe,high_income,-0.06,sale,wgc_fsapi:cbd_v11:quarterly_change
 2024-09-30,Malta,MLT,Western Europe,high_income,-0.03,sale,wgc_fsapi:cbd_v11:quarterly_change
 2025-03-31,Malta,MLT,Western Europe,high_income,0.06,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-06-30,Malta,MLT,Western Europe,high_income,0.06,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-09-30,Malta,MLT,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,Malta,MLT,Western Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-03-31,Mongolia,MNG,East Asia,lower_middle_income,0.94,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-06-30,Mongolia,MNG,East Asia,lower_middle_income,1.88,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-09-30,Mongolia,MNG,East Asia,lower_middle_income,0.54,purchase,wgc_fsapi:cbd_v11:quarterly_change
@@ -1885,7 +1889,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2025-03-31,Philippines,PHL,South East Asia,lower_middle_income,-2.99,sale,wgc_fsapi:cbd_v11:quarterly_change
 2025-06-30,Philippines,PHL,South East Asia,lower_middle_income,2.19,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-09-30,Philippines,PHL,South East Asia,lower_middle_income,2.23,purchase,wgc_fsapi:cbd_v11:quarterly_change
-2025-12-31,Philippines,PHL,South East Asia,lower_middle_income,1.22,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,Philippines,PHL,South East Asia,lower_middle_income,1.07,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2016-12-31,Papua New Guinea,PNG,South East Asia,lower_middle_income,-0.63,sale,wgc_fsapi:cbd_v11:quarterly_change
 2023-06-30,Papua New Guinea,PNG,South East Asia,lower_middle_income,0.63,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-09-30,Poland,POL,Central and Eastern Europe,high_income,0.03,purchase,wgc_fsapi:cbd_v11:quarterly_change
@@ -2225,6 +2229,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2025-03-31,Serbia,SRB,Central and Eastern Europe,upper_middle_income,0.96,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-06-30,Serbia,SRB,Central and Eastern Europe,upper_middle_income,1.2,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-09-30,Serbia,SRB,Central and Eastern Europe,upper_middle_income,1.38,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,Serbia,SRB,Central and Eastern Europe,upper_middle_income,0.82,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-03-31,Suriname,SUR,Latin America & Caribbean,upper_middle_income,-0.17,sale,wgc_fsapi:cbd_v11:quarterly_change
 2001-06-30,Suriname,SUR,Latin America & Caribbean,upper_middle_income,0.37,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2001-09-30,Suriname,SUR,Latin America & Caribbean,upper_middle_income,-0.39,sale,wgc_fsapi:cbd_v11:quarterly_change
@@ -2299,6 +2304,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2025-03-31,Slovenia,SVN,Central and Eastern Europe,high_income,0.31,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-06-30,Slovenia,SVN,Central and Eastern Europe,high_income,0.25,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-09-30,Slovenia,SVN,Central and Eastern Europe,high_income,0.28,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,Slovenia,SVN,Central and Eastern Europe,high_income,0.22,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2005-03-31,Sweden,SWE,Western Europe,high_income,-15.02,sale,wgc_fsapi:cbd_v11:quarterly_change
 2005-12-31,Sweden,SWE,Western Europe,high_income,-2.0,sale,wgc_fsapi:cbd_v11:quarterly_change
 2006-03-31,Sweden,SWE,Western Europe,high_income,-3.2,sale,wgc_fsapi:cbd_v11:quarterly_change
@@ -2483,7 +2489,7 @@ date,country,iso3,region_group,economic_group,value,direction,source
 2025-03-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,6.32,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-06-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,10.84,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2025-09-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,6.52,purchase,wgc_fsapi:cbd_v11:quarterly_change
-2025-12-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,2.42,purchase,wgc_fsapi:cbd_v11:quarterly_change
+2025-12-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,3.02,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2003-09-30,"Taiwan, China",TWN,East Asia,high_income,1.87,purchase,wgc_fsapi:cbd_v11:quarterly_change
 2004-06-30,"Taiwan, China",TWN,East Asia,high_income,-1.87,sale,wgc_fsapi:cbd_v11:quarterly_change
 2004-12-31,"Taiwan, China",TWN,East Asia,high_income,1.55,purchase,wgc_fsapi:cbd_v11:quarterly_change

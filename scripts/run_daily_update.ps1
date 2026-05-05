@@ -22,3 +22,5 @@ python .\scripts\fetch_stock_volatility_data.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python .\scripts\fetch_us_debt_data.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+python .\scripts\build_gold_macro_dashboard_data.py
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

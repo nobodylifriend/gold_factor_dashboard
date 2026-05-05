@@ -73,7 +73,7 @@ This file is generated from project metadata and local data artifacts.
 | 通胀 / 通胀预期 | PCE_同比 | PCE_同比 | PCEPI_YOY | PCEPI_YOY | fred | m | D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_同比.csv | PCE相对12个月前的同比涨幅，单位为百分比。 |
 | 通胀 / 通胀预期 | PCE_环比 | PCE_环比 | PCEPI_MOM | PCEPI_MOM | fred | m | D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_环比.csv | PCE相对上月的环比涨幅，单位为百分比。 |
 | 通胀 / 通胀预期 | PCE_环比年化 | PCE_环比年化 | PCEPI_MOM_ANNUALIZED | PCEPI_MOM_ANNUALIZED | fred | m | D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PCE_环比年化.csv | PCE环比按月频折算年化后的涨幅，单位为百分比。 |
-| 通胀 / 通胀预期 | PPI |  | PPIACO | PPIACO | fred | m | D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI.csv | 全部商品生产者价格指数原始值。 |
+| 通胀 / 通胀预期 | PPI |  | PPIACO | PPIACO | fred | M | D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI.csv | 全部商品生产者价格指数原始值。 |
 | 通胀 / 通胀预期 | PPI_同比 | PPI_同比 | PPIACO_YOY | PPIACO_YOY | fred | m | D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_同比.csv | PPI相对12个月前的同比涨幅，单位为百分比。 |
 | 通胀 / 通胀预期 | PPI_环比 | PPI_环比 | PPIACO_MOM | PPIACO_MOM | fred | m | D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_环比.csv | PPI相对上月的环比涨幅，单位为百分比。 |
 | 通胀 / 通胀预期 | PPI_环比年化 | PPI_环比年化 | PPIACO_MOM_ANNUALIZED | PPIACO_MOM_ANNUALIZED | fred | m | D:\note\pandas_project\gold_price_analysis\data\fred\通胀_通胀预期\PPI_环比年化.csv | PPI环比按月频折算年化后的涨幅，单位为百分比。 |

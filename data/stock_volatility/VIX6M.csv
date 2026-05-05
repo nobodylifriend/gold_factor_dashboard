@@ -4608,3 +4608,7 @@ date,value,source
 2026-04-24,23.27,cboe:VIX6M_History.csv
 2026-04-27,23.03,cboe:VIX6M_History.csv
 2026-04-28,22.87,cboe:VIX6M_History.csv
+2026-04-29,23.25,cboe:VIX6M_History.csv
+2026-04-30,22.61,cboe:VIX6M_History.csv
+2026-05-01,22.69,cboe:VIX6M_History.csv
+2026-05-04,23.07,cboe:VIX6M_History.csv

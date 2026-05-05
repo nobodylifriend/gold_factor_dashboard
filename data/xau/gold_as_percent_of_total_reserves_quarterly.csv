@@ -10635,7 +10635,7 @@ date,country,iso3,region_group,economic_group,value,source
 2023-09-30,Comoros,COM,Sub-Saharan Africa,lower_middle_income,0.4,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Costa Rica,CRI,Latin America & Caribbean,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Croatia,HRV,Central and Eastern Europe,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
-2023-09-30,Cyprus,CYP,Western Europe,high_income,49.36,wgc_fsapi:cbd_v11:quarterly
+2023-09-30,Cyprus,CYP,Western Europe,high_income,49.37,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Czech Republic,CZE,Central and Eastern Europe,high_income,1.09,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Denmark,DNK,Western Europe,high_income,4.01,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Dominican Republic,DOM,Latin America & Caribbean,upper_middle_income,0.21,wgc_fsapi:cbd_v11:quarterly
@@ -10672,7 +10672,7 @@ date,country,iso3,region_group,economic_group,value,source
 2023-09-30,Lithuania,LTU,Western Europe,high_income,5.96,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Luxembourg,LUX,Western Europe,high_income,4.57,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Malaysia,MYS,South East Asia,upper_middle_income,2.12,wgc_fsapi:cbd_v11:quarterly
-2023-09-30,Malta,MLT,Western Europe,high_income,1.27,wgc_fsapi:cbd_v11:quarterly
+2023-09-30,Malta,MLT,Western Europe,high_income,1.24,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Mauritius,MUS,Sub-Saharan Africa,high_income,11.38,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Mexico,MEX,Latin America & Caribbean,upper_middle_income,3.45,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Mongolia,MNG,East Asia,lower_middle_income,9.64,wgc_fsapi:cbd_v11:quarterly
@@ -10698,7 +10698,7 @@ date,country,iso3,region_group,economic_group,value,source
 2023-09-30,Saudi Arabia,SAU,Middle East & North Africa,high_income,4.24,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Serbia,SRB,Central and Eastern Europe,upper_middle_income,9.09,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Singapore,SGP,South East Asia,high_income,4.02,wgc_fsapi:cbd_v11:quarterly
-2023-09-30,Slovakia,SVK,Central and Eastern Europe,high_income,19.06,wgc_fsapi:cbd_v11:quarterly
+2023-09-30,Slovakia,SVK,Central and Eastern Europe,high_income,19.07,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,Slovenia,SVN,Central and Eastern Europe,high_income,8.23,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,South Africa,ZAF,Sub-Saharan Africa,upper_middle_income,12.35,wgc_fsapi:cbd_v11:quarterly
 2023-09-30,South Korea,KOR,East Asia,high_income,1.52,wgc_fsapi:cbd_v11:quarterly
@@ -10806,7 +10806,7 @@ date,country,iso3,region_group,economic_group,value,source
 2023-12-31,Saudi Arabia,SAU,Middle East & North Africa,high_income,4.71,wgc_fsapi:cbd_v11:quarterly
 2023-12-31,Serbia,SRB,Central and Eastern Europe,upper_middle_income,9.68,wgc_fsapi:cbd_v11:quarterly
 2023-12-31,Singapore,SGP,South East Asia,high_income,4.27,wgc_fsapi:cbd_v11:quarterly
-2023-12-31,Slovakia,SVK,Central and Eastern Europe,high_income,18.74,wgc_fsapi:cbd_v11:quarterly
+2023-12-31,Slovakia,SVK,Central and Eastern Europe,high_income,18.73,wgc_fsapi:cbd_v11:quarterly
 2023-12-31,Slovenia,SVN,Central and Eastern Europe,high_income,8.94,wgc_fsapi:cbd_v11:quarterly
 2023-12-31,South Africa,ZAF,Sub-Saharan Africa,upper_middle_income,13.4,wgc_fsapi:cbd_v11:quarterly
 2023-12-31,South Korea,KOR,East Asia,high_income,1.66,wgc_fsapi:cbd_v11:quarterly
@@ -10862,9 +10862,10 @@ date,country,iso3,region_group,economic_group,value,source
 2024-03-31,Finland,FIN,Western Europe,high_income,20.32,wgc_fsapi:cbd_v11:quarterly
 2024-03-31,France,FRA,Western Europe,high_income,68.61,wgc_fsapi:cbd_v11:quarterly
 2024-03-31,Germany,DEU,Western Europe,high_income,70.56,wgc_fsapi:cbd_v11:quarterly
+2024-03-31,Ghana,GHA,Sub-Saharan Africa,lower_middle_income,32.88,wgc_fsapi:cbd_v11:quarterly
 2024-03-31,Greece,GRC,Western Europe,high_income,58.08,wgc_fsapi:cbd_v11:quarterly
 2024-03-31,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,2.33,wgc_fsapi:cbd_v11:quarterly
-2024-03-31,Haiti,HTI,Latin America & Caribbean,low_income,5.31,wgc_fsapi:cbd_v11:quarterly
+2024-03-31,Haiti,HTI,Latin America & Caribbean,low_income,5.32,wgc_fsapi:cbd_v11:quarterly
 2024-03-31,Honduras,HND,Latin America & Caribbean,lower_middle_income,0.69,wgc_fsapi:cbd_v11:quarterly
 2024-03-31,Hungary,HUN,Central and Eastern Europe,high_income,13.45,wgc_fsapi:cbd_v11:quarterly
 2024-03-31,Iceland,ISL,Western Europe,high_income,2.15,wgc_fsapi:cbd_v11:quarterly
@@ -10967,6 +10968,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-06-30,Finland,FIN,Western Europe,high_income,21.12,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,France,FRA,Western Europe,high_income,70.06,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,Germany,DEU,Western Europe,high_income,71.54,wgc_fsapi:cbd_v11:quarterly
+2024-06-30,Ghana,GHA,Sub-Saharan Africa,lower_middle_income,33.06,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,Greece,GRC,Western Europe,high_income,60.37,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,2.41,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,Haiti,HTI,Latin America & Caribbean,low_income,5.54,wgc_fsapi:cbd_v11:quarterly
@@ -11029,7 +11031,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-06-30,Thailand,THA,South East Asia,upper_middle_income,7.83,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,Trinidad and Tobago,TTO,Latin America & Caribbean,high_income,2.44,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,Tunisia,TUN,Middle East & North Africa,lower_middle_income,6.14,wgc_fsapi:cbd_v11:quarterly
-2024-06-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,34.07,wgc_fsapi:cbd_v11:quarterly
+2024-06-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,32.9,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,Ukraine,UKR,Central and Eastern Europe,upper_middle_income,5.35,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,United Arab Emirates,ARE,Middle East & North Africa,high_income,2.66,wgc_fsapi:cbd_v11:quarterly
 2024-06-30,United Kingdom,GBR,Western Europe,high_income,13.46,wgc_fsapi:cbd_v11:quarterly
@@ -11059,7 +11061,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-09-30,Comoros,COM,Sub-Saharan Africa,lower_middle_income,0.46,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Costa Rica,CRI,Latin America & Caribbean,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Croatia,HRV,Central and Eastern Europe,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
-2024-09-30,Cyprus,CYP,Western Europe,high_income,55.45,wgc_fsapi:cbd_v11:quarterly
+2024-09-30,Cyprus,CYP,Western Europe,high_income,55.44,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Czech Republic,CZE,Central and Eastern Europe,high_income,2.54,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Denmark,DNK,Western Europe,high_income,4.85,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Dominican Republic,DOM,Latin America & Caribbean,upper_middle_income,0.33,wgc_fsapi:cbd_v11:quarterly
@@ -11071,9 +11073,10 @@ date,country,iso3,region_group,economic_group,value,source
 2024-09-30,Finland,FIN,Western Europe,high_income,22.44,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,France,FRA,Western Europe,high_income,71.85,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Germany,DEU,Western Europe,high_income,73.54,wgc_fsapi:cbd_v11:quarterly
+2024-09-30,Ghana,GHA,Sub-Saharan Africa,lower_middle_income,36.81,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Greece,GRC,Western Europe,high_income,62.58,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,2.41,wgc_fsapi:cbd_v11:quarterly
-2024-09-30,Haiti,HTI,Latin America & Caribbean,low_income,6.06,wgc_fsapi:cbd_v11:quarterly
+2024-09-30,Haiti,HTI,Latin America & Caribbean,low_income,6.07,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Honduras,HND,Latin America & Caribbean,lower_middle_income,0.87,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Hungary,HUN,Central and Eastern Europe,high_income,18.07,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Iceland,ISL,Western Europe,high_income,2.51,wgc_fsapi:cbd_v11:quarterly
@@ -11092,7 +11095,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-09-30,Lebanon,LBN,Middle East & North Africa,lower_middle_income,71.16,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Libya,LBY,Middle East & North Africa,upper_middle_income,13.0,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Lithuania,LTU,Western Europe,high_income,7.92,wgc_fsapi:cbd_v11:quarterly
-2024-09-30,Luxembourg,LUX,Western Europe,high_income,6.21,wgc_fsapi:cbd_v11:quarterly
+2024-09-30,Luxembourg,LUX,Western Europe,high_income,6.22,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Malaysia,MYS,South East Asia,upper_middle_income,2.75,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Malta,MLT,Western Europe,high_income,1.05,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Mauritius,MUS,Sub-Saharan Africa,high_income,13.03,wgc_fsapi:cbd_v11:quarterly
@@ -11100,6 +11103,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-09-30,Mongolia,MNG,East Asia,lower_middle_income,12.36,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Morocco,MAR,Middle East & North Africa,lower_middle_income,4.93,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Mozambique,MOZ,Sub-Saharan Africa,low_income,8.62,wgc_fsapi:cbd_v11:quarterly
+2024-09-30,Nepal,NPL,South Asia,lower_middle_income,4.43,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Netherlands,NLD,Western Europe,high_income,64.0,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Nicaragua,NIC,Latin America & Caribbean,lower_middle_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Nigeria,NGA,Sub-Saharan Africa,lower_middle_income,4.57,wgc_fsapi:cbd_v11:quarterly
@@ -11120,7 +11124,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-09-30,Serbia,SRB,Central and Eastern Europe,upper_middle_income,12.66,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Singapore,SGP,South East Asia,high_income,4.78,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Slovakia,SVK,Central and Eastern Europe,high_income,17.99,wgc_fsapi:cbd_v11:quarterly
-2024-09-30,Slovenia,SVN,Central and Eastern Europe,high_income,9.35,wgc_fsapi:cbd_v11:quarterly
+2024-09-30,Slovenia,SVN,Central and Eastern Europe,high_income,9.34,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,South Africa,ZAF,Sub-Saharan Africa,upper_middle_income,16.68,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,South Korea,KOR,East Asia,high_income,2.09,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Spain,ESP,Western Europe,high_income,21.6,wgc_fsapi:cbd_v11:quarterly
@@ -11132,7 +11136,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-09-30,Thailand,THA,South East Asia,upper_middle_income,8.16,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Trinidad and Tobago,TTO,Latin America & Caribbean,high_income,2.91,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Tunisia,TUN,Middle East & North Africa,lower_middle_income,6.27,wgc_fsapi:cbd_v11:quarterly
-2024-09-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,36.2,wgc_fsapi:cbd_v11:quarterly
+2024-09-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,35.02,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,Ukraine,UKR,Central and Eastern Europe,upper_middle_income,5.95,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,United Arab Emirates,ARE,Middle East & North Africa,high_income,2.78,wgc_fsapi:cbd_v11:quarterly
 2024-09-30,United Kingdom,GBR,Western Europe,high_income,14.52,wgc_fsapi:cbd_v11:quarterly
@@ -11163,7 +11167,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-12-31,Comoros,COM,Sub-Saharan Africa,lower_middle_income,0.47,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Costa Rica,CRI,Latin America & Caribbean,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Croatia,HRV,Central and Eastern Europe,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
-2024-12-31,Cyprus,CYP,Western Europe,high_income,55.87,wgc_fsapi:cbd_v11:quarterly
+2024-12-31,Cyprus,CYP,Western Europe,high_income,55.88,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Czech Republic,CZE,Central and Eastern Europe,high_income,2.93,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Denmark,DNK,Western Europe,high_income,5.15,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Dominican Republic,DOM,Latin America & Caribbean,upper_middle_income,0.35,wgc_fsapi:cbd_v11:quarterly
@@ -11175,9 +11179,10 @@ date,country,iso3,region_group,economic_group,value,source
 2024-12-31,Finland,FIN,Western Europe,high_income,20.4,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,France,FRA,Western Europe,high_income,72.27,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Germany,DEU,Western Europe,high_income,74.39,wgc_fsapi:cbd_v11:quarterly
+2024-12-31,Ghana,GHA,Sub-Saharan Africa,lower_middle_income,36.41,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Greece,GRC,Western Europe,high_income,63.15,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,2.37,wgc_fsapi:cbd_v11:quarterly
-2024-12-31,Haiti,HTI,Latin America & Caribbean,low_income,5.59,wgc_fsapi:cbd_v11:quarterly
+2024-12-31,Haiti,HTI,Latin America & Caribbean,low_income,5.6,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Honduras,HND,Latin America & Caribbean,lower_middle_income,0.73,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Hungary,HUN,Central and Eastern Europe,high_income,19.88,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Iceland,ISL,Western Europe,high_income,2.6,wgc_fsapi:cbd_v11:quarterly
@@ -11196,7 +11201,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-12-31,Lebanon,LBN,Middle East & North Africa,lower_middle_income,72.25,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Libya,LBY,Middle East & North Africa,upper_middle_income,13.24,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Lithuania,LTU,Western Europe,high_income,6.59,wgc_fsapi:cbd_v11:quarterly
-2024-12-31,Luxembourg,LUX,Western Europe,high_income,6.73,wgc_fsapi:cbd_v11:quarterly
+2024-12-31,Luxembourg,LUX,Western Europe,high_income,6.74,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Malaysia,MYS,South East Asia,upper_middle_income,2.81,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Malta,MLT,Western Europe,high_income,1.1,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Mauritius,MUS,Sub-Saharan Africa,high_income,12.24,wgc_fsapi:cbd_v11:quarterly
@@ -11204,6 +11209,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-12-31,Mongolia,MNG,East Asia,lower_middle_income,11.19,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Morocco,MAR,Middle East & North Africa,lower_middle_income,5.0,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Mozambique,MOZ,Sub-Saharan Africa,low_income,8.59,wgc_fsapi:cbd_v11:quarterly
+2024-12-31,Nepal,NPL,South Asia,lower_middle_income,4.23,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Netherlands,NLD,Western Europe,high_income,64.93,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Nicaragua,NIC,Latin America & Caribbean,lower_middle_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Nigeria,NGA,Sub-Saharan Africa,lower_middle_income,4.44,wgc_fsapi:cbd_v11:quarterly
@@ -11236,7 +11242,7 @@ date,country,iso3,region_group,economic_group,value,source
 2024-12-31,Thailand,THA,South East Asia,upper_middle_income,8.3,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Trinidad and Tobago,TTO,Latin America & Caribbean,high_income,2.92,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Tunisia,TUN,Middle East & North Africa,lower_middle_income,6.14,wgc_fsapi:cbd_v11:quarterly
-2024-12-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,36.31,wgc_fsapi:cbd_v11:quarterly
+2024-12-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,35.17,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,Ukraine,UKR,Central and Eastern Europe,upper_middle_income,5.24,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,United Arab Emirates,ARE,Middle East & North Africa,high_income,2.62,wgc_fsapi:cbd_v11:quarterly
 2024-12-31,United Kingdom,GBR,Western Europe,high_income,14.91,wgc_fsapi:cbd_v11:quarterly
@@ -11266,7 +11272,7 @@ date,country,iso3,region_group,economic_group,value,source
 2025-03-31,Comoros,COM,Sub-Saharan Africa,lower_middle_income,0.56,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Costa Rica,CRI,Latin America & Caribbean,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Croatia,HRV,Central and Eastern Europe,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
-2025-03-31,Cyprus,CYP,Western Europe,high_income,59.99,wgc_fsapi:cbd_v11:quarterly
+2025-03-31,Cyprus,CYP,Western Europe,high_income,60.0,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Czech Republic,CZE,Central and Eastern Europe,high_income,3.73,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Denmark,DNK,Western Europe,high_income,5.73,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Dominican Republic,DOM,Latin America & Caribbean,upper_middle_income,0.38,wgc_fsapi:cbd_v11:quarterly
@@ -11278,9 +11284,10 @@ date,country,iso3,region_group,economic_group,value,source
 2025-03-31,Finland,FIN,Western Europe,high_income,22.44,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,France,FRA,Western Europe,high_income,74.75,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Germany,DEU,Western Europe,high_income,77.18,wgc_fsapi:cbd_v11:quarterly
+2025-03-31,Ghana,GHA,Sub-Saharan Africa,lower_middle_income,35.85,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Greece,GRC,Western Europe,high_income,67.49,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,2.7,wgc_fsapi:cbd_v11:quarterly
-2025-03-31,Haiti,HTI,Latin America & Caribbean,low_income,6.2,wgc_fsapi:cbd_v11:quarterly
+2025-03-31,Haiti,HTI,Latin America & Caribbean,low_income,6.21,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Honduras,HND,Latin America & Caribbean,lower_middle_income,0.83,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Hungary,HUN,Central and Eastern Europe,high_income,22.33,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Iceland,ISL,Western Europe,high_income,3.03,wgc_fsapi:cbd_v11:quarterly
@@ -11307,6 +11314,7 @@ date,country,iso3,region_group,economic_group,value,source
 2025-03-31,Mongolia,MNG,East Asia,lower_middle_income,14.26,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Morocco,MAR,Middle East & North Africa,lower_middle_income,5.76,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Mozambique,MOZ,Sub-Saharan Africa,low_income,10.57,wgc_fsapi:cbd_v11:quarterly
+2025-03-31,Nepal,NPL,South Asia,lower_middle_income,4.92,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Netherlands,NLD,Western Europe,high_income,68.59,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Nicaragua,NIC,Latin America & Caribbean,lower_middle_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Nigeria,NGA,Sub-Saharan Africa,lower_middle_income,5.63,wgc_fsapi:cbd_v11:quarterly
@@ -11339,7 +11347,7 @@ date,country,iso3,region_group,economic_group,value,source
 2025-03-31,Thailand,THA,South East Asia,upper_middle_income,9.58,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Trinidad and Tobago,TTO,Latin America & Caribbean,high_income,3.72,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Tunisia,TUN,Middle East & North Africa,lower_middle_income,8.23,wgc_fsapi:cbd_v11:quarterly
-2025-03-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,43.67,wgc_fsapi:cbd_v11:quarterly
+2025-03-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,42.46,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,Ukraine,UKR,Central and Eastern Europe,upper_middle_income,6.46,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,United Arab Emirates,ARE,Middle East & North Africa,high_income,2.89,wgc_fsapi:cbd_v11:quarterly
 2025-03-31,United Kingdom,GBR,Western Europe,high_income,16.89,wgc_fsapi:cbd_v11:quarterly
@@ -11373,16 +11381,17 @@ date,country,iso3,region_group,economic_group,value,source
 2025-06-30,Denmark,DNK,Western Europe,high_income,5.55,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Dominican Republic,DOM,Latin America & Caribbean,upper_middle_income,0.4,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Ecuador,ECU,Latin America & Caribbean,upper_middle_income,33.01,wgc_fsapi:cbd_v11:quarterly
-2025-06-30,Egypt,EGY,Middle East & North Africa,lower_middle_income,29.27,wgc_fsapi:cbd_v11:quarterly
+2025-06-30,Egypt,EGY,Middle East & North Africa,lower_middle_income,29.26,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,El Salvador,SLV,Latin America & Caribbean,lower_middle_income,3.26,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Estonia,EST,Western Europe,high_income,1.09,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Fiji,FJI,Australasia / Oceania,upper_middle_income,0.2,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Finland,FIN,Western Europe,high_income,22.56,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,France,FRA,Western Europe,high_income,74.96,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Germany,DEU,Western Europe,high_income,77.5,wgc_fsapi:cbd_v11:quarterly
+2025-06-30,Ghana,GHA,Sub-Saharan Africa,lower_middle_income,35.65,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Greece,GRC,Western Europe,high_income,67.48,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,2.68,wgc_fsapi:cbd_v11:quarterly
-2025-06-30,Haiti,HTI,Latin America & Caribbean,low_income,6.15,wgc_fsapi:cbd_v11:quarterly
+2025-06-30,Haiti,HTI,Latin America & Caribbean,low_income,6.16,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Honduras,HND,Latin America & Caribbean,lower_middle_income,0.82,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Hungary,HUN,Central and Eastern Europe,high_income,21.09,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Iceland,ISL,Western Europe,high_income,2.85,wgc_fsapi:cbd_v11:quarterly
@@ -11408,6 +11417,7 @@ date,country,iso3,region_group,economic_group,value,source
 2025-06-30,Mongolia,MNG,East Asia,lower_middle_income,14.73,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Morocco,MAR,Middle East & North Africa,lower_middle_income,5.18,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Mozambique,MOZ,Sub-Saharan Africa,low_income,10.33,wgc_fsapi:cbd_v11:quarterly
+2025-06-30,Nepal,NPL,South Asia,lower_middle_income,4.81,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Netherlands,NLD,Western Europe,high_income,68.11,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Nicaragua,NIC,Latin America & Caribbean,lower_middle_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Nigeria,NGA,Sub-Saharan Africa,lower_middle_income,5.96,wgc_fsapi:cbd_v11:quarterly
@@ -11439,7 +11449,7 @@ date,country,iso3,region_group,economic_group,value,source
 2025-06-30,Thailand,THA,South East Asia,upper_middle_income,9.45,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Trinidad and Tobago,TTO,Latin America & Caribbean,high_income,4.22,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Tunisia,TUN,Middle East & North Africa,lower_middle_income,8.2,wgc_fsapi:cbd_v11:quarterly
-2025-06-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,50.11,wgc_fsapi:cbd_v11:quarterly
+2025-06-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,48.9,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,Ukraine,UKR,Central and Eastern Europe,upper_middle_income,6.35,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,United Arab Emirates,ARE,Middle East & North Africa,high_income,2.93,wgc_fsapi:cbd_v11:quarterly
 2025-06-30,United Kingdom,GBR,Western Europe,high_income,16.56,wgc_fsapi:cbd_v11:quarterly
@@ -11468,7 +11478,7 @@ date,country,iso3,region_group,economic_group,value,source
 2025-09-30,Comoros,COM,Sub-Saharan Africa,lower_middle_income,0.6,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Costa Rica,CRI,Latin America & Caribbean,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Croatia,HRV,Central and Eastern Europe,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
-2025-09-30,Cyprus,CYP,Western Europe,high_income,63.28,wgc_fsapi:cbd_v11:quarterly
+2025-09-30,Cyprus,CYP,Western Europe,high_income,63.27,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Czech Republic,CZE,Central and Eastern Europe,high_income,4.81,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Denmark,DNK,Western Europe,high_income,6.23,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Dominican Republic,DOM,Latin America & Caribbean,upper_middle_income,0.52,wgc_fsapi:cbd_v11:quarterly
@@ -11480,8 +11490,10 @@ date,country,iso3,region_group,economic_group,value,source
 2025-09-30,Finland,FIN,Western Europe,high_income,25.05,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,France,FRA,Western Europe,high_income,77.7,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Germany,DEU,Western Europe,high_income,80.37,wgc_fsapi:cbd_v11:quarterly
+2025-09-30,Ghana,GHA,Sub-Saharan Africa,lower_middle_income,43.6,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Greece,GRC,Western Europe,high_income,63.9,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,5.22,wgc_fsapi:cbd_v11:quarterly
+2025-09-30,Haiti,HTI,Latin America & Caribbean,low_income,6.88,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Honduras,HND,Latin America & Caribbean,lower_middle_income,0.88,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Hungary,HUN,Central and Eastern Europe,high_income,24.13,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Iceland,ISL,Western Europe,high_income,3.21,wgc_fsapi:cbd_v11:quarterly
@@ -11506,7 +11518,8 @@ date,country,iso3,region_group,economic_group,value,source
 2025-09-30,Mexico,MEX,Latin America & Caribbean,upper_middle_income,5.69,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Mongolia,MNG,East Asia,lower_middle_income,15.98,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Morocco,MAR,Middle East & North Africa,lower_middle_income,5.89,wgc_fsapi:cbd_v11:quarterly
-2025-09-30,Netherlands,NLD,Western Europe,high_income,70.66,wgc_fsapi:cbd_v11:quarterly
+2025-09-30,Nepal,NPL,South Asia,lower_middle_income,5.05,wgc_fsapi:cbd_v11:quarterly
+2025-09-30,Netherlands,NLD,Western Europe,high_income,70.67,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Nicaragua,NIC,Latin America & Caribbean,lower_middle_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Nigeria,NGA,Sub-Saharan Africa,lower_middle_income,6.13,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,North Macedonia,MKD,Central and Eastern Europe,upper_middle_income,15.3,wgc_fsapi:cbd_v11:quarterly
@@ -11535,57 +11548,100 @@ date,country,iso3,region_group,economic_group,value,source
 2025-09-30,"Taiwan, China",TWN,East Asia,high_income,7.96,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Thailand,THA,South East Asia,upper_middle_income,10.56,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Tunisia,TUN,Middle East & North Africa,lower_middle_income,8.92,wgc_fsapi:cbd_v11:quarterly
-2025-09-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,48.92,wgc_fsapi:cbd_v11:quarterly
+2025-09-30,Turkey,TUR,Central and Eastern Europe,upper_middle_income,47.72,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Ukraine,UKR,Central and Eastern Europe,upper_middle_income,7.22,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,United Arab Emirates,ARE,Middle East & North Africa,high_income,3.38,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,United Kingdom,GBR,Western Europe,high_income,18.3,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,United States of America,USA,North America,high_income,80.36,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Uruguay,URY,Latin America & Caribbean,high_income,0.07,wgc_fsapi:cbd_v11:quarterly
 2025-09-30,Uzbekistan,UZB,Central Asia,lower_middle_income,80.51,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Albania,ALB,Central and Eastern Europe,upper_middle_income,6.09,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Algeria,DZA,Middle East & North Africa,upper_middle_income,33.62,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Argentina,ARG,Latin America & Caribbean,upper_middle_income,21.15,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Armenia,ARM,Central and Eastern Europe,upper_middle_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Aruba,ABW,Latin America & Caribbean,high_income,19.57,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Australia,AUS,Australasia / Oceania,high_income,15.32,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Australia,AUS,Australasia / Oceania,high_income,15.3,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Austria,AUT,Western Europe,high_income,73.59,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Azerbaijan,AZE,Central and Eastern Europe,upper_middle_income,0.0,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Bangladesh,BGD,South Asia,lower_middle_income,7.02,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Belarus,BLR,Central and Eastern Europe,upper_middle_income,49.36,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Brazil,BRA,Latin America & Caribbean,upper_middle_income,6.76,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Belgium,BEL,Western Europe,high_income,56.63,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Brazil,BRA,Latin America & Caribbean,upper_middle_income,6.75,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Bulgaria,BGR,Central and Eastern Europe,high_income,12.79,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Cambodia,KHM,South East Asia,lower_middle_income,27.77,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Canada,CAN,North America,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Chile,CHL,Latin America & Caribbean,high_income,0.07,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,China,CHN,East Asia,upper_middle_income,8.64,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Colombia,COL,Latin America & Caribbean,upper_middle_income,1.0,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Comoros,COM,Sub-Saharan Africa,lower_middle_income,0.62,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Costa Rica,CRI,Latin America & Caribbean,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Czech Republic,CZE,Central and Eastern Europe,high_income,5.72,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Croatia,HRV,Central and Eastern Europe,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Cyprus,CYP,Western Europe,high_income,66.09,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Czech Republic,CZE,Central and Eastern Europe,high_income,5.7,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Denmark,DNK,Western Europe,high_income,7.31,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Dominican Republic,DOM,Latin America & Caribbean,upper_middle_income,0.54,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Ecuador,ECU,Latin America & Caribbean,upper_middle_income,37.67,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Egypt,EGY,Middle East & North Africa,lower_middle_income,37.17,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,El Salvador,SLV,Latin America & Caribbean,lower_middle_income,5.27,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Estonia,EST,Western Europe,high_income,1.43,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Fiji,FJI,Australasia / Oceania,upper_middle_income,0.26,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Finland,FIN,Western Europe,high_income,27.37,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,France,FRA,Western Europe,high_income,79.92,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Germany,DEU,Western Europe,high_income,82.22,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Greece,GRC,Western Europe,high_income,66.99,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Guatemala,GTM,Latin America & Caribbean,upper_middle_income,5.58,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Hungary,HUN,Central and Eastern Europe,high_income,26.15,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Iceland,ISL,Western Europe,high_income,3.61,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,India,IND,South Asia,lower_middle_income,17.49,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Haiti,HTI,Latin America & Caribbean,low_income,7.49,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Honduras,HND,Latin America & Caribbean,lower_middle_income,0.96,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Hungary,HUN,Central and Eastern Europe,high_income,26.14,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Iceland,ISL,Western Europe,high_income,3.6,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,India,IND,South Asia,lower_middle_income,17.66,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Indonesia,IDN,South East Asia,upper_middle_income,7.67,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Italy,ITA,Western Europe,high_income,79.38,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Japan,JPN,East Asia,high_income,8.67,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Kazakhstan,KAZ,Central Asia,upper_middle_income,72.17,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Ireland,IRL,Western Europe,high_income,12.37,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Italy,ITA,Western Europe,high_income,79.33,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Japan,JPN,East Asia,high_income,8.66,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Kazakhstan,KAZ,Central Asia,upper_middle_income,72.49,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Kenya,KEN,Sub-Saharan Africa,lower_middle_income,0.02,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Kuwait,KWT,Middle East & North Africa,high_income,21.44,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Kyrgyzstan,KGZ,Central Asia,lower_middle_income,75.52,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Latvia,LVA,Western Europe,high_income,15.35,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Libya,LBY,Middle East & North Africa,upper_middle_income,19.68,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Lithuania,LTU,Western Europe,high_income,11.57,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Luxembourg,LUX,Western Europe,high_income,10.29,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Malaysia,MYS,South East Asia,upper_middle_income,4.35,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Malta,MLT,Western Europe,high_income,3.4,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Mauritius,MUS,Sub-Saharan Africa,high_income,16.92,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Mexico,MEX,Latin America & Caribbean,upper_middle_income,6.59,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Mexico,MEX,Latin America & Caribbean,upper_middle_income,6.58,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Mongolia,MNG,East Asia,lower_middle_income,15.65,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Morocco,MAR,Middle East & North Africa,lower_middle_income,6.4,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Nepal,NPL,South Asia,lower_middle_income,5.32,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Netherlands,NLD,Western Europe,high_income,72.85,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Nigeria,NGA,Sub-Saharan Africa,lower_middle_income,6.54,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,North Macedonia,MKD,Central and Eastern Europe,upper_middle_income,16.68,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Norway,NOR,Western Europe,high_income,0.0,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Pakistan,PAK,South Asia,lower_middle_income,34.38,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Peru,PER,Latin America & Caribbean,upper_middle_income,5.39,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Philippines,PHL,South East Asia,lower_middle_income,16.85,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Philippines,PHL,South East Asia,lower_middle_income,16.83,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Poland,POL,Central and Eastern Europe,high_income,28.43,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Portugal,PRT,Western Europe,high_income,78.06,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Qatar,QAT,Middle East & North Africa,high_income,28.97,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Romania,ROU,Central and Eastern Europe,high_income,16.06,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Romania,ROU,Central and Eastern Europe,high_income,16.05,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Saudi Arabia,SAU,Middle East & North Africa,high_income,8.98,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Serbia,SRB,Central and Eastern Europe,upper_middle_income,21.59,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Singapore,SGP,South East Asia,high_income,6.29,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,South Africa,ZAF,Sub-Saharan Africa,upper_middle_income,23.2,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Slovakia,SVK,Central and Eastern Europe,high_income,24.51,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Slovenia,SVN,Central and Eastern Europe,high_income,16.73,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,South Africa,ZAF,Sub-Saharan Africa,upper_middle_income,23.18,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,South Korea,KOR,East Asia,high_income,3.36,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Suriname,SUR,Latin America & Caribbean,upper_middle_income,10.56,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Sweden,SWE,Western Europe,high_income,23.82,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Spain,ESP,Western Europe,high_income,30.75,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Suriname,SUR,Latin America & Caribbean,upper_middle_income,10.55,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Sweden,SWE,Western Europe,high_income,23.79,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Switzerland,CHE,Western Europe,high_income,13.58,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,"Taiwan, China",TWN,East Asia,high_income,8.99,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Thailand,THA,South East Asia,upper_middle_income,11.67,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,54.63,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Turkey,TUR,Central and Eastern Europe,upper_middle_income,54.64,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Ukraine,UKR,Central and Eastern Europe,upper_middle_income,6.71,wgc_fsapi:cbd_v11:quarterly
-2025-12-31,United Kingdom,GBR,Western Europe,high_income,20.36,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,United Arab Emirates,ARE,Middle East & North Africa,high_income,3.58,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,United Kingdom,GBR,Western Europe,high_income,20.33,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,United States of America,USA,North America,high_income,82.44,wgc_fsapi:cbd_v11:quarterly
+2025-12-31,Uruguay,URY,Latin America & Caribbean,high_income,0.07,wgc_fsapi:cbd_v11:quarterly
 2025-12-31,Uzbekistan,UZB,Central Asia,lower_middle_income,83.01,wgc_fsapi:cbd_v11:quarterly

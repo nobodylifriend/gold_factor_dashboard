@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-01T08:05:24.196425+00:00",
+  "generated_at": "2026-05-05T09:24:44.530027+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
       "name": "xau_usd_daily_ohlc",
       "file_name": "xau_usd_daily_ohlc.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-05-01",
+      "end_date": "2026-05-05",
       "rows": 5154,
       "notes": "Daily OHLC merged from multiple public sources. Coverage is strongest from 2006-04-25 to 2026-01-09 and 2026-03-25 to the latest recent window. See source column for provenance."
     },
@@ -14,16 +14,16 @@
       "name": "xau_usd_monthly_close",
       "file_name": "xau_usd_monthly_close.csv",
       "start_date": "2006-05-01",
-      "end_date": "2026-04-01",
-      "rows": 240,
+      "end_date": "2026-05-01",
+      "rows": 241,
       "notes": "Complete monthly close series from Macrotrends through the latest published month."
     },
     {
       "name": "GVZ",
       "file_name": "GVZ.csv",
       "start_date": "2008-06-03",
-      "end_date": "2026-04-30",
-      "rows": 4508,
+      "end_date": "2026-05-04",
+      "rows": 4510,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
@@ -62,16 +62,16 @@
       "name": "GLD_TOTAL_HOLDINGS_TONNES",
       "file_name": "GLD_total_holdings_tonnes.csv",
       "start_date": "2004-11-18",
-      "end_date": "2026-04-30",
-      "rows": 5394,
+      "end_date": "2026-05-04",
+      "rows": 5396,
       "notes": "Daily GLD trust gold holdings in tonnes from the official SPDR Gold Shares historical archive."
     },
     {
       "name": "GLD_DAILY_SHARE_VOLUME",
       "file_name": "GLD_share_volume.csv",
       "start_date": "2004-11-18",
-      "end_date": "2026-04-30",
-      "rows": 5394,
+      "end_date": "2026-05-04",
+      "rows": 5396,
       "notes": "Daily GLD exchange share volume from the official SPDR Gold Shares historical archive."
     },
     {
@@ -119,7 +119,7 @@
       "file_name": "official_gold_reserves_quarterly.csv",
       "start_date": "2000-12-31",
       "end_date": "2025-12-31",
-      "rows": 11930,
+      "rows": 11944,
       "notes": "Quarterly country-level official gold reserve history from the public World Gold Council central bank dashboard API, including gold reserves in tonnes and US$ millions, FX reserves, total reserves, and gold holdings percent. The public API exposes quarterly and year-end history; monthly history is not publicly downloadable without login."
     },
     {
@@ -127,7 +127,7 @@
       "file_name": "change_in_official_gold_reserves_quarterly.csv",
       "start_date": "2001-06-30 00:00:00",
       "end_date": "2025-12-31 00:00:00",
-      "rows": 2735,
+      "rows": 2741,
       "notes": "Quarterly change in reported official gold reserves by country, derived as the difference in tonnes from consecutive public WGC quarterly observations. Positive values indicate reported purchases and negative values indicate reported sales."
     },
     {
@@ -135,7 +135,7 @@
       "file_name": "gold_as_percent_of_total_reserves_quarterly.csv",
       "start_date": "2000-12-31",
       "end_date": "2025-12-31",
-      "rows": 11590,
+      "rows": 11646,
       "notes": "Quarterly gold holdings as a percent of total reserves by country from the World Gold Council central bank dashboard API."
     },
     {
@@ -143,7 +143,7 @@
       "file_name": "reported_central_bank_gold_purchases_sales_quarterly.csv",
       "start_date": "2001-06-30 00:00:00",
       "end_date": "2025-12-31 00:00:00",
-      "rows": 2735,
+      "rows": 2741,
       "notes": "Quarterly reported central bank gold purchases or sales by country, based on non-zero changes in official gold reserve tonnes between public WGC quarterly observations."
     },
     {
@@ -151,8 +151,24 @@
       "file_name": "official_gold_reserves_tonnes_quarterly.csv",
       "start_date": "2000-12-31",
       "end_date": "2025-12-31",
-      "rows": 11643,
+      "rows": 11692,
       "notes": "Quarterly reported official gold reserves by country in tonnes from the World Gold Council central bank dashboard API."
+    },
+    {
+      "name": "GLD_GOLD_OPTIONS_ATM_IV",
+      "file_name": "gld_gold_options_atm_iv.csv",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-05",
+      "rows": 2,
+      "notes": "Daily GLD option ATM implied volatility proxy derived from Nasdaq option-chain bid/ask prices with Black-Scholes inversion."
+    },
+    {
+      "name": "GLD_GOLD_OPTIONS_25D_IV",
+      "file_name": "gld_gold_options_25d_iv.csv",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-05",
+      "rows": 2,
+      "notes": "Daily GLD option 25-delta implied volatility proxy derived from Nasdaq option-chain bid/ask prices and Black-Scholes deltas."
     }
   ]
 }

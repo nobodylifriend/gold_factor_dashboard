@@ -7,6 +7,7 @@
 3. `FX` 汇率数据抓取和日更
 4. `股票波动率` 指标抓取和日更
 5. `美国债务 / 财政` 补充数据抓取和日更
+6. `黄金宏观分析台` 前端消费 JSON 构建
 
 目标是为《[黄金价格预测.md](/D:/note/pandas_project/gold_price_analysis/黄金价格预测.md)》里的黄金价格预测做一期可复用的数据准备。
 
@@ -557,9 +558,11 @@ date,value,source
 4. 若成功，继续执行 `python .\scripts\fetch_xau_data.py`
 5. 继续执行 `python .\scripts\fetch_gld_options_iv_data.py`
 6. 继续执行 `python .\scripts\fetch_fx_data.py`
-7. 继续执行 `python .\scripts\fetch_stock_volatility_data.py`
-8. 继续执行 `python .\scripts\fetch_us_debt_data.py`
-9. 任一步失败则退出非零
+7. 继续执行 `python .\scripts\fetch_stock_index_data.py`
+8. 继续执行 `python .\scripts\fetch_stock_volatility_data.py`
+9. 继续执行 `python .\scripts\fetch_us_debt_data.py`
+10. 继续执行 `python .\scripts\build_gold_macro_dashboard_data.py`
+11. 任一步失败则退出非零
 
 脚本内容核心如下：
 
@@ -572,8 +575,10 @@ python -m gold_data update
 python .\scripts\fetch_xau_data.py
 python .\scripts\fetch_gld_options_iv_data.py
 python .\scripts\fetch_fx_data.py
+python .\scripts\fetch_stock_index_data.py
 python .\scripts\fetch_stock_volatility_data.py
 python .\scripts\fetch_us_debt_data.py
+python .\scripts\build_gold_macro_dashboard_data.py
 ```
 
 手动运行：
