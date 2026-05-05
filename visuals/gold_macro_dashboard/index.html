@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>黄金 / 美元 / 利率 信号矩阵</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">黄金宏观分析台</p>
+          <h1>黄金 / 美元 / 利率 信号矩阵</h1>
+          <p class="hero-summary" id="hero-summary"></p>
+        </div>
+        <div class="date-controls">
+          <div class="date-field">
+            <span class="date-label">开始日期</span>
+            <button id="start-date-display" class="date-display" type="button" aria-controls="start-date">
+              选择开始日期
+            </button>
+            <input id="start-date" class="native-date-input" type="date" aria-label="开始日期选择器">
+          </div>
+          <div class="date-field">
+            <span class="date-label">结束日期</span>
+            <button id="end-date-display" class="date-display" type="button" aria-controls="end-date">
+              选择结束日期
+            </button>
+            <input id="end-date" class="native-date-input" type="date" aria-label="结束日期选择器">
+          </div>
+          <button id="apply-filters" class="apply-button" type="button">查询</button>
+        </div>
+        <div class="hero-status">
+          <div class="status-chip">
+            <span class="status-label">当前入场类型</span>
+            <strong id="hero-entry-type">观察</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="overview-grid">
+        <div class="hero-charts">
+          <article class="chart-card">
+            <h2>黄金价格走势</h2>
+            <div id="chart-xau"></div>
+          </article>
+          <article class="chart-card">
+            <h2>标普500价格走势</h2>
+            <div id="chart-sp500"></div>
+          </article>
+          <article class="chart-card">
+            <h2>纳斯达克100价格走势</h2>
+            <div id="chart-nasdaq100"></div>
+          </article>
+        </div>
+        <aside class="quadrant-card" id="quadrant-panel"></aside>
+      </section>
+
+      <section class="signal-panel" id="signal-checklist"></section>
+      <section class="detail-grid" id="detail-charts" aria-live="polite"></section>
+      <section class="doc-panel">
+        <a href="../../四象限.md">查看四象限文档说明、页面入口与数据来源</a>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
