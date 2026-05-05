@@ -23,3 +23,5 @@ def test_dashboard_styles_define_fintech_theme_tokens():
     assert ".chart-card" in css
     assert ".date-display" in css
     assert ".apply-button" in css
+    assert ".signal-grid" in css
+    assert ".quadrant-matrix" in css

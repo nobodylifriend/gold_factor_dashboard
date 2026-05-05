@@ -8,6 +8,8 @@ const {
   computeQuadrantState,
   computeDefaultDateRange,
   normalizeRange,
+  buildSvgLineChart,
+  formatAxisDateLabel,
 } = require("../visuals/gold_macro_dashboard/app.js");
 
 test("classifyTrend returns flat inside threshold", () => {
@@ -91,4 +93,25 @@ test("normalizeRange swaps invalid user ranges", () => {
     normalizeRange("2026-05-04", "2026-04-04", { start: "2026-04-04", end: "2026-05-04" }),
     { start: "2026-04-04", end: "2026-05-04" },
   );
+});
+
+test("formatAxisDateLabel renders short visible date label", () => {
+  assert.equal(formatAxisDateLabel("2026-05-05"), "26/05/05");
+});
+
+test("buildSvgLineChart includes axes, labels and hover layers", () => {
+  const markup = buildSvgLineChart(
+    [
+      { date: "2026-05-01", value: 100 },
+      { date: "2026-05-02", value: 105 },
+      { date: "2026-05-05", value: 110 },
+    ],
+    "#73c6ff",
+    2,
+  );
+
+  assert.match(markup, /chart-axis-label-x/);
+  assert.match(markup, /chart-axis-label-y/);
+  assert.match(markup, /chart-hover-line/);
+  assert.match(markup, /chart-tooltip/);
 });
