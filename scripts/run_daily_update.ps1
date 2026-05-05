@@ -16,6 +16,8 @@ python .\scripts\fetch_gld_options_iv_data.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python .\scripts\fetch_fx_data.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+python .\scripts\fetch_stock_index_data.py
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python .\scripts\fetch_stock_volatility_data.py
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 python .\scripts\fetch_us_debt_data.py

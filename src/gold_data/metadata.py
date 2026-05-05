@@ -613,3 +613,26 @@ STOCK_VOLATILITY_INDICATORS: tuple[dict[str, str], ...] = (
         "file_name": "SKEW.csv",
     },
 )
+DEFAULT_STOCK_INDEX_CATEGORY = "股票指数"
+STOCK_INDEX_INDICATORS: tuple[dict[str, str], ...] = (
+    {
+        "indicator_id": "SP500",
+        "category": DEFAULT_STOCK_INDEX_CATEGORY,
+        "indicator_name": "SP500",
+        "chinese_name": "标普500指数",
+        "english_code": "SP500",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "SP500.csv",
+    },
+    {
+        "indicator_id": "NASDAQ100",
+        "category": DEFAULT_STOCK_INDEX_CATEGORY,
+        "indicator_name": "NASDAQ100",
+        "chinese_name": "纳斯达克100指数",
+        "english_code": "NASDAQ100",
+        "source": "yahoo",
+        "frequency": "d",
+        "file_name": "NASDAQ100.csv",
+    },
+)

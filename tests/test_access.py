@@ -230,6 +230,52 @@ indicators:
                 "股票波动率",
             )
 
+    def test_refresh_indicator_directory_includes_stock_index_manifest_artifacts(self) -> None:
+        with WorkspaceTempDir() as tmp:
+            base = Path(tmp)
+            write_file(base / "config" / "indicators.yml", "indicators: []\n")
+            write_file(
+                base / "data" / "stock_index" / "manifest.json",
+                json.dumps(
+                    {
+                        "artifacts": [
+                            {
+                                "name": "SP500",
+                                "file_name": "SP500.csv",
+                                "notes": "S&P 500 daily close series.",
+                            },
+                            {
+                                "name": "NASDAQ100",
+                                "file_name": "NASDAQ100.csv",
+                                "notes": "Nasdaq-100 daily close series.",
+                            },
+                        ]
+                    },
+                    ensure_ascii=False,
+                ),
+            )
+            write_file(
+                base / "data" / "stock_index" / "SP500.csv",
+                "date,value,source\n2024-01-01,4769.83,test\n",
+            )
+            write_file(
+                base / "data" / "stock_index" / "NASDAQ100.csv",
+                "date,value,source\n2024-01-01,16824.46,test\n",
+            )
+
+            frame = refresh_indicator_directory(base)
+
+            self.assertIn("SP500", frame["indicator_id"].tolist())
+            self.assertIn("NASDAQ100", frame["indicator_id"].tolist())
+            self.assertEqual(
+                frame.loc[frame["indicator_id"] == "SP500", "source"].iloc[0],
+                "yahoo",
+            )
+            self.assertEqual(
+                frame.loc[frame["indicator_id"] == "NASDAQ100", "frequency"].iloc[0],
+                "d",
+            )
+
     def test_refresh_indicator_directory_includes_us_debt_manifest_artifacts(self) -> None:
         with WorkspaceTempDir() as tmp:
             base = Path(tmp)

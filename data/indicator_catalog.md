@@ -43,6 +43,8 @@ This file is generated from project metadata and local data artifacts.
 | 汇率 | 美元广义贸易加权指数 | 美元广义贸易加权指数 | DTWEXBGS | DTWEXBGS | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\汇率\美元广义贸易加权指数.csv | 美元广义贸易加权指数，衡量美元相对主要贸易伙伴货币的强弱。 |
 | 油价指标 | Brent原油现货价 | Brent原油现货价 | DCOILBRENTEU | DCOILBRENTEU | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\Brent原油现货价.csv | Brent原油现货价格，用于跟踪全球能源价格变化。 |
 | 油价指标 | WTI原油现货价 | WTI原油现货价 | DCOILWTICO | DCOILWTICO | fred | D | D:\note\pandas_project\gold_price_analysis\data\fred\油价指标\WTI原油现货价.csv | WTI原油现货价格，用于跟踪能源价格和通胀传导。 |
+| 股票指数 | NASDAQ100 | 纳斯达克100指数 | NASDAQ100 | NASDAQ100 | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_index\NASDAQ100.csv | Nasdaq-100 Index daily close series from Yahoo Finance chart API. |
+| 股票指数 | SP500 | 标普500指数 | SP500 | SP500 | yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_index\SP500.csv | S&P 500 Index daily close series from Yahoo Finance chart API. |
 | 股票波动率 | SKEW |  | SKEW | SKEW | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\SKEW.csv | Cboe SKEW Index，用于衡量标普500收益分布左尾尾部风险的定价水平和崩盘保护需求。 |
 | 股票波动率 | VIX |  | VIX | VIX | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VIX.csv | Cboe Volatility Index，衡量标普500期权隐含的未来30天年化波动率预期，常被视为美股恐慌指数。 |
 | 股票波动率 | VIX1D |  | VIX1D | VIX1D | cboe+yahoo | d | D:\note\pandas_project\gold_price_analysis\data\stock_volatility\VIX1D.csv | Cboe 1-Day Volatility Index，衡量标普500期权隐含的未来1个交易日波动率预期。 |

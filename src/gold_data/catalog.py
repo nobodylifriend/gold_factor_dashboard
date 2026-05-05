@@ -9,6 +9,7 @@ from .config import IndicatorConfig, indicator_path, load_indicators
 from .metadata import (
     FX_INDICATORS,
     INDICATOR_DEFINITIONS,
+    STOCK_INDEX_INDICATORS,
     STOCK_VOLATILITY_INDICATORS,
     US_DEBT_INDICATORS,
     XAU_INDICATORS,
@@ -35,12 +36,14 @@ def build_indicator_directory(base_dir: Path, config_path: Path | None = None) -
     fred_catalog = _read_csv_if_exists(base_dir / "data" / "fred" / "_catalog.csv")
     xau_manifest = _read_manifest(base_dir / "data" / "xau" / "manifest.json")
     fx_manifest = _read_manifest(base_dir / "data" / "fx" / "manifest.json")
+    stock_index_manifest = _read_manifest(base_dir / "data" / "stock_index" / "manifest.json")
     stock_volatility_manifest = _read_manifest(base_dir / "data" / "stock_volatility" / "manifest.json")
     us_debt_manifest = _read_manifest(base_dir / "data" / "us_debt" / "manifest.json")
 
     rows = _build_fred_rows(base_dir, indicators, fred_catalog)
     rows.extend(_build_external_rows(base_dir, "xau", XAU_INDICATORS, xau_manifest))
     rows.extend(_build_external_rows(base_dir, "fx", FX_INDICATORS, fx_manifest))
+    rows.extend(_build_external_rows(base_dir, "stock_index", STOCK_INDEX_INDICATORS, stock_index_manifest))
     rows.extend(
         _build_external_rows(
             base_dir,
