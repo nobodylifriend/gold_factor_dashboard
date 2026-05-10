@@ -1,0 +1,59 @@
+name: Daily Data Update
+
+on:
+  schedule:
+    - cron: "15 22 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-data-update
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements.github-pages.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.github-pages.txt
+
+      - name: Write .env for FRED access
+        shell: bash
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: |
+          if [ -z "${FRED_API_KEY}" ]; then
+            echo "FRED_API_KEY secret is not set."
+            exit 1
+          fi
+          printf 'FRED_API_KEY=%s\n' "${FRED_API_KEY}" > .env
+
+      - name: Run daily update pipeline
+        run: bash scripts/run_daily_update_github.sh
+
+      - name: Commit refreshed data
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data visuals/gold_macro_dashboard/data/dashboard_data.json .env
+          git reset .env
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: refresh dashboard data"
+          git push
