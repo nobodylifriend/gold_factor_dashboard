@@ -35,7 +35,7 @@ def test_daily_update_workflow_runs_pipeline_and_commits():
 
 def test_requirements_include_update_dependencies():
     text = Path("requirements.github-pages.txt").read_text(encoding="utf-8")
-    for package in ("pandas", "requests", "PyYAML", "beautifulsoup4", "pypdf"):
+    for package in ("pandas", "requests", "PyYAML", "beautifulsoup4", "pypdf", "openpyxl"):
         assert package in text
 
 
