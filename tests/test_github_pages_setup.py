@@ -27,6 +27,8 @@ def test_daily_update_workflow_runs_pipeline_and_commits():
     assert "workflow_dispatch:" in text
     assert "bash scripts/run_daily_update_github.sh" in text
     assert "git push" in text
+    assert "git add data visuals/gold_macro_dashboard/data/dashboard_data.json" in text
+    assert ".env" not in text.split("git add", 1)[1].splitlines()[0]
 
     script = Path("scripts/run_daily_update_github.sh").read_text(encoding="utf-8")
     assert "python -m gold_data update" in script

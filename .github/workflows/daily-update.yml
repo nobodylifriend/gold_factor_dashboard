@@ -49,8 +49,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data visuals/gold_macro_dashboard/data/dashboard_data.json .env
-          git reset .env
+          git add data visuals/gold_macro_dashboard/data/dashboard_data.json
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0
