@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-05-05T09:26:00.935935+00:00",
+  "generated_at": "2026-05-09T14:06:07.706300+00:00",
   "base_start_date": "2025-01-01",
   "artifacts": [
     {
       "name": "Federal Debt Intragovernmental Holdings",
       "file_name": "Federal Debt Intragovernmental Holdings.csv",
       "start_date": "2025-01-02",
-      "end_date": "2026-05-01",
-      "rows": 334,
+      "end_date": "2026-05-07",
+      "rows": 338,
       "notes": "Daily intragovernmental holdings from Treasury Debt to the Penny, converted to millions of dollars."
     },
     {
       "name": "Marketable Treasury Securities Outstanding",
       "file_name": "Marketable Treasury Securities Outstanding.csv",
       "start_date": "2025-01-31",
-      "end_date": "2026-03-31",
-      "rows": 15,
+      "end_date": "2026-04-30",
+      "rows": 16,
       "notes": "Monthly total marketable Treasury securities outstanding from MSPD table 1, in millions of dollars."
     },
     {
       "name": "Average Interest Rate on Total Interest-Bearing Debt",
       "file_name": "Average Interest Rate on Total Interest-Bearing Debt.csv",
       "start_date": "2025-01-31",
-      "end_date": "2026-03-31",
-      "rows": 15,
+      "end_date": "2026-04-30",
+      "rows": 16,
       "notes": "Monthly average interest rate on total interest-bearing debt from Treasury Fiscal Data."
     },
     {

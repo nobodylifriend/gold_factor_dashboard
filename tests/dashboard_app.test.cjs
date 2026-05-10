@@ -10,6 +10,7 @@ const {
   normalizeRange,
   buildSvgLineChart,
   formatAxisDateLabel,
+  buildExportFileName,
 } = require("../visuals/gold_macro_dashboard/app.js");
 
 test("classifyTrend returns flat inside threshold", () => {
@@ -114,4 +115,11 @@ test("buildSvgLineChart includes axes, labels and hover layers", () => {
   assert.match(markup, /chart-axis-label-y/);
   assert.match(markup, /chart-hover-line/);
   assert.match(markup, /chart-tooltip/);
+});
+
+test("buildExportFileName includes current date range", () => {
+  assert.equal(
+    buildExportFileName({ start: "2026-04-04", end: "2026-05-04" }),
+    "gold-macro-dashboard-2026-04-04_to_2026-05-04.png",
+  );
 });

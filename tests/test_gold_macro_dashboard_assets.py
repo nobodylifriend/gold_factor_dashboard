@@ -9,9 +9,11 @@ def test_dashboard_html_contains_required_sections():
     assert 'id="start-date-display"' in html
     assert 'id="end-date-display"' in html
     assert 'id="apply-filters"' in html
+    assert 'id="export-image"' in html
     assert 'id="quadrant-panel"' in html
     assert 'id="signal-checklist"' in html
     assert 'id="detail-charts"' in html
+    assert 'id="chart-nasdaq100"' not in html
 
 
 def test_dashboard_styles_define_fintech_theme_tokens():

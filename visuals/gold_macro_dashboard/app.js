@@ -255,6 +255,51 @@ function formatValue(value, precision = 2) {
   return Number(value).toFixed(precision);
 }
 
+function buildExportFileName(range) {
+  return `gold-macro-dashboard-${range.start}_to_${range.end}.png`;
+}
+
+function setExportButtonState(button, isExporting) {
+  if (!button) {
+    return;
+  }
+  button.disabled = isExporting;
+  button.textContent = isExporting ? "导出中..." : "导出图片";
+}
+
+function triggerImageDownload(dataUrl, fileName) {
+  const anchor = document.createElement("a");
+  anchor.href = dataUrl;
+  anchor.download = fileName;
+  document.body.appendChild(anchor);
+  anchor.click();
+  anchor.remove();
+}
+
+async function exportDashboardImage(range, button) {
+  const shell = document.querySelector(".page-shell");
+  const exporter = typeof window !== "undefined" ? window.htmlToImage : null;
+  if (!shell || !exporter || typeof exporter.toPng !== "function") {
+    throw new Error("导出组件加载失败，请刷新页面后重试");
+  }
+
+  document.body.classList.add("is-exporting-image");
+  setExportButtonState(button, true);
+
+  try {
+    await new Promise((resolve) => window.requestAnimationFrame(() => resolve()));
+    const dataUrl = await exporter.toPng(shell, {
+      cacheBust: true,
+      backgroundColor: "#07111f",
+      pixelRatio: Math.max(window.devicePixelRatio || 1, 2),
+    });
+    triggerImageDownload(dataUrl, buildExportFileName(range));
+  } finally {
+    document.body.classList.remove("is-exporting-image");
+    setExportButtonState(button, false);
+  }
+}
+
 function getTrendTone(value) {
   if (value === "上升" || value === "是" || value === "确认") {
     return "positive";
@@ -655,7 +700,8 @@ async function initDashboard() {
   const startDisplay = document.getElementById("start-date-display");
   const endDisplay = document.getElementById("end-date-display");
   const applyButton = document.getElementById("apply-filters");
-  if (!startInput || !endInput || !startDisplay || !endDisplay || !applyButton) {
+  const exportButton = document.getElementById("export-image");
+  if (!startInput || !endInput || !startDisplay || !endDisplay || !applyButton || !exportButton) {
     return;
   }
 
@@ -690,6 +736,21 @@ async function initDashboard() {
       updateDateDisplay(startDisplay, range.start);
       updateDateDisplay(endDisplay, range.end);
       renderDashboard(data, range);
+    });
+
+    exportButton.addEventListener("click", async () => {
+      const range = normalizeRange(startInput.value, endInput.value, fallbackRange);
+      startInput.value = range.start;
+      endInput.value = range.end;
+      updateDateDisplay(startDisplay, range.start);
+      updateDateDisplay(endDisplay, range.end);
+      renderDashboard(data, range);
+      try {
+        await exportDashboardImage(range, exportButton);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : "导出图片失败";
+        window.alert(message);
+      }
     });
 
     renderDashboard(data, fallbackRange);
@@ -737,6 +798,7 @@ if (typeof module !== "undefined") {
     normalizeRange,
     buildChartGeometry,
     formatAxisDateLabel,
+    buildExportFileName,
     HERO_CHART_DIMENSIONS,
     DETAIL_CHART_DIMENSIONS,
   };

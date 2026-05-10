@@ -29,7 +29,10 @@
             </button>
             <input id="end-date" class="native-date-input" type="date" aria-label="结束日期选择器">
           </div>
-          <button id="apply-filters" class="apply-button" type="button">查询</button>
+          <div class="action-buttons">
+            <button id="apply-filters" class="apply-button" type="button">查询</button>
+            <button id="export-image" class="secondary-button export-exclude" type="button">导出图片</button>
+          </div>
         </div>
         <div class="hero-status">
           <div class="status-chip">
@@ -49,10 +52,6 @@
             <h2>标普500价格走势</h2>
             <div id="chart-sp500"></div>
           </article>
-          <article class="chart-card">
-            <h2>纳斯达克100价格走势</h2>
-            <div id="chart-nasdaq100"></div>
-          </article>
         </div>
         <aside class="quadrant-card" id="quadrant-panel"></aside>
       </section>
@@ -63,6 +62,7 @@
         <a href="../../四象限.md">查看四象限文档说明、页面入口与数据来源</a>
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

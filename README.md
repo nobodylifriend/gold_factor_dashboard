@@ -587,6 +587,26 @@ python .\scripts\build_gold_macro_dashboard_data.py
 powershell -ExecutionPolicy Bypass -File .\scripts\run_daily_update.ps1
 ```
 
+### 启动 Dashboard
+
+先生成最新 dashboard 数据：
+
+```powershell
+python .\scripts\build_gold_macro_dashboard_data.py
+```
+
+再启动本地静态服务：
+
+```powershell
+python -m http.server 8765 --directory .\visuals\gold_macro_dashboard
+```
+
+浏览器访问：
+
+```text
+http://127.0.0.1:8765/
+```
+
 Windows 计划任务示例：
 
 ```powershell

@@ -82,6 +82,16 @@ a {
   gap: 12px;
 }
 
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.action-buttons > * {
+  flex: 1 1 160px;
+}
+
 .date-field {
   position: relative;
   display: grid;
@@ -107,7 +117,9 @@ a {
 .date-display:hover,
 .date-display:focus-visible,
 .apply-button:hover,
-.apply-button:focus-visible {
+.apply-button:focus-visible,
+.secondary-button:hover,
+.secondary-button:focus-visible {
   border-color: rgba(115, 198, 255, 0.55);
   outline: none;
   box-shadow: 0 0 0 3px rgba(115, 198, 255, 0.12);
@@ -131,6 +143,23 @@ a {
   color: var(--text-main);
   font-weight: 700;
   cursor: pointer;
+}
+
+.secondary-button {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(115, 198, 255, 0.24);
+  border-radius: 14px;
+  background: rgba(7, 16, 24, 0.9);
+  color: var(--text-main);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.apply-button:disabled,
+.secondary-button:disabled {
+  opacity: 0.72;
+  cursor: wait;
 }
 
 .hero-status {
@@ -490,6 +519,10 @@ a {
 .empty-state {
   margin: 0;
   color: var(--text-dim);
+}
+
+body.is-exporting-image .export-exclude {
+  visibility: hidden;
 }
 
 @media (max-width: 1120px) {
