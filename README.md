@@ -1,5 +1,7 @@
 # gold_price_analysis
 
+网页地址：[https://nobodylifriend.github.io/gold_factor_dashboard/](https://nobodylifriend.github.io/gold_factor_dashboard/)
+
 这个仓库当前已经实现了五条数据准备链路：
 
 1. `FRED` 宏观与金融指标抓取、初始化和日更
