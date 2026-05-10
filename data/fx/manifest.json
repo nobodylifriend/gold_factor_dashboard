@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T14:05:07.347599+00:00",
+  "generated_at": "2026-05-10T10:09:53.131509+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
@@ -22,7 +22,7 @@
       "name": "GBPUSD",
       "file_name": "GBPUSD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-05-08",
+      "end_date": "2026-05-10",
       "rows": 5209,
       "notes": "GBP/USD spot from Yahoo Finance daily chart API."
     },
@@ -38,7 +38,7 @@
       "name": "AUDUSD",
       "file_name": "AUDUSD.csv",
       "start_date": "2006-05-15",
-      "end_date": "2026-05-09",
+      "end_date": "2026-05-10",
       "rows": 5198,
       "notes": "AUD/USD spot from Yahoo Finance daily chart API."
     },
@@ -46,7 +46,7 @@
       "name": "USDCAD",
       "file_name": "USDCAD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-05-09",
+      "end_date": "2026-05-10",
       "rows": 5212,
       "notes": "USD/CAD spot from Yahoo Finance daily chart API."
     },
@@ -54,7 +54,7 @@
       "name": "USDCHF",
       "file_name": "USDCHF.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-05-09",
+      "end_date": "2026-05-10",
       "rows": 5210,
       "notes": "USD/CHF spot from Yahoo Finance daily chart API."
     }

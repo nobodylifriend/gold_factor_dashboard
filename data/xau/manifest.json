@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-09T14:04:53.855910+00:00",
+  "generated_at": "2026-05-10T10:09:50.615296+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
@@ -7,7 +7,7 @@
       "file_name": "xau_usd_daily_ohlc.csv",
       "start_date": "2006-04-25",
       "end_date": "2026-05-08",
-      "rows": 5153,
+      "rows": 5152,
       "notes": "Daily OHLC merged from multiple public sources. Coverage is strongest from 2006-04-25 to 2026-01-09 and 2026-03-25 to the latest recent window. See source column for provenance."
     },
     {
@@ -54,8 +54,8 @@
       "name": "GLOBAL_GOLD_ETF_NET_FLOWS_MONTHLY",
       "file_name": "global_gold_etf_net_flows_monthly.csv",
       "start_date": "2003-02-28",
-      "end_date": "2026-04-30",
-      "rows": 279,
+      "end_date": "2026-03-31",
+      "rows": 278,
       "notes": "Monthly global gold ETF net flows aggregated across regions using WGC tonnage flow series."
     },
     {

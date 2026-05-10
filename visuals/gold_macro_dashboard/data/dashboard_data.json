@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T07:00:07.297731+00:00",
+  "generated_at": "2026-05-10T10:10:02.257423+00:00",
   "metadata": {
     "title": "黄金 / 美元 / 利率 信号矩阵",
     "hero_chart_ids": [
@@ -78,7 +78,7 @@
     },
     "default_range": {
       "start": "2025-07-14",
-      "end": "2026-05-09"
+      "end": "2026-05-10"
     },
     "trend_thresholds": {
       "tips10y": 0.03,
@@ -20620,10 +20620,6 @@
         {
           "date": "2026-01-09",
           "value": 4508.748
-        },
-        {
-          "date": "2026-04-09",
-          "value": 4766.0
         },
         {
           "date": "2026-04-10",
@@ -241588,17 +241584,13 @@
         },
         {
           "date": "2026-03-31",
-          "value": -84.27305249
-        },
-        {
-          "date": "2026-04-30",
-          "value": 45.11871105
+          "value": -84.2593002
         }
       ],
       "value_precision": 2,
       "frequency_label": "月频",
       "description_zh": "全球黄金ETF月度净流量，用来观察资金申赎方向。",
-      "latest_date": "2026-04-30"
+      "latest_date": "2026-03-31"
     },
     "global_gold_etf_flows_weekly": {
       "label": "全球黄金ETF净流量（周）",
@@ -243325,7 +243317,7 @@
         },
         {
           "date": "2026-04-03",
-          "value": 23.3367423
+          "value": 23.350494590000004
         },
         {
           "date": "2026-04-10",
@@ -243337,7 +243329,7 @@
         },
         {
           "date": "2026-04-24",
-          "value": -5.60153833
+          "value": -10.53769913
         }
       ],
       "value_precision": 2,
@@ -442924,14 +442916,14 @@
           "value": 1.3555645942687988
         },
         {
-          "date": "2026-05-08",
-          "value": 1.3632335662841797
+          "date": "2026-05-10",
+          "value": 1.3631778955459597
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "英镑兑美元汇率，用来补充欧洲发达市场对美元的反馈。",
-      "latest_date": "2026-05-08"
+      "latest_date": "2026-05-10"
     },
     "audusd": {
       "label": "AUD/USD",
@@ -463725,14 +463717,14 @@
           "value": 0.7208600044250488
         },
         {
-          "date": "2026-05-09",
+          "date": "2026-05-10",
           "value": 0.7249528765678406
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "澳元兑美元汇率，对全球增长和大宗商品周期更敏感。",
-      "latest_date": "2026-05-09"
+      "latest_date": "2026-05-10"
     },
     "usdchf": {
       "label": "USD/CHF",
@@ -484574,14 +484566,14 @@
           "value": 0.7802000045776367
         },
         {
-          "date": "2026-05-09",
+          "date": "2026-05-10",
           "value": 0.776199996471405
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元兑瑞郎汇率，可补充避险货币对美元的反应。",
-      "latest_date": "2026-05-09"
+      "latest_date": "2026-05-10"
     },
     "vix": {
       "label": "VIX",
