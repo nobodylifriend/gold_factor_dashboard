@@ -5,6 +5,8 @@ def test_dashboard_html_contains_required_sections():
     html = Path("visuals/gold_macro_dashboard/index.html").read_text(encoding="utf-8")
 
     assert "黄金 / 美元 / 利率 信号矩阵" in html
+    assert 'id="tab-navigation"' in html
+    assert 'id="tab-panels"' in html
     assert 'id="hero-entry-type"' in html
     assert 'id="start-date-display"' in html
     assert 'id="end-date-display"' in html
@@ -21,6 +23,16 @@ def test_dashboard_styles_define_fintech_theme_tokens():
 
     assert "--bg-base:" in css
     assert "--accent-gold:" in css
+    assert ".tab-rail" in css
+    assert ".tab-button" in css
+    assert ".tab-panel" in css
+    assert ".topic-summary-grid" in css
+    assert ".tab-insight-grid" in css
+    assert ".chart-meta" in css
+    assert ".chart-meta-warning" in css
+    assert ".chart-title-row" in css
+    assert ".chart-info-button" in css
+    assert ".chart-note-warning" in css
     assert ".hero-panel" in css
     assert ".chart-card" in css
     assert ".date-display" in css

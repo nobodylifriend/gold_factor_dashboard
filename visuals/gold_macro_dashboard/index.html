@@ -30,7 +30,7 @@
             <input id="end-date" class="native-date-input" type="date" aria-label="结束日期选择器">
           </div>
           <div class="action-buttons">
-            <button id="apply-filters" class="apply-button" type="button">查询</button>
+            <button id="apply-filters" class="apply-button" type="button">更新视图</button>
             <button id="export-image" class="secondary-button export-exclude" type="button">导出图片</button>
           </div>
         </div>
@@ -42,25 +42,39 @@
         </div>
       </section>
 
-      <section class="overview-grid">
-        <div class="hero-charts">
-          <article class="chart-card">
-            <h2>黄金价格走势</h2>
-            <div id="chart-xau"></div>
-          </article>
-          <article class="chart-card">
-            <h2>标普500价格走势</h2>
-            <div id="chart-sp500"></div>
-          </article>
+      <section class="tab-rail">
+        <div class="tab-rail-header">
+          <h2>专题工作台</h2>
+          <p>总览给结论，专题页给证据。</p>
         </div>
-        <aside class="quadrant-card" id="quadrant-panel"></aside>
+        <div id="tab-navigation" class="tab-navigation" role="tablist" aria-label="专题切换"></div>
       </section>
 
-      <section class="signal-panel" id="signal-checklist"></section>
-      <section class="detail-grid" id="detail-charts" aria-live="polite"></section>
-      <section class="doc-panel">
-        <a href="../../四象限.md">查看四象限文档说明、页面入口与数据来源</a>
+      <section class="topic-summary-panel" id="topic-summary-panel"></section>
+
+      <section id="overview-panel" class="overview-panel">
+        <section class="overview-grid">
+          <div class="hero-charts">
+            <article class="chart-card">
+              <h2>黄金价格走势</h2>
+              <div id="chart-xau"></div>
+            </article>
+            <article class="chart-card">
+              <h2>标普500价格走势</h2>
+              <div id="chart-sp500"></div>
+            </article>
+          </div>
+          <aside class="quadrant-card" id="quadrant-panel"></aside>
+        </section>
+
+        <section class="signal-panel" id="signal-checklist"></section>
+        <section class="detail-grid" id="detail-charts" aria-live="polite"></section>
+        <section class="doc-panel">
+          <a href="../../四象限.md">查看四象限文档说明、页面入口与数据来源</a>
+        </section>
       </section>
+
+      <section id="tab-panels" class="tab-panels" aria-live="polite"></section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js"></script>
     <script src="./app.js"></script>

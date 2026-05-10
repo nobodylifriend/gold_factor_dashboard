@@ -8,9 +8,18 @@ const {
   computeQuadrantState,
   computeDefaultDateRange,
   normalizeRange,
+  buildSeriesWindow,
+  slicePointsInRange,
   buildSvgLineChart,
   formatAxisDateLabel,
   buildExportFileName,
+  buildTabButtonMarkup,
+  buildTopicSummaryMarkup,
+  computeTabInsightItems,
+  buildInsightStripMarkup,
+  buildSeriesMetaText,
+  buildSeriesTitleMarkup,
+  computeFreshnessStatus,
 } = require("../visuals/gold_macro_dashboard/app.js");
 
 test("classifyTrend returns flat inside threshold", () => {
@@ -96,6 +105,44 @@ test("normalizeRange swaps invalid user ranges", () => {
   );
 });
 
+test("buildSeriesWindow marks fallback when the selected range has too few points", () => {
+  const points = Array.from({ length: 12 }, (_, index) => ({
+    date: `2026-0${Math.floor(index / 3) + 1}-${String((index % 3) + 1).padStart(2, "0")}`,
+    value: index + 1,
+  }));
+  const densePoints = Array.from({ length: 14 }, (_, index) => ({
+    date: `2026-05-${String(index + 1).padStart(2, "0")}`,
+    value: index + 1,
+  }));
+
+  const fallback = buildSeriesWindow(points, "2026-05-01", "2026-05-31");
+  const sparse = buildSeriesWindow(points, "2026-04-01", "2026-04-30");
+  const direct = buildSeriesWindow(densePoints, "2026-05-01", "2026-05-12");
+
+  assert.equal(fallback.isFallback, true);
+  assert.equal(sparse.isFallback, true);
+  assert.equal(direct.isFallback, false);
+  assert.equal(fallback.inRangeCount, 0);
+  assert.equal(sparse.inRangeCount, 3);
+  assert.equal(direct.inRangeCount, 12);
+  assert.equal(fallback.points.length, 10);
+  assert.equal(sparse.points.length, 10);
+  assert.equal(direct.points.length, 12);
+  assert.deepEqual(fallback.points.map((point) => point.value), [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+  assert.deepEqual(sparse.points.map((point) => point.value), [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+  assert.deepEqual(direct.points.map((point) => point.value), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+});
+
+test("slicePointsInRange keeps returning points only for compatibility", () => {
+  const points = [
+    { date: "2026-01-01", value: 1 },
+    { date: "2026-02-01", value: 2 },
+    { date: "2026-03-01", value: 3 },
+  ];
+
+  assert.deepEqual(slicePointsInRange(points, "2026-02-01", "2026-02-28"), points);
+});
+
 test("formatAxisDateLabel renders short visible date label", () => {
   assert.equal(formatAxisDateLabel("2026-05-05"), "26/05/05");
 });
@@ -122,4 +169,109 @@ test("buildExportFileName includes current date range", () => {
     buildExportFileName({ start: "2026-04-04", end: "2026-05-04" }),
     "gold-macro-dashboard-2026-04-04_to_2026-05-04.png",
   );
+});
+
+test("buildTabButtonMarkup marks the active tab", () => {
+  const markup = buildTabButtonMarkup(
+    { id: "gold", label: "黄金本体", description: "价格与资金" },
+    "gold",
+  );
+
+  assert.match(markup, /data-tab-id="gold"/);
+  assert.match(markup, /aria-selected="true"/);
+  assert.match(markup, /黄金本体/);
+});
+
+test("buildTopicSummaryMarkup renders compact cards", () => {
+  const markup = buildTopicSummaryMarkup([
+    { key: "gold_summary", label: "黄金本体", value: "价格上行，ETF回流", tone: "positive" },
+    { key: "rates_summary", label: "利率流动性", value: "实际利率回落", tone: "positive" },
+  ]);
+
+  assert.match(markup, /topic-summary-grid/);
+  assert.match(markup, /黄金本体/);
+  assert.match(markup, /实际利率回落/);
+});
+
+test("computeTabInsightItems turns configured series into insight cards", () => {
+  const items = computeTabInsightItems(
+    {
+      insights: [
+        {
+          key: "usd_direction",
+          label: "美元总方向",
+          series_id: "dxy",
+          up_text: "美元走强",
+          down_text: "美元走弱",
+          flat_text: "美元横盘",
+          up_tone: "negative",
+          down_tone: "positive",
+          flat_tone: "neutral",
+        },
+      ],
+    },
+    {
+      dxy: { start: 100, end: 98.5 },
+    },
+  );
+
+  assert.deepEqual(items, [
+    {
+      key: "usd_direction",
+      label: "美元总方向",
+      value: "美元走弱",
+      tone: "positive",
+    },
+  ]);
+});
+
+test("buildInsightStripMarkup renders tab insight cards", () => {
+  const markup = buildInsightStripMarkup("专题结论", [
+    { key: "vix", label: "波动率", value: "波动率回落", tone: "positive" },
+    { key: "stress", label: "金融压力", value: "压力缓和", tone: "positive" },
+  ]);
+
+  assert.match(markup, /tab-insight-grid/);
+  assert.match(markup, /专题结论/);
+  assert.match(markup, /波动率回落/);
+});
+
+test("buildSeriesMetaText renders frequency and latest date", () => {
+  const meta = buildSeriesMetaText({
+    frequency_label: "季频",
+    latest_date: "2026-03-31",
+  });
+
+  assert.match(meta, /季频/);
+  assert.match(meta, /2026-03-31/);
+});
+
+test("computeFreshnessStatus flags stale series against selected range end", () => {
+  assert.deepEqual(
+    computeFreshnessStatus(
+      { frequency_label: "月频", latest_date: "2026-02-01" },
+      "2026-05-08",
+    ),
+    { level: "warning", label: "更新偏旧" },
+  );
+
+  assert.equal(
+    computeFreshnessStatus(
+      { frequency_label: "季频", latest_date: "2026-03-31" },
+      "2026-05-08",
+    ),
+    null,
+  );
+});
+
+test("buildSeriesTitleMarkup renders a help trigger when description exists", () => {
+  const markup = buildSeriesTitleMarkup({
+    label: "美元指数 DXY",
+    description_zh: "美元对主要可兑换货币的狭义指数，用来观察美元强弱。",
+  });
+
+  assert.match(markup, /chart-title-row/);
+  assert.match(markup, /chart-info-button/);
+  assert.match(markup, /title="美元对主要可兑换货币的狭义指数，用来观察美元强弱。"/);
+  assert.match(markup, /aria-label="查看 美元指数 DXY 指标定义"/);
 });
