@@ -1,77 +1,77 @@
 {
-  "generated_at": "2026-05-11T23:13:54.671358+00:00",
+  "generated_at": "2026-05-12T23:20:09.730487+00:00",
   "base_start_date": "1990-01-01",
   "artifacts": [
     {
       "name": "VIX",
       "file_name": "VIX.csv",
       "start_date": "1990-01-02",
-      "end_date": "2026-05-11",
-      "rows": 9186,
+      "end_date": "2026-05-12",
+      "rows": 9187,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "VIX1D",
       "file_name": "VIX1D.csv",
       "start_date": "2022-05-13",
-      "end_date": "2026-05-11",
-      "rows": 1001,
+      "end_date": "2026-05-12",
+      "rows": 1002,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "VIX9D",
       "file_name": "VIX9D.csv",
       "start_date": "2011-01-03",
-      "end_date": "2026-05-11",
-      "rows": 3861,
+      "end_date": "2026-05-12",
+      "rows": 3862,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "VIX3M",
       "file_name": "VIX3M.csv",
       "start_date": "2006-07-17",
-      "end_date": "2026-05-11",
-      "rows": 4986,
+      "end_date": "2026-05-12",
+      "rows": 4987,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "VIX6M",
       "file_name": "VIX6M.csv",
       "start_date": "2008-01-02",
-      "end_date": "2026-05-11",
-      "rows": 4618,
+      "end_date": "2026-05-12",
+      "rows": 4619,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "VIX1Y",
       "file_name": "VIX1Y.csv",
       "start_date": "2007-01-03",
-      "end_date": "2026-05-11",
-      "rows": 4863,
+      "end_date": "2026-05-12",
+      "rows": 4864,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "VXN",
       "file_name": "VXN.csv",
       "start_date": "2001-01-23",
-      "end_date": "2026-05-11",
-      "rows": 6364,
+      "end_date": "2026-05-12",
+      "rows": 6365,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "VVIX",
       "file_name": "VVIX.csv",
       "start_date": "2006-03-06",
-      "end_date": "2026-05-11",
-      "rows": 5018,
+      "end_date": "2026-05-12",
+      "rows": 5019,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "SKEW",
       "file_name": "SKEW.csv",
       "start_date": "1990-01-02",
-      "end_date": "2026-05-11",
-      "rows": 9144,
+      "end_date": "2026-05-12",
+      "rows": 9145,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     }
   ]
