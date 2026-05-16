@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T23:13:47.770149+00:00",
+  "generated_at": "2026-05-16T23:10:45.708157+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
@@ -38,7 +38,7 @@
       "name": "AUDUSD",
       "file_name": "AUDUSD.csv",
       "start_date": "2006-05-15",
-      "end_date": "2026-05-15",
+      "end_date": "2026-05-16",
       "rows": 5203,
       "notes": "AUD/USD spot from Yahoo Finance daily chart API."
     },
@@ -46,7 +46,7 @@
       "name": "USDCAD",
       "file_name": "USDCAD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-05-15",
+      "end_date": "2026-05-16",
       "rows": 5217,
       "notes": "USD/CAD spot from Yahoo Finance daily chart API."
     },
@@ -54,7 +54,7 @@
       "name": "USDCHF",
       "file_name": "USDCHF.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-05-15",
+      "end_date": "2026-05-16",
       "rows": 5215,
       "notes": "USD/CHF spot from Yahoo Finance daily chart API."
     }

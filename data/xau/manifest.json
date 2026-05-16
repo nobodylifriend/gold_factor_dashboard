@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T23:13:45.709526+00:00",
+  "generated_at": "2026-05-16T23:10:42.227645+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
@@ -7,7 +7,7 @@
       "file_name": "xau_usd_daily_ohlc.csv",
       "start_date": "2006-04-25",
       "end_date": "2026-05-15",
-      "rows": 5154,
+      "rows": 5153,
       "notes": "Daily OHLC merged from multiple public sources. Coverage is strongest from 2006-04-25 to 2026-01-09 and 2026-03-25 to the latest recent window. See source column for provenance."
     },
     {
