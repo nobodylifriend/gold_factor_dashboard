@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T23:10:57.676308+00:00",
+  "generated_at": "2026-05-17T23:13:30.059781+00:00",
   "metadata": {
     "title": "黄金 / 美元 / 利率 信号矩阵",
     "hero_chart_ids": [
@@ -78,7 +78,7 @@
     },
     "default_range": {
       "start": "2025-07-21",
-      "end": "2026-05-16"
+      "end": "2026-05-17"
     },
     "trend_thresholds": {
       "tips10y": 0.03,
@@ -20622,10 +20622,6 @@
           "value": 4508.748
         },
         {
-          "date": "2026-04-16",
-          "value": 4788.580078125
-        },
-        {
           "date": "2026-04-17",
           "value": 4830.43017578125
         },
@@ -20712,12 +20708,16 @@
         {
           "date": "2026-05-15",
           "value": 4540.06982421875
+        },
+        {
+          "date": "2026-05-17",
+          "value": 4549.43994140625
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "伦敦金现货的美元价格主序列，用来观察金价趋势本身。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-17"
     },
     "sp500": {
       "label": "标普500价格走势",
@@ -143644,12 +143644,16 @@
         {
           "date": "2026-05-15",
           "value": 99.2699966430664
+        },
+        {
+          "date": "2026-05-17",
+          "value": 99.28450012207033
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元对主要可兑换货币的狭义指数，用来观察美元强弱。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-17"
     },
     "nominal10y": {
       "label": "10年期美债收益率",
@@ -401646,14 +401650,14 @@
           "value": 1.166208028793335
         },
         {
-          "date": "2026-05-15",
-          "value": 1.163061261177063
+          "date": "2026-05-17",
+          "value": 1.1623852252960205
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "欧元兑美元汇率，是最重要的美元对手盘之一。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-17"
     },
     "usdjpy": {
       "label": "USD/JPY",
@@ -422463,14 +422467,14 @@
           "value": 158.3820037841797
         },
         {
-          "date": "2026-05-15",
-          "value": 158.7310028076172
+          "date": "2026-05-17",
+          "value": 158.8090057373047
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元兑日元汇率，常用来区分套息和避险驱动。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-17"
     },
     "gbpusd": {
       "label": "GBP/USD",
@@ -443328,14 +443332,14 @@
           "value": 1.339136242866516
         },
         {
-          "date": "2026-05-15",
-          "value": 1.3323917388916016
+          "date": "2026-05-17",
+          "value": 1.331894874572754
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "英镑兑美元汇率，用来补充欧洲发达市场对美元的反馈。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-17"
     },
     "audusd": {
       "label": "AUD/USD",
@@ -464149,14 +464153,14 @@
           "value": 0.7214298844337463
         },
         {
-          "date": "2026-05-16",
-          "value": 0.7153075933456421
+          "date": "2026-05-17",
+          "value": 0.7152052521705627
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "澳元兑美元汇率，对全球增长和大宗商品周期更敏感。",
-      "latest_date": "2026-05-16"
+      "latest_date": "2026-05-17"
     },
     "usdchf": {
       "label": "USD/CHF",
@@ -485018,14 +485022,14 @@
           "value": 0.7841799855232239
         },
         {
-          "date": "2026-05-16",
-          "value": 0.7860000133514404
+          "date": "2026-05-17",
+          "value": 0.7867900133132935
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元兑瑞郎汇率，可补充避险货币对美元的反应。",
-      "latest_date": "2026-05-16"
+      "latest_date": "2026-05-17"
     },
     "vix": {
       "label": "VIX",
