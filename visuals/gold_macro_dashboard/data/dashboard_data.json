@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T23:13:30.059781+00:00",
+  "generated_at": "2026-05-18T23:20:46.523384+00:00",
   "metadata": {
     "title": "黄金 / 美元 / 利率 信号矩阵",
     "hero_chart_ids": [
@@ -77,8 +77,8 @@
       "y": "tips10y"
     },
     "default_range": {
-      "start": "2025-07-21",
-      "end": "2026-05-17"
+      "start": "2025-07-22",
+      "end": "2026-05-18"
     },
     "trend_thresholds": {
       "tips10y": 0.03,
@@ -20622,10 +20622,6 @@
           "value": 4508.748
         },
         {
-          "date": "2026-04-17",
-          "value": 4830.43017578125
-        },
-        {
           "date": "2026-04-20",
           "value": 4820.830078125
         },
@@ -20711,13 +20707,17 @@
         },
         {
           "date": "2026-05-17",
-          "value": 4549.43994140625
+          "value": 4537.14990234375
+        },
+        {
+          "date": "2026-05-18",
+          "value": 4572.7900390625
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "伦敦金现货的美元价格主序列，用来观察金价趋势本身。",
-      "latest_date": "2026-05-17"
+      "latest_date": "2026-05-18"
     },
     "sp500": {
       "label": "标普500价格走势",
@@ -62413,12 +62413,16 @@
         {
           "date": "2026-05-15",
           "value": 7408.5
+        },
+        {
+          "date": "2026-05-18",
+          "value": 7403.0498046875
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "标普500指数，代表美国大盘风险资产表现。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "nasdaq100": {
       "label": "纳斯达克100价格走势",
@@ -103362,12 +103366,16 @@
         {
           "date": "2026-05-15",
           "value": 29125.19921875
+        },
+        {
+          "date": "2026-05-18",
+          "value": 28994.369140625
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "纳斯达克100指数，代表成长和科技风险偏好。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "tips10y": {
       "label": "10年期TIPS实际收益率",
@@ -123447,12 +123455,16 @@
         {
           "date": "2026-05-14",
           "value": 2.0
+        },
+        {
+          "date": "2026-05-15",
+          "value": 2.1
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国10年期TIPS实际收益率，是黄金最核心的机会成本指标之一。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "dxy": {
       "label": "美元指数 DXY",
@@ -143646,14 +143658,14 @@
           "value": 99.2699966430664
         },
         {
-          "date": "2026-05-17",
-          "value": 99.28450012207033
+          "date": "2026-05-18",
+          "value": 98.9646987915039
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元对主要可兑换货币的狭义指数，用来观察美元强弱。",
-      "latest_date": "2026-05-17"
+      "latest_date": "2026-05-18"
     },
     "nominal10y": {
       "label": "10年期美债收益率",
@@ -163733,12 +163745,16 @@
         {
           "date": "2026-05-14",
           "value": 4.47
+        },
+        {
+          "date": "2026-05-15",
+          "value": 4.59
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国10年期国债名义收益率，反映长端无风险利率水平。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "breakeven10y": {
       "label": "10年盈亏平衡通胀率",
@@ -183822,12 +183838,16 @@
         {
           "date": "2026-05-15",
           "value": 2.49
+        },
+        {
+          "date": "2026-05-18",
+          "value": 2.48
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国10年期盈亏平衡通胀率，代表市场定价的中长期通胀预期。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "credit_oas_hy": {
       "label": "高收益信用利差 OAS",
@@ -187039,12 +187059,16 @@
         {
           "date": "2026-05-14",
           "value": 2.76
+        },
+        {
+          "date": "2026-05-15",
+          "value": 2.8
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国高收益信用利差，用来衡量信用风险和融资环境。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "sofr": {
       "label": "SOFR",
@@ -195156,12 +195180,16 @@
         {
           "date": "2026-05-14",
           "value": 3.56
+        },
+        {
+          "date": "2026-05-15",
+          "value": 3.55
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "担保隔夜融资利率，反映美元短端资金价格。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "xau_monthly": {
       "label": "黄金月度收盘价",
@@ -196128,7 +196156,7 @@
         },
         {
           "date": "2026-05-01",
-          "value": 4542.3273
+          "value": 4565.805
         }
       ],
       "value_precision": 2,
@@ -214214,12 +214242,16 @@
         {
           "date": "2026-05-15",
           "value": 26.34
+        },
+        {
+          "date": "2026-05-18",
+          "value": 26.2
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "黄金波动率指数，反映期权市场对金价波动的预期。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "gld_holdings": {
       "label": "GLD 黄金总持仓",
@@ -235839,12 +235871,16 @@
         {
           "date": "2026-05-14",
           "value": 1039.99
+        },
+        {
+          "date": "2026-05-15",
+          "value": 1037.42
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "GLD黄金ETF总持仓，代表配置型资金是否持续回流。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "global_gold_etf_holdings_weekly": {
       "label": "全球黄金ETF持仓（周）",
@@ -240679,13 +240715,17 @@
         },
         {
           "date": "2026-05-08",
-          "value": 4137.64
+          "value": 4137.73
+        },
+        {
+          "date": "2026-05-15",
+          "value": 4139.57
         }
       ],
       "value_precision": 2,
       "frequency_label": "周频",
       "description_zh": "全球实物黄金ETF周度总持仓，观察中期配置资金是否持续增配。",
-      "latest_date": "2026-05-08"
+      "latest_date": "2026-05-15"
     },
     "gold_etf_flows": {
       "label": "全球黄金ETF净流量",
@@ -243557,13 +243597,17 @@
         },
         {
           "date": "2026-05-08",
-          "value": -0.8617869199999997
+          "value": -0.7748026399999999
+        },
+        {
+          "date": "2026-05-15",
+          "value": 1.8376973099999996
         }
       ],
       "value_precision": 2,
       "frequency_label": "周频",
       "description_zh": "全球黄金ETF周度净流量，更适合观察短期资金流拐点。",
-      "latest_date": "2026-05-08"
+      "latest_date": "2026-05-15"
     },
     "gld_volume": {
       "label": "GLD成交量",
@@ -265183,12 +265227,16 @@
         {
           "date": "2026-05-14",
           "value": 4021406.0
+        },
+        {
+          "date": "2026-05-15",
+          "value": 9360393.0
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "GLD日成交量，用来观察黄金ETF交易热度是否放大。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "global_gold_mine_production_quarterly": {
       "label": "全球矿产金产量（季）",
@@ -296743,12 +296791,16 @@
         {
           "date": "2026-05-14",
           "value": 1.46
+        },
+        {
+          "date": "2026-05-15",
+          "value": 1.56
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国5年期TIPS实际收益率，更偏中短期的实际利率信号。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "tips30y": {
       "label": "30年期TIPS实际收益率",
@@ -312996,12 +313048,16 @@
         {
           "date": "2026-05-14",
           "value": 2.73
+        },
+        {
+          "date": "2026-05-15",
+          "value": 2.81
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国30年期TIPS实际收益率，用来看超长端实际利率约束。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "fedfunds": {
       "label": "联邦基金利率",
@@ -336000,12 +336056,16 @@
         {
           "date": "2026-05-15",
           "value": 2.7
+        },
+        {
+          "date": "2026-05-18",
+          "value": 2.69
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国5年期盈亏平衡通胀率，反映中短端通胀预期。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "forward5y5y": {
       "label": "5年期5年期前瞻通胀预期",
@@ -356089,12 +356149,16 @@
         {
           "date": "2026-05-15",
           "value": 2.28
+        },
+        {
+          "date": "2026-05-18",
+          "value": 2.27
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "5年期5年期远期通胀预期，反映更长期的通胀锚。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "cpi_yoy": {
       "label": "CPI同比",
@@ -380835,12 +380899,32 @@
         {
           "date": "2026-05-08",
           "value": 118.0392
+        },
+        {
+          "date": "2026-05-11",
+          "value": 118.0562
+        },
+        {
+          "date": "2026-05-12",
+          "value": 118.5238
+        },
+        {
+          "date": "2026-05-13",
+          "value": 118.4737
+        },
+        {
+          "date": "2026-05-14",
+          "value": 118.6696
+        },
+        {
+          "date": "2026-05-15",
+          "value": 119.2825
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元广义贸易加权指数，比DXY覆盖更广的美元强弱口径。",
-      "latest_date": "2026-05-08"
+      "latest_date": "2026-05-15"
     },
     "eurusd": {
       "label": "EUR/USD",
@@ -401651,13 +401735,17 @@
         },
         {
           "date": "2026-05-17",
-          "value": 1.1623852252960205
+          "value": 1.161440134048462
+        },
+        {
+          "date": "2026-05-18",
+          "value": 1.16604483127594
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "欧元兑美元汇率，是最重要的美元对手盘之一。",
-      "latest_date": "2026-05-17"
+      "latest_date": "2026-05-18"
     },
     "usdjpy": {
       "label": "USD/JPY",
@@ -422468,13 +422556,17 @@
         },
         {
           "date": "2026-05-17",
-          "value": 158.8090057373047
+          "value": 158.843994140625
+        },
+        {
+          "date": "2026-05-18",
+          "value": 158.81399536132812
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元兑日元汇率，常用来区分套息和避险驱动。",
-      "latest_date": "2026-05-17"
+      "latest_date": "2026-05-18"
     },
     "gbpusd": {
       "label": "GBP/USD",
@@ -443333,13 +443425,17 @@
         },
         {
           "date": "2026-05-17",
-          "value": 1.331894874572754
+          "value": 1.330849051475525
+        },
+        {
+          "date": "2026-05-18",
+          "value": 1.3433998823165894
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "英镑兑美元汇率，用来补充欧洲发达市场对美元的反馈。",
-      "latest_date": "2026-05-17"
+      "latest_date": "2026-05-18"
     },
     "audusd": {
       "label": "AUD/USD",
@@ -464154,13 +464250,17 @@
         },
         {
           "date": "2026-05-17",
-          "value": 0.7152052521705627
+          "value": 0.7130200862884521
+        },
+        {
+          "date": "2026-05-18",
+          "value": 0.7175660133361816
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "澳元兑美元汇率，对全球增长和大宗商品周期更敏感。",
-      "latest_date": "2026-05-17"
+      "latest_date": "2026-05-18"
     },
     "usdchf": {
       "label": "USD/CHF",
@@ -485023,13 +485123,17 @@
         },
         {
           "date": "2026-05-17",
-          "value": 0.7867900133132935
+          "value": 0.7872899770736694
+        },
+        {
+          "date": "2026-05-18",
+          "value": 0.7842400074005127
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元兑瑞郎汇率，可补充避险货币对美元的反应。",
-      "latest_date": "2026-05-17"
+      "latest_date": "2026-05-18"
     },
     "vix": {
       "label": "VIX",
@@ -521793,12 +521897,16 @@
         {
           "date": "2026-05-15",
           "value": 18.43
+        },
+        {
+          "date": "2026-05-18",
+          "value": 17.81999969482422
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "标普500隐含波动率指数，代表市场风险厌恶程度。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "vvix": {
       "label": "VVIX",
@@ -541890,12 +541998,16 @@
         {
           "date": "2026-05-15",
           "value": 92.94
+        },
+        {
+          "date": "2026-05-18",
+          "value": 91.18
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "VIX的波动率指数，用来观察波动率本身是否失稳。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "vxn": {
       "label": "VXN",
@@ -567371,12 +567483,16 @@
         {
           "date": "2026-05-15",
           "value": 25.33
+        },
+        {
+          "date": "2026-05-18",
+          "value": 24.21
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "纳斯达克100隐含波动率指数，用来观察科技成长风格的风险溢价。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "vix3m": {
       "label": "VIX3M",
@@ -587340,12 +587456,16 @@
         {
           "date": "2026-05-15",
           "value": 21.36
+        },
+        {
+          "date": "2026-05-18",
+          "value": 20.92
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "3个月期限的标普隐含波动率，用来区分短期恐慌和中期波动预期。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "skew": {
       "label": "SKEW",
@@ -623941,12 +624061,16 @@
         {
           "date": "2026-05-15",
           "value": 145.77
+        },
+        {
+          "date": "2026-05-18",
+          "value": 138.39999389648438
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "标普尾部风险定价指数，反映市场是否在买入崩盘保护。",
-      "latest_date": "2026-05-15"
+      "latest_date": "2026-05-18"
     },
     "stlfsi": {
       "label": "圣路易斯金融压力指数",
@@ -631351,12 +631475,16 @@
         {
           "date": "2026-05-14",
           "value": 2.76
+        },
+        {
+          "date": "2026-05-15",
+          "value": 2.8
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国高收益OAS利差，观察高风险信用融资环境。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "ig_oas": {
       "label": "投资级信用利差 OAS",
@@ -634564,12 +634692,16 @@
         {
           "date": "2026-05-14",
           "value": 0.76
+        },
+        {
+          "date": "2026-05-15",
+          "value": 0.75
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美国投资级OAS利差，观察高质量信用融资环境。",
-      "latest_date": "2026-05-14"
+      "latest_date": "2026-05-15"
     },
     "copper": {
       "label": "铜价",
