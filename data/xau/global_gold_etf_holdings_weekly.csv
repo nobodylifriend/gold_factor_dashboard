@@ -1205,6 +1205,8 @@ date,value,source
 2026-04-10,4125.23,wgc_fsapi:etf_holdings:weekly
 2026-04-17,4147.179999999999,wgc_fsapi:etf_holdings:weekly
 2026-04-24,4141.5599999999995,wgc_fsapi:etf_holdings:weekly
-2026-05-01,4138.5,wgc_fsapi:etf_holdings:weekly
-2026-05-08,4137.73,wgc_fsapi:etf_holdings:weekly
-2026-05-15,4139.57,wgc_fsapi:etf_holdings:weekly
+2026-05-01,4138.47,wgc_fsapi:etf_holdings:weekly
+2026-05-08,4137.7,wgc_fsapi:etf_holdings:weekly
+2026-05-15,4139.38,wgc_fsapi:etf_holdings:weekly
+2026-05-22,4131.06,wgc_fsapi:etf_holdings:weekly
+2026-05-29,4120.83,wgc_fsapi:etf_holdings:weekly
