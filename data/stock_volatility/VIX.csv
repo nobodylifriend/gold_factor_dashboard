@@ -9204,4 +9204,7 @@ date,value,source
 2026-06-03,16.06,cboe:VIX_History.csv
 2026-06-04,15.4,cboe:VIX_History.csv
 2026-06-05,21.51,cboe:VIX_History.csv
-2026-06-08,18.920000076293945,yahoo:^VIX
+2026-06-08,18.92,cboe:VIX_History.csv
+2026-06-09,19.87,cboe:VIX_History.csv
+2026-06-10,22.22,cboe:VIX_History.csv
+2026-06-11,19.440000534057617,yahoo:^VIX

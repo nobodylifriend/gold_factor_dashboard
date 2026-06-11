@@ -5036,3 +5036,6 @@ date,value,source
 2026-06-04,85.75,cboe:VVIX_History.csv
 2026-06-05,102.04,cboe:VVIX_History.csv
 2026-06-08,92.4,cboe:VVIX_History.csv
+2026-06-09,95.81,cboe:VVIX_History.csv
+2026-06-10,108.16,cboe:VVIX_History.csv
+2026-06-11,100.63,cboe:VVIX_History.csv
