@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-11T23:55:48.148543+00:00",
+  "generated_at": "2026-06-19T23:16:45.060409+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
       "name": "xau_usd_daily_ohlc",
       "file_name": "xau_usd_daily_ohlc.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-06-11",
+      "end_date": "2026-06-19",
       "rows": 5155,
       "notes": "Daily OHLC merged from multiple public sources. Coverage is strongest from 2006-04-25 to 2026-01-09 and 2026-03-25 to the latest recent window. See source column for provenance."
     },
@@ -22,16 +22,16 @@
       "name": "GVZ",
       "file_name": "GVZ.csv",
       "start_date": "2008-06-03",
-      "end_date": "2026-06-11",
-      "rows": 4537,
+      "end_date": "2026-06-18",
+      "rows": 4542,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
       "name": "GLOBAL_GOLD_ETF_HOLDINGS_WEEKLY",
       "file_name": "global_gold_etf_holdings_weekly.csv",
       "start_date": "2003-02-28",
-      "end_date": "2026-06-05",
-      "rows": 1212,
+      "end_date": "2026-06-12",
+      "rows": 1213,
       "notes": "Weekly global physically backed gold ETF holdings aggregated across North America, Europe, Asia, and Other; units are tonnes."
     },
     {
@@ -46,8 +46,8 @@
       "name": "GLOBAL_GOLD_ETF_NET_FLOWS_WEEKLY",
       "file_name": "global_gold_etf_net_flows_weekly.csv",
       "start_date": "2018-01-05",
-      "end_date": "2026-06-05",
-      "rows": 440,
+      "end_date": "2026-06-12",
+      "rows": 441,
       "notes": "Weekly global gold ETF net flows aggregated across regions using WGC tonnage flow series."
     },
     {
@@ -62,16 +62,16 @@
       "name": "GLD_TOTAL_HOLDINGS_TONNES",
       "file_name": "GLD_total_holdings_tonnes.csv",
       "start_date": "2004-11-18",
-      "end_date": "2026-06-10",
-      "rows": 5422,
+      "end_date": "2026-06-18",
+      "rows": 5428,
       "notes": "Daily GLD trust gold holdings in tonnes from the official SPDR Gold Shares historical archive."
     },
     {
       "name": "GLD_DAILY_SHARE_VOLUME",
       "file_name": "GLD_share_volume.csv",
       "start_date": "2004-11-18",
-      "end_date": "2026-06-10",
-      "rows": 5422,
+      "end_date": "2026-06-18",
+      "rows": 5428,
       "notes": "Daily GLD exchange share volume from the official SPDR Gold Shares historical archive."
     },
     {
@@ -158,16 +158,16 @@
       "name": "GLD_GOLD_OPTIONS_ATM_IV",
       "file_name": "gld_gold_options_atm_iv.csv",
       "start_date": "2026-04-29",
-      "end_date": "2026-06-11",
-      "rows": 12,
+      "end_date": "2026-06-17",
+      "rows": 13,
       "notes": "Daily GLD option ATM implied volatility proxy derived from Nasdaq option-chain bid/ask prices with Black-Scholes inversion."
     },
     {
       "name": "GLD_GOLD_OPTIONS_25D_IV",
       "file_name": "gld_gold_options_25d_iv.csv",
       "start_date": "2026-04-29",
-      "end_date": "2026-06-11",
-      "rows": 12,
+      "end_date": "2026-06-17",
+      "rows": 13,
       "notes": "Daily GLD option 25-delta implied volatility proxy derived from Nasdaq option-chain bid/ask prices and Black-Scholes deltas."
     }
   ]

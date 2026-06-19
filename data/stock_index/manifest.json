@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-06-11T23:55:50.996450+00:00",
+  "generated_at": "2026-06-19T23:16:48.251216+00:00",
   "base_start_date": "1985-01-01",
   "artifacts": [
     {
       "name": "SP500",
       "file_name": "SP500.csv",
       "start_date": "1985-01-02",
-      "end_date": "2026-06-11",
-      "rows": 10441,
+      "end_date": "2026-06-17",
+      "rows": 10445,
       "notes": "S&P 500 Index daily close series from Yahoo Finance chart API."
     },
     {
       "name": "NASDAQ100",
       "file_name": "NASDAQ100.csv",
       "start_date": "1985-10-01",
-      "end_date": "2026-06-11",
-      "rows": 10253,
+      "end_date": "2026-06-17",
+      "rows": 10257,
       "notes": "Nasdaq-100 Index daily close series from Yahoo Finance chart API."
     }
   ]
