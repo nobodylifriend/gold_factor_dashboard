@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-20T23:37:53.930311+00:00",
+  "generated_at": "2026-06-21T23:46:22.273748+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
       "name": "DXY",
       "file_name": "DXY.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-06-19",
-      "rows": 5070,
+      "end_date": "2026-06-21",
+      "rows": 5071,
       "notes": "ICE U.S. Dollar Index from Yahoo Finance daily chart API."
     },
     {
       "name": "EURUSD",
       "file_name": "EURUSD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-06-19",
+      "end_date": "2026-06-21",
       "rows": 5227,
       "notes": "EUR/USD spot from Yahoo Finance daily chart API."
     },
@@ -22,7 +22,7 @@
       "name": "GBPUSD",
       "file_name": "GBPUSD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-06-20",
+      "end_date": "2026-06-21",
       "rows": 5239,
       "notes": "GBP/USD spot from Yahoo Finance daily chart API."
     },
@@ -30,7 +30,7 @@
       "name": "USDJPY",
       "file_name": "USDJPY.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-06-20",
+      "end_date": "2026-06-21",
       "rows": 5227,
       "notes": "USD/JPY spot from Yahoo Finance daily chart API."
     },
@@ -38,7 +38,7 @@
       "name": "AUDUSD",
       "file_name": "AUDUSD.csv",
       "start_date": "2006-05-15",
-      "end_date": "2026-06-20",
+      "end_date": "2026-06-21",
       "rows": 5228,
       "notes": "AUD/USD spot from Yahoo Finance daily chart API."
     },
@@ -46,7 +46,7 @@
       "name": "USDCAD",
       "file_name": "USDCAD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-06-20",
+      "end_date": "2026-06-21",
       "rows": 5242,
       "notes": "USD/CAD spot from Yahoo Finance daily chart API."
     },
@@ -54,7 +54,7 @@
       "name": "USDCHF",
       "file_name": "USDCHF.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-06-20",
+      "end_date": "2026-06-21",
       "rows": 5240,
       "notes": "USD/CHF spot from Yahoo Finance daily chart API."
     }

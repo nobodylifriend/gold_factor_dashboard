@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-20T23:38:07.504507+00:00",
+  "generated_at": "2026-06-21T23:46:35.276424+00:00",
   "metadata": {
     "title": "黄金 / 美元 / 利率 信号矩阵",
     "hero_chart_ids": [
@@ -78,7 +78,7 @@
     },
     "default_range": {
       "start": "2025-08-25",
-      "end": "2026-06-20"
+      "end": "2026-06-21"
     },
     "trend_thresholds": {
       "tips10y": 0.03,
@@ -20622,10 +20622,6 @@
           "value": 4508.748
         },
         {
-          "date": "2026-05-20",
-          "value": 4545.16015625
-        },
-        {
           "date": "2026-05-21",
           "value": 4545.18017578125
         },
@@ -20716,12 +20712,16 @@
         {
           "date": "2026-06-19",
           "value": 4160.259765625
+        },
+        {
+          "date": "2026-06-21",
+          "value": 4145.7099609375
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "伦敦金现货的美元价格主序列，用来观察金价趋势本身。",
-      "latest_date": "2026-06-19"
+      "latest_date": "2026-06-21"
     },
     "sp500": {
       "label": "标普500价格走势",
@@ -62505,12 +62505,16 @@
         {
           "date": "2026-06-17",
           "value": 7420.10009765625
+        },
+        {
+          "date": "2026-06-18",
+          "value": 7500.580078125
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "标普500指数，代表美国大盘风险资产表现。",
-      "latest_date": "2026-06-17"
+      "latest_date": "2026-06-18"
     },
     "nasdaq100": {
       "label": "纳斯达克100价格走势",
@@ -103542,12 +103546,16 @@
         {
           "date": "2026-06-17",
           "value": 29670.94921875
+        },
+        {
+          "date": "2026-06-18",
+          "value": 30406.189453125
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "纳斯达克100指数，代表成长和科技风险偏好。",
-      "latest_date": "2026-06-17"
+      "latest_date": "2026-06-18"
     },
     "tips10y": {
       "label": "10年期TIPS实际收益率",
@@ -144006,14 +144014,18 @@
           "value": 100.08999633789062
         },
         {
-          "date": "2026-06-19",
-          "value": 100.76000213623048
+          "date": "2026-06-18",
+          "value": 100.8499984741211
+        },
+        {
+          "date": "2026-06-21",
+          "value": 100.84410095214844
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元对主要可兑换货币的狭义指数，用来观察美元强弱。",
-      "latest_date": "2026-06-19"
+      "latest_date": "2026-06-21"
     },
     "nominal10y": {
       "label": "10年期美债收益率",
@@ -403314,14 +403326,14 @@
           "value": 1.1458560228347778
         },
         {
-          "date": "2026-06-19",
-          "value": 1.1469204425811768
+          "date": "2026-06-21",
+          "value": 1.1462632417678833
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "欧元兑美元汇率，是最重要的美元对手盘之一。",
-      "latest_date": "2026-06-19"
+      "latest_date": "2026-06-21"
     },
     "usdjpy": {
       "label": "USD/JPY",
@@ -424231,14 +424243,14 @@
           "value": 161.28900146484375
         },
         {
-          "date": "2026-06-20",
-          "value": 161.27499389648438
+          "date": "2026-06-21",
+          "value": 161.49099731445312
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元兑日元汇率，常用来区分套息和避险驱动。",
-      "latest_date": "2026-06-20"
+      "latest_date": "2026-06-21"
     },
     "gbpusd": {
       "label": "GBP/USD",
@@ -445196,14 +445208,14 @@
           "value": 1.320201754570007
         },
         {
-          "date": "2026-06-20",
-          "value": 1.3237143754959106
+          "date": "2026-06-21",
+          "value": 1.3203411102294922
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "英镑兑美元汇率，用来补充欧洲发达市场对美元的反馈。",
-      "latest_date": "2026-06-20"
+      "latest_date": "2026-06-21"
     },
     "audusd": {
       "label": "AUD/USD",
@@ -466117,14 +466129,14 @@
           "value": 0.7013099789619446
         },
         {
-          "date": "2026-06-20",
-          "value": 0.701557457447052
+          "date": "2026-06-21",
+          "value": 0.7003781795501709
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "澳元兑美元汇率，对全球增长和大宗商品周期更敏感。",
-      "latest_date": "2026-06-20"
+      "latest_date": "2026-06-21"
     },
     "usdchf": {
       "label": "USD/CHF",
@@ -487086,14 +487098,14 @@
           "value": 0.8048999905586243
         },
         {
-          "date": "2026-06-20",
-          "value": 0.8064000010490417
+          "date": "2026-06-21",
+          "value": 0.8080999851226807
         }
       ],
       "value_precision": 2,
       "frequency_label": "日频",
       "description_zh": "美元兑瑞郎汇率，可补充避险货币对美元的反应。",
-      "latest_date": "2026-06-20"
+      "latest_date": "2026-06-21"
     },
     "vix": {
       "label": "VIX",
