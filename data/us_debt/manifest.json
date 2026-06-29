@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-21T23:46:34.163395+00:00",
+  "generated_at": "2026-06-29T23:17:48.168648+00:00",
   "base_start_date": "2025-01-01",
   "artifacts": [
     {
       "name": "Federal Debt Intragovernmental Holdings",
       "file_name": "Federal Debt Intragovernmental Holdings.csv",
       "start_date": "2025-01-02",
-      "end_date": "2026-06-17",
-      "rows": 366,
+      "end_date": "2026-06-26",
+      "rows": 372,
       "notes": "Daily intragovernmental holdings from Treasury Debt to the Penny, converted to millions of dollars."
     },
     {
