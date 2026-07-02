@@ -1,61 +1,61 @@
 {
-  "generated_at": "2026-07-01T23:45:35.491803+00:00",
+  "generated_at": "2026-07-02T23:31:26.595992+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
       "name": "DXY",
       "file_name": "DXY.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-07-01",
-      "rows": 5078,
+      "end_date": "2026-07-02",
+      "rows": 5079,
       "notes": "ICE U.S. Dollar Index from Yahoo Finance daily chart API."
     },
     {
       "name": "EURUSD",
       "file_name": "EURUSD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-07-01",
-      "rows": 5235,
+      "end_date": "2026-07-02",
+      "rows": 5236,
       "notes": "EUR/USD spot from Yahoo Finance daily chart API."
     },
     {
       "name": "GBPUSD",
       "file_name": "GBPUSD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-07-01",
-      "rows": 5247,
+      "end_date": "2026-07-02",
+      "rows": 5248,
       "notes": "GBP/USD spot from Yahoo Finance daily chart API."
     },
     {
       "name": "USDJPY",
       "file_name": "USDJPY.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-07-01",
-      "rows": 5235,
+      "end_date": "2026-07-02",
+      "rows": 5236,
       "notes": "USD/JPY spot from Yahoo Finance daily chart API."
     },
     {
       "name": "AUDUSD",
       "file_name": "AUDUSD.csv",
       "start_date": "2006-05-15",
-      "end_date": "2026-07-01",
-      "rows": 5236,
+      "end_date": "2026-07-02",
+      "rows": 5237,
       "notes": "AUD/USD spot from Yahoo Finance daily chart API."
     },
     {
       "name": "USDCAD",
       "file_name": "USDCAD.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-07-01",
-      "rows": 5250,
+      "end_date": "2026-07-02",
+      "rows": 5251,
       "notes": "USD/CAD spot from Yahoo Finance daily chart API."
     },
     {
       "name": "USDCHF",
       "file_name": "USDCHF.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-07-01",
-      "rows": 5248,
+      "end_date": "2026-07-02",
+      "rows": 5249,
       "notes": "USD/CHF spot from Yahoo Finance daily chart API."
     }
   ]
