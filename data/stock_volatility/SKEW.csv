@@ -9178,4 +9178,4 @@ date,value,source
 2026-06-29,144.46,cboe:SKEW_History.csv
 2026-06-30,149.6,cboe:SKEW_History.csv
 2026-07-01,154.82,cboe:SKEW_History.csv
-2026-07-02,150.02000427246094,yahoo:^SKEW
+2026-07-02,150.02,cboe:SKEW_History.csv

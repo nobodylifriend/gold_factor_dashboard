@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-07-02T23:31:24.512394+00:00",
+  "generated_at": "2026-07-03T23:19:50.378958+00:00",
   "base_start_date": "2006-04-25",
   "artifacts": [
     {
       "name": "xau_usd_daily_ohlc",
       "file_name": "xau_usd_daily_ohlc.csv",
       "start_date": "2006-04-25",
-      "end_date": "2026-07-02",
+      "end_date": "2026-07-03",
       "rows": 5154,
       "notes": "Daily OHLC merged from multiple public sources. Coverage is strongest from 2006-04-25 to 2026-01-09 and 2026-03-25 to the latest recent window. See source column for provenance."
     },
@@ -62,16 +62,16 @@
       "name": "GLD_TOTAL_HOLDINGS_TONNES",
       "file_name": "GLD_total_holdings_tonnes.csv",
       "start_date": "2004-11-18",
-      "end_date": "2026-07-01",
-      "rows": 5436,
+      "end_date": "2026-07-02",
+      "rows": 5437,
       "notes": "Daily GLD trust gold holdings in tonnes from the official SPDR Gold Shares historical archive."
     },
     {
       "name": "GLD_DAILY_SHARE_VOLUME",
       "file_name": "GLD_share_volume.csv",
       "start_date": "2004-11-18",
-      "end_date": "2026-07-01",
-      "rows": 5436,
+      "end_date": "2026-07-02",
+      "rows": 5437,
       "notes": "Daily GLD exchange share volume from the official SPDR Gold Shares historical archive."
     },
     {

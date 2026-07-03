@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-07-02T23:31:30.458104+00:00",
+  "generated_at": "2026-07-03T23:19:59.372113+00:00",
   "base_start_date": "1990-01-01",
   "artifacts": [
     {
       "name": "VIX",
       "file_name": "VIX.csv",
       "start_date": "1990-01-02",
-      "end_date": "2026-07-02",
-      "rows": 9224,
+      "end_date": "2026-07-03",
+      "rows": 9225,
       "notes": "Daily close series merged with Cboe official history preferred and Yahoo Finance used only for older backfill if needed."
     },
     {
